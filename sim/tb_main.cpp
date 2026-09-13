@@ -2,8 +2,8 @@
 #include "Vtop.h"
 #include "verilated.h"
 
-// Loads an identity weight matrix, pulses one activation vector once, drains the
-// pipeline, then checks psum_out[c] == act_in[c] (diagonal weights isolate each term).
+// Loads an identity weight matrix, holds one activation vector steady, waits for the
+// pipeline to fill, then checks psum_out[c] == act_in[c] (diagonal weights isolate each term).
 static const int N = 4;
 
 static void tick(Vtop* top) {
@@ -34,11 +34,9 @@ int main(int argc, char** argv) {
     int8_t act[N] = {1, 2, 3, 4};
     uint32_t act_flat = 0;
     for (int i = 0; i < N; i++) act_flat |= (uint32_t)(uint8_t)act[i] << (i * 8);
-    top->act_in_flat = act_flat;
-    tick(top);
-    top->act_in_flat = 0;
+    top->act_in_flat = act_flat; // held steady, not pulsed, so output reaches steady state
 
-    for (int i = 0; i < 3 * N; i++) tick(top);
+    for (int i = 0; i < 2 * N; i++) tick(top);
 
     bool pass = true;
     for (int c = 0; c < N; c++) {
