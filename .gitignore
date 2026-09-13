@@ -1,4 +1,9 @@
 obj_dir/
+obj_dir_n*/
+obj_dir_N*/
+sim/perf/test_metrics
+sim/perf/results.csv
+sim/vectors/
 *.vcd
 *.o
 *.log
