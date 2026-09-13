@@ -1,0 +1,1372 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69+24 (git sha1 d0e71cfb7-dirty, Release, Clang /usr/bin/clang++ 21.1.8)
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+
+1. Executing SLANG frontend.
+Top level design units:
+    scratchpad_dbuf
+
+
+Build succeeded: 0 errors, 0 warnings
+
+1.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\scratchpad_dbuf.$18'.
+Found and cleaned up 1 empty switch in `\scratchpad_dbuf.$0'.
+Cleaned up 2 empty switches.
+
+1.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 2 switch rules as full_case in process $18 in module scratchpad_dbuf.
+Marked 1 switch rules as full_case in process $8 in module scratchpad_dbuf.
+Marked 2 switch rules as full_case in process $0 in module scratchpad_dbuf.
+Removed a total of 0 dead cases.
+
+1.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 3 redundant assignments.
+Promoted 0 assignments to connections.
+
+1.4. Executing PROC_INIT pass (extract init attributes).
+
+1.5. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~8 debug messages>
+
+1.6. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\scratchpad_dbuf.$18'.
+     1/3: $rd_data$24
+     2/3: $rd_valid$26
+     3/3: $rd_data$25
+Creating decoders for process `\scratchpad_dbuf.$8'.
+     1/2: $16
+     2/2: $12
+Creating decoders for process `\scratchpad_dbuf.$0'.
+     1/2: $consume_bank_q$2
+     2/2: $consume_bank_q$3
+
+1.7. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 3 empty switches in `\scratchpad_dbuf.$18'.
+Removing empty process `scratchpad_dbuf.$18'.
+Found and cleaned up 2 empty switches in `\scratchpad_dbuf.$8'.
+Removing empty process `scratchpad_dbuf.$8'.
+Found and cleaned up 3 empty switches in `\scratchpad_dbuf.$0'.
+Removing empty process `scratchpad_dbuf.$0'.
+Cleaned up 8 empty switches.
+
+1.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module scratchpad_dbuf.
+
+2. Executing SYNTH pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1.1. Analyzing design hierarchy..
+Top module:  \scratchpad_dbuf
+
+2.1.2. Analyzing design hierarchy..
+Top module:  \scratchpad_dbuf
+Removed 0 unused modules.
+
+2.2. Executing PROC pass (convert processes to netlists).
+
+2.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+2.2.4. Executing PROC_INIT pass (extract init attributes).
+
+2.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+2.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+2.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+2.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module scratchpad_dbuf.
+
+2.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module scratchpad_dbuf.
+
+2.4. Executing CHECK pass (checking for obvious problems).
+Checking module scratchpad_dbuf...
+Found and reported 0 problems.
+
+2.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \scratchpad_dbuf..
+Removed 0 unused cells and 18 unused wires.
+<suppressed ~4 debug messages>
+
+2.6. Executing OPT pass (performing simple optimizations).
+
+2.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module scratchpad_dbuf.
+
+2.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\scratchpad_dbuf'.
+Computing hashes of 25 cells of `\scratchpad_dbuf'.
+Finding duplicate cells in `\scratchpad_dbuf'.
+Computing hashes of 24 cells of `\scratchpad_dbuf'.
+Finding duplicate cells in `\scratchpad_dbuf'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+2.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \scratchpad_dbuf..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$4.
+    dead port 1/2 on $mux $procmux$25.
+Removed 2 multiplexer ports.
+<suppressed ~20 debug messages>
+
+2.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \scratchpad_dbuf.
+    Consolidated identical input bits for $mux cell $17:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$17y
+      New ports: A=1'0, B=1'1, Y=$17y [0]
+      New connections: $17y [31:1] = { $17y [0] $17y [0] $17y [0] $17y [0] $17y [0] $17y [0] $17y [0] $17y [0] $17y [0] $17y [0] $17y [0] $17y [0] $17y [0] $17y [0] $17y [0] $17y [0] $17y [0] $17y [0] $17y [0] $17y [0] $17y [0] $17y [0] $17y [0] $17y [0] $17y [0] $17y [0] $17y [0] $17y [0] $17y [0] $17y [0] $17y [0] }
+    Consolidated identical input bits for $mux cell $13:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$13y
+      New ports: A=1'0, B=1'1, Y=$13y [0]
+      New connections: $13y [31:1] = { $13y [0] $13y [0] $13y [0] $13y [0] $13y [0] $13y [0] $13y [0] $13y [0] $13y [0] $13y [0] $13y [0] $13y [0] $13y [0] $13y [0] $13y [0] $13y [0] $13y [0] $13y [0] $13y [0] $13y [0] $13y [0] $13y [0] $13y [0] $13y [0] $13y [0] $13y [0] $13y [0] $13y [0] $13y [0] $13y [0] $13y [0] }
+  Optimizing cells in module \scratchpad_dbuf.
+Performed a total of 2 changes.
+
+2.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\scratchpad_dbuf'.
+Computing hashes of 22 cells of `\scratchpad_dbuf'.
+Finding duplicate cells in `\scratchpad_dbuf'.
+Removed a total of 0 cells.
+
+2.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \scratchpad_dbuf..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+2.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module scratchpad_dbuf.
+
+2.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \scratchpad_dbuf..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~18 debug messages>
+
+2.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \scratchpad_dbuf.
+Performed a total of 0 changes.
+
+2.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\scratchpad_dbuf'.
+Computing hashes of 22 cells of `\scratchpad_dbuf'.
+Finding duplicate cells in `\scratchpad_dbuf'.
+Removed a total of 0 cells.
+
+2.6.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \scratchpad_dbuf..
+
+2.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module scratchpad_dbuf.
+
+2.6.16. Finished fast OPT passes. (There is nothing left to do.)
+
+2.7. Executing FSM pass (extract and optimize FSM).
+
+2.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+2.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+2.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \scratchpad_dbuf..
+
+2.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+2.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+2.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+2.8. Executing OPT pass (performing simple optimizations).
+
+2.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module scratchpad_dbuf.
+
+2.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\scratchpad_dbuf'.
+Computing hashes of 22 cells of `\scratchpad_dbuf'.
+Finding duplicate cells in `\scratchpad_dbuf'.
+Removed a total of 0 cells.
+
+2.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \scratchpad_dbuf..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~18 debug messages>
+
+2.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \scratchpad_dbuf.
+Performed a total of 0 changes.
+
+2.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\scratchpad_dbuf'.
+Computing hashes of 22 cells of `\scratchpad_dbuf'.
+Finding duplicate cells in `\scratchpad_dbuf'.
+Removed a total of 0 cells.
+
+2.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $driver$consume_bank_q ($dff) from module scratchpad_dbuf (D = $consume_bank_q$2, Q = \consume_bank_q, rval = 1'1).
+Adding EN signal on $auto$ff.cc:337:slice$31 ($sdff) from module scratchpad_dbuf (D = \fill_bank, Q = \consume_bank_q).
+Adding SRST signal on $driver$rd_data ($dff) from module scratchpad_dbuf (D = $procmux$1_Y, Q = \rd_data, rval = 0).
+Adding EN signal on $auto$ff.cc:337:slice$33 ($sdff) from module scratchpad_dbuf (D = $23y, Q = \rd_data).
+Adding SRST signal on $driver$rd_valid ($dff) from module scratchpad_dbuf (D = \rd_en, Q = \rd_valid, rval = 1'0).
+
+2.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \scratchpad_dbuf..
+Removed 5 unused cells and 5 unused wires.
+<suppressed ~6 debug messages>
+
+2.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module scratchpad_dbuf.
+
+2.8.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.8.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \scratchpad_dbuf..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~11 debug messages>
+
+2.8.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \scratchpad_dbuf.
+Performed a total of 0 changes.
+
+2.8.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\scratchpad_dbuf'.
+Computing hashes of 17 cells of `\scratchpad_dbuf'.
+Finding duplicate cells in `\scratchpad_dbuf'.
+Removed a total of 0 cells.
+
+2.8.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.8.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \scratchpad_dbuf..
+
+2.8.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module scratchpad_dbuf.
+
+2.8.16. Finished fast OPT passes. (There is nothing left to do.)
+
+2.9. Executing WREDUCE pass (reducing word size of cells).
+
+2.10. Executing PEEPOPT pass (run peephole optimizers).
+
+2.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \scratchpad_dbuf..
+
+2.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module scratchpad_dbuf:
+  created 0 $alu and 0 $macc cells.
+
+2.13. Executing SHARE pass (SAT-based resource sharing).
+Found 2 cells in module scratchpad_dbuf that may be considered for resource sharing.
+  Analyzing resource sharing options for $19 ($memrd_v2):
+    Found 1 activation_patterns using ctrl signal \consume_bank_q.
+    No candidates found.
+  Analyzing resource sharing options for $21 ($memrd_v2):
+    Found 1 activation_patterns using ctrl signal \consume_bank_q.
+    No candidates found.
+
+2.14. Executing OPT pass (performing simple optimizations).
+
+2.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module scratchpad_dbuf.
+
+2.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\scratchpad_dbuf'.
+Computing hashes of 17 cells of `\scratchpad_dbuf'.
+Finding duplicate cells in `\scratchpad_dbuf'.
+Removed a total of 0 cells.
+
+2.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \scratchpad_dbuf..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~11 debug messages>
+
+2.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \scratchpad_dbuf.
+Performed a total of 0 changes.
+
+2.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\scratchpad_dbuf'.
+Computing hashes of 17 cells of `\scratchpad_dbuf'.
+Finding duplicate cells in `\scratchpad_dbuf'.
+Removed a total of 0 cells.
+
+2.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \scratchpad_dbuf..
+
+2.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module scratchpad_dbuf.
+
+2.14.9. Finished fast OPT passes. (There is nothing left to do.)
+
+2.15. Executing MEMORY pass.
+
+2.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+2.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+2.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+  Analyzing scratchpad_dbuf.mem1 write port 0.
+  Analyzing scratchpad_dbuf.mem0 write port 0.
+
+2.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+2.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `\mem1'[0] in module `\scratchpad_dbuf': FF found, but with a mux select that doesn't seem to correspond to transparency logic.
+Checking read port `\mem0'[0] in module `\scratchpad_dbuf': FF found, but with a mux select that doesn't seem to correspond to transparency logic.
+Checking read port address `\mem1'[0] in module `\scratchpad_dbuf': no address FF found.
+Checking read port address `\mem0'[0] in module `\scratchpad_dbuf': no address FF found.
+
+2.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \scratchpad_dbuf..
+
+2.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+2.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+2.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \scratchpad_dbuf..
+
+2.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \scratchpad_dbuf..
+
+2.17. Executing OPT pass (performing simple optimizations).
+
+2.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module scratchpad_dbuf.
+<suppressed ~4 debug messages>
+
+2.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\scratchpad_dbuf'.
+Computing hashes of 11 cells of `\scratchpad_dbuf'.
+Finding duplicate cells in `\scratchpad_dbuf'.
+Removed a total of 0 cells.
+
+2.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \scratchpad_dbuf..
+Removed 0 unused cells and 4 unused wires.
+<suppressed ~1 debug messages>
+
+2.17.5. Finished fast OPT passes.
+
+2.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory \mem1 in module \scratchpad_dbuf:
+  created 256 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 255 $mux cells.
+  write interface: 256 write mux blocks.
+Mapping memory \mem0 in module \scratchpad_dbuf:
+  created 256 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 255 $mux cells.
+  write interface: 256 write mux blocks.
+
+2.19. Executing OPT pass (performing simple optimizations).
+
+2.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module scratchpad_dbuf.
+<suppressed ~16 debug messages>
+
+2.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\scratchpad_dbuf'.
+Computing hashes of 2367 cells of `\scratchpad_dbuf'.
+Finding duplicate cells in `\scratchpad_dbuf'.
+Removed a total of 0 cells.
+
+2.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \scratchpad_dbuf..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~1538 debug messages>
+
+2.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \scratchpad_dbuf.
+Performed a total of 0 changes.
+
+2.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\scratchpad_dbuf'.
+Computing hashes of 2367 cells of `\scratchpad_dbuf'.
+Finding duplicate cells in `\scratchpad_dbuf'.
+Removed a total of 0 cells.
+
+2.19.6. Executing OPT_SHARE pass.
+
+2.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \scratchpad_dbuf..
+Removed 0 unused cells and 1032 unused wires.
+<suppressed ~1 debug messages>
+
+2.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module scratchpad_dbuf.
+
+2.19.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.19.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \scratchpad_dbuf..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~1538 debug messages>
+
+2.19.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \scratchpad_dbuf.
+Performed a total of 0 changes.
+
+2.19.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\scratchpad_dbuf'.
+Computing hashes of 2367 cells of `\scratchpad_dbuf'.
+Finding duplicate cells in `\scratchpad_dbuf'.
+Removed a total of 0 cells.
+
+2.19.14. Executing OPT_SHARE pass.
+
+2.19.15. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $memory\mem1[0]$40 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[0]).
+Adding EN signal on $memory\mem1[1]$42 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[1]).
+Adding EN signal on $memory\mem1[2]$44 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[2]).
+Adding EN signal on $memory\mem1[3]$46 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[3]).
+Adding EN signal on $memory\mem1[4]$48 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[4]).
+Adding EN signal on $memory\mem1[5]$50 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[5]).
+Adding EN signal on $memory\mem1[6]$52 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[6]).
+Adding EN signal on $memory\mem1[7]$54 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[7]).
+Adding EN signal on $memory\mem1[8]$56 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[8]).
+Adding EN signal on $memory\mem1[9]$58 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[9]).
+Adding EN signal on $memory\mem1[10]$60 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[10]).
+Adding EN signal on $memory\mem1[11]$62 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[11]).
+Adding EN signal on $memory\mem1[12]$64 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[12]).
+Adding EN signal on $memory\mem1[13]$66 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[13]).
+Adding EN signal on $memory\mem1[14]$68 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[14]).
+Adding EN signal on $memory\mem1[15]$70 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[15]).
+Adding EN signal on $memory\mem1[16]$72 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[16]).
+Adding EN signal on $memory\mem1[17]$74 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[17]).
+Adding EN signal on $memory\mem1[18]$76 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[18]).
+Adding EN signal on $memory\mem1[19]$78 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[19]).
+Adding EN signal on $memory\mem1[20]$80 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[20]).
+Adding EN signal on $memory\mem1[21]$82 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[21]).
+Adding EN signal on $memory\mem1[22]$84 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[22]).
+Adding EN signal on $memory\mem1[23]$86 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[23]).
+Adding EN signal on $memory\mem1[24]$88 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[24]).
+Adding EN signal on $memory\mem1[25]$90 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[25]).
+Adding EN signal on $memory\mem1[26]$92 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[26]).
+Adding EN signal on $memory\mem1[27]$94 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[27]).
+Adding EN signal on $memory\mem1[28]$96 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[28]).
+Adding EN signal on $memory\mem1[29]$98 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[29]).
+Adding EN signal on $memory\mem1[30]$100 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[30]).
+Adding EN signal on $memory\mem1[31]$102 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[31]).
+Adding EN signal on $memory\mem1[32]$104 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[32]).
+Adding EN signal on $memory\mem1[33]$106 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[33]).
+Adding EN signal on $memory\mem1[34]$108 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[34]).
+Adding EN signal on $memory\mem1[35]$110 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[35]).
+Adding EN signal on $memory\mem1[36]$112 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[36]).
+Adding EN signal on $memory\mem1[37]$114 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[37]).
+Adding EN signal on $memory\mem1[38]$116 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[38]).
+Adding EN signal on $memory\mem1[39]$118 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[39]).
+Adding EN signal on $memory\mem1[40]$120 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[40]).
+Adding EN signal on $memory\mem1[41]$122 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[41]).
+Adding EN signal on $memory\mem1[42]$124 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[42]).
+Adding EN signal on $memory\mem1[43]$126 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[43]).
+Adding EN signal on $memory\mem1[44]$128 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[44]).
+Adding EN signal on $memory\mem1[45]$130 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[45]).
+Adding EN signal on $memory\mem1[46]$132 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[46]).
+Adding EN signal on $memory\mem1[47]$134 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[47]).
+Adding EN signal on $memory\mem1[48]$136 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[48]).
+Adding EN signal on $memory\mem1[49]$138 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[49]).
+Adding EN signal on $memory\mem1[50]$140 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[50]).
+Adding EN signal on $memory\mem1[51]$142 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[51]).
+Adding EN signal on $memory\mem1[52]$144 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[52]).
+Adding EN signal on $memory\mem1[53]$146 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[53]).
+Adding EN signal on $memory\mem1[54]$148 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[54]).
+Adding EN signal on $memory\mem1[55]$150 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[55]).
+Adding EN signal on $memory\mem1[56]$152 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[56]).
+Adding EN signal on $memory\mem1[57]$154 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[57]).
+Adding EN signal on $memory\mem1[58]$156 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[58]).
+Adding EN signal on $memory\mem1[59]$158 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[59]).
+Adding EN signal on $memory\mem1[60]$160 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[60]).
+Adding EN signal on $memory\mem1[61]$162 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[61]).
+Adding EN signal on $memory\mem1[62]$164 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[62]).
+Adding EN signal on $memory\mem1[63]$166 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[63]).
+Adding EN signal on $memory\mem1[64]$168 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[64]).
+Adding EN signal on $memory\mem1[65]$170 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[65]).
+Adding EN signal on $memory\mem1[66]$172 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[66]).
+Adding EN signal on $memory\mem1[67]$174 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[67]).
+Adding EN signal on $memory\mem1[68]$176 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[68]).
+Adding EN signal on $memory\mem1[69]$178 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[69]).
+Adding EN signal on $memory\mem1[70]$180 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[70]).
+Adding EN signal on $memory\mem1[71]$182 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[71]).
+Adding EN signal on $memory\mem1[72]$184 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[72]).
+Adding EN signal on $memory\mem1[73]$186 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[73]).
+Adding EN signal on $memory\mem1[74]$188 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[74]).
+Adding EN signal on $memory\mem1[75]$190 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[75]).
+Adding EN signal on $memory\mem1[76]$192 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[76]).
+Adding EN signal on $memory\mem1[77]$194 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[77]).
+Adding EN signal on $memory\mem1[78]$196 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[78]).
+Adding EN signal on $memory\mem1[79]$198 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[79]).
+Adding EN signal on $memory\mem1[80]$200 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[80]).
+Adding EN signal on $memory\mem1[81]$202 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[81]).
+Adding EN signal on $memory\mem1[82]$204 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[82]).
+Adding EN signal on $memory\mem1[83]$206 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[83]).
+Adding EN signal on $memory\mem1[84]$208 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[84]).
+Adding EN signal on $memory\mem1[85]$210 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[85]).
+Adding EN signal on $memory\mem1[86]$212 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[86]).
+Adding EN signal on $memory\mem1[87]$214 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[87]).
+Adding EN signal on $memory\mem1[88]$216 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[88]).
+Adding EN signal on $memory\mem1[89]$218 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[89]).
+Adding EN signal on $memory\mem1[90]$220 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[90]).
+Adding EN signal on $memory\mem1[91]$222 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[91]).
+Adding EN signal on $memory\mem1[92]$224 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[92]).
+Adding EN signal on $memory\mem1[93]$226 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[93]).
+Adding EN signal on $memory\mem1[94]$228 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[94]).
+Adding EN signal on $memory\mem1[95]$230 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[95]).
+Adding EN signal on $memory\mem1[96]$232 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[96]).
+Adding EN signal on $memory\mem1[97]$234 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[97]).
+Adding EN signal on $memory\mem1[98]$236 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[98]).
+Adding EN signal on $memory\mem1[99]$238 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[99]).
+Adding EN signal on $memory\mem1[100]$240 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[100]).
+Adding EN signal on $memory\mem1[101]$242 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[101]).
+Adding EN signal on $memory\mem1[102]$244 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[102]).
+Adding EN signal on $memory\mem1[103]$246 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[103]).
+Adding EN signal on $memory\mem1[104]$248 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[104]).
+Adding EN signal on $memory\mem1[105]$250 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[105]).
+Adding EN signal on $memory\mem1[106]$252 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[106]).
+Adding EN signal on $memory\mem1[107]$254 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[107]).
+Adding EN signal on $memory\mem1[108]$256 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[108]).
+Adding EN signal on $memory\mem1[109]$258 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[109]).
+Adding EN signal on $memory\mem1[110]$260 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[110]).
+Adding EN signal on $memory\mem1[111]$262 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[111]).
+Adding EN signal on $memory\mem1[112]$264 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[112]).
+Adding EN signal on $memory\mem1[113]$266 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[113]).
+Adding EN signal on $memory\mem1[114]$268 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[114]).
+Adding EN signal on $memory\mem1[115]$270 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[115]).
+Adding EN signal on $memory\mem1[116]$272 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[116]).
+Adding EN signal on $memory\mem1[117]$274 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[117]).
+Adding EN signal on $memory\mem1[118]$276 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[118]).
+Adding EN signal on $memory\mem1[119]$278 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[119]).
+Adding EN signal on $memory\mem1[120]$280 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[120]).
+Adding EN signal on $memory\mem1[121]$282 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[121]).
+Adding EN signal on $memory\mem1[122]$284 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[122]).
+Adding EN signal on $memory\mem1[123]$286 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[123]).
+Adding EN signal on $memory\mem1[124]$288 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[124]).
+Adding EN signal on $memory\mem1[125]$290 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[125]).
+Adding EN signal on $memory\mem1[126]$292 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[126]).
+Adding EN signal on $memory\mem1[127]$294 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[127]).
+Adding EN signal on $memory\mem1[128]$296 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[128]).
+Adding EN signal on $memory\mem1[129]$298 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[129]).
+Adding EN signal on $memory\mem1[130]$300 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[130]).
+Adding EN signal on $memory\mem1[131]$302 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[131]).
+Adding EN signal on $memory\mem1[132]$304 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[132]).
+Adding EN signal on $memory\mem1[133]$306 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[133]).
+Adding EN signal on $memory\mem1[134]$308 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[134]).
+Adding EN signal on $memory\mem1[135]$310 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[135]).
+Adding EN signal on $memory\mem1[136]$312 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[136]).
+Adding EN signal on $memory\mem1[137]$314 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[137]).
+Adding EN signal on $memory\mem1[138]$316 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[138]).
+Adding EN signal on $memory\mem1[139]$318 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[139]).
+Adding EN signal on $memory\mem1[140]$320 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[140]).
+Adding EN signal on $memory\mem1[141]$322 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[141]).
+Adding EN signal on $memory\mem1[142]$324 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[142]).
+Adding EN signal on $memory\mem1[143]$326 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[143]).
+Adding EN signal on $memory\mem1[144]$328 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[144]).
+Adding EN signal on $memory\mem1[145]$330 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[145]).
+Adding EN signal on $memory\mem1[146]$332 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[146]).
+Adding EN signal on $memory\mem1[147]$334 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[147]).
+Adding EN signal on $memory\mem1[148]$336 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[148]).
+Adding EN signal on $memory\mem1[149]$338 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[149]).
+Adding EN signal on $memory\mem1[150]$340 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[150]).
+Adding EN signal on $memory\mem1[151]$342 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[151]).
+Adding EN signal on $memory\mem1[152]$344 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[152]).
+Adding EN signal on $memory\mem1[153]$346 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[153]).
+Adding EN signal on $memory\mem1[154]$348 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[154]).
+Adding EN signal on $memory\mem1[155]$350 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[155]).
+Adding EN signal on $memory\mem1[156]$352 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[156]).
+Adding EN signal on $memory\mem1[157]$354 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[157]).
+Adding EN signal on $memory\mem1[158]$356 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[158]).
+Adding EN signal on $memory\mem1[159]$358 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[159]).
+Adding EN signal on $memory\mem1[160]$360 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[160]).
+Adding EN signal on $memory\mem1[161]$362 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[161]).
+Adding EN signal on $memory\mem1[162]$364 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[162]).
+Adding EN signal on $memory\mem1[163]$366 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[163]).
+Adding EN signal on $memory\mem1[164]$368 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[164]).
+Adding EN signal on $memory\mem1[165]$370 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[165]).
+Adding EN signal on $memory\mem1[166]$372 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[166]).
+Adding EN signal on $memory\mem1[167]$374 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[167]).
+Adding EN signal on $memory\mem1[168]$376 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[168]).
+Adding EN signal on $memory\mem1[169]$378 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[169]).
+Adding EN signal on $memory\mem1[170]$380 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[170]).
+Adding EN signal on $memory\mem1[171]$382 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[171]).
+Adding EN signal on $memory\mem1[172]$384 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[172]).
+Adding EN signal on $memory\mem1[173]$386 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[173]).
+Adding EN signal on $memory\mem1[174]$388 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[174]).
+Adding EN signal on $memory\mem1[175]$390 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[175]).
+Adding EN signal on $memory\mem1[176]$392 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[176]).
+Adding EN signal on $memory\mem1[177]$394 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[177]).
+Adding EN signal on $memory\mem1[178]$396 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[178]).
+Adding EN signal on $memory\mem1[179]$398 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[179]).
+Adding EN signal on $memory\mem1[180]$400 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[180]).
+Adding EN signal on $memory\mem1[181]$402 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[181]).
+Adding EN signal on $memory\mem1[182]$404 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[182]).
+Adding EN signal on $memory\mem1[183]$406 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[183]).
+Adding EN signal on $memory\mem1[184]$408 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[184]).
+Adding EN signal on $memory\mem1[185]$410 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[185]).
+Adding EN signal on $memory\mem1[186]$412 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[186]).
+Adding EN signal on $memory\mem1[187]$414 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[187]).
+Adding EN signal on $memory\mem1[188]$416 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[188]).
+Adding EN signal on $memory\mem1[189]$418 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[189]).
+Adding EN signal on $memory\mem1[190]$420 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[190]).
+Adding EN signal on $memory\mem1[191]$422 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[191]).
+Adding EN signal on $memory\mem1[192]$424 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[192]).
+Adding EN signal on $memory\mem1[193]$426 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[193]).
+Adding EN signal on $memory\mem1[194]$428 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[194]).
+Adding EN signal on $memory\mem1[195]$430 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[195]).
+Adding EN signal on $memory\mem1[196]$432 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[196]).
+Adding EN signal on $memory\mem1[197]$434 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[197]).
+Adding EN signal on $memory\mem1[198]$436 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[198]).
+Adding EN signal on $memory\mem1[199]$438 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[199]).
+Adding EN signal on $memory\mem1[200]$440 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[200]).
+Adding EN signal on $memory\mem1[201]$442 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[201]).
+Adding EN signal on $memory\mem1[202]$444 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[202]).
+Adding EN signal on $memory\mem1[203]$446 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[203]).
+Adding EN signal on $memory\mem1[204]$448 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[204]).
+Adding EN signal on $memory\mem1[205]$450 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[205]).
+Adding EN signal on $memory\mem1[206]$452 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[206]).
+Adding EN signal on $memory\mem1[207]$454 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[207]).
+Adding EN signal on $memory\mem1[208]$456 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[208]).
+Adding EN signal on $memory\mem1[209]$458 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[209]).
+Adding EN signal on $memory\mem1[210]$460 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[210]).
+Adding EN signal on $memory\mem1[211]$462 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[211]).
+Adding EN signal on $memory\mem1[212]$464 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[212]).
+Adding EN signal on $memory\mem1[213]$466 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[213]).
+Adding EN signal on $memory\mem1[214]$468 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[214]).
+Adding EN signal on $memory\mem1[215]$470 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[215]).
+Adding EN signal on $memory\mem1[216]$472 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[216]).
+Adding EN signal on $memory\mem1[217]$474 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[217]).
+Adding EN signal on $memory\mem1[218]$476 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[218]).
+Adding EN signal on $memory\mem1[219]$478 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[219]).
+Adding EN signal on $memory\mem1[220]$480 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[220]).
+Adding EN signal on $memory\mem1[221]$482 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[221]).
+Adding EN signal on $memory\mem1[222]$484 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[222]).
+Adding EN signal on $memory\mem1[223]$486 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[223]).
+Adding EN signal on $memory\mem1[224]$488 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[224]).
+Adding EN signal on $memory\mem1[225]$490 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[225]).
+Adding EN signal on $memory\mem1[226]$492 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[226]).
+Adding EN signal on $memory\mem1[227]$494 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[227]).
+Adding EN signal on $memory\mem1[228]$496 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[228]).
+Adding EN signal on $memory\mem1[229]$498 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[229]).
+Adding EN signal on $memory\mem1[230]$500 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[230]).
+Adding EN signal on $memory\mem1[231]$502 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[231]).
+Adding EN signal on $memory\mem1[232]$504 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[232]).
+Adding EN signal on $memory\mem1[233]$506 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[233]).
+Adding EN signal on $memory\mem1[234]$508 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[234]).
+Adding EN signal on $memory\mem1[235]$510 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[235]).
+Adding EN signal on $memory\mem1[236]$512 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[236]).
+Adding EN signal on $memory\mem1[237]$514 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[237]).
+Adding EN signal on $memory\mem1[238]$516 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[238]).
+Adding EN signal on $memory\mem1[239]$518 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[239]).
+Adding EN signal on $memory\mem1[240]$520 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[240]).
+Adding EN signal on $memory\mem1[241]$522 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[241]).
+Adding EN signal on $memory\mem1[242]$524 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[242]).
+Adding EN signal on $memory\mem1[243]$526 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[243]).
+Adding EN signal on $memory\mem1[244]$528 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[244]).
+Adding EN signal on $memory\mem1[245]$530 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[245]).
+Adding EN signal on $memory\mem1[246]$532 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[246]).
+Adding EN signal on $memory\mem1[247]$534 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[247]).
+Adding EN signal on $memory\mem1[248]$536 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[248]).
+Adding EN signal on $memory\mem1[249]$538 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[249]).
+Adding EN signal on $memory\mem1[250]$540 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[250]).
+Adding EN signal on $memory\mem1[251]$542 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[251]).
+Adding EN signal on $memory\mem1[252]$544 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[252]).
+Adding EN signal on $memory\mem1[253]$546 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[253]).
+Adding EN signal on $memory\mem1[254]$548 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[254]).
+Adding EN signal on $memory\mem1[255]$550 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem1[255]).
+Adding EN signal on $memory\mem0[0]$2981 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[0]).
+Adding EN signal on $memory\mem0[1]$2983 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[1]).
+Adding EN signal on $memory\mem0[2]$2985 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[2]).
+Adding EN signal on $memory\mem0[3]$2987 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[3]).
+Adding EN signal on $memory\mem0[4]$2989 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[4]).
+Adding EN signal on $memory\mem0[5]$2991 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[5]).
+Adding EN signal on $memory\mem0[6]$2993 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[6]).
+Adding EN signal on $memory\mem0[7]$2995 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[7]).
+Adding EN signal on $memory\mem0[8]$2997 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[8]).
+Adding EN signal on $memory\mem0[9]$2999 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[9]).
+Adding EN signal on $memory\mem0[10]$3001 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[10]).
+Adding EN signal on $memory\mem0[11]$3003 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[11]).
+Adding EN signal on $memory\mem0[12]$3005 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[12]).
+Adding EN signal on $memory\mem0[13]$3007 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[13]).
+Adding EN signal on $memory\mem0[14]$3009 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[14]).
+Adding EN signal on $memory\mem0[15]$3011 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[15]).
+Adding EN signal on $memory\mem0[16]$3013 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[16]).
+Adding EN signal on $memory\mem0[17]$3015 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[17]).
+Adding EN signal on $memory\mem0[18]$3017 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[18]).
+Adding EN signal on $memory\mem0[19]$3019 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[19]).
+Adding EN signal on $memory\mem0[20]$3021 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[20]).
+Adding EN signal on $memory\mem0[21]$3023 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[21]).
+Adding EN signal on $memory\mem0[22]$3025 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[22]).
+Adding EN signal on $memory\mem0[23]$3027 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[23]).
+Adding EN signal on $memory\mem0[24]$3029 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[24]).
+Adding EN signal on $memory\mem0[25]$3031 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[25]).
+Adding EN signal on $memory\mem0[26]$3033 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[26]).
+Adding EN signal on $memory\mem0[27]$3035 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[27]).
+Adding EN signal on $memory\mem0[28]$3037 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[28]).
+Adding EN signal on $memory\mem0[29]$3039 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[29]).
+Adding EN signal on $memory\mem0[30]$3041 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[30]).
+Adding EN signal on $memory\mem0[31]$3043 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[31]).
+Adding EN signal on $memory\mem0[32]$3045 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[32]).
+Adding EN signal on $memory\mem0[33]$3047 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[33]).
+Adding EN signal on $memory\mem0[34]$3049 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[34]).
+Adding EN signal on $memory\mem0[35]$3051 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[35]).
+Adding EN signal on $memory\mem0[36]$3053 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[36]).
+Adding EN signal on $memory\mem0[37]$3055 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[37]).
+Adding EN signal on $memory\mem0[38]$3057 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[38]).
+Adding EN signal on $memory\mem0[39]$3059 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[39]).
+Adding EN signal on $memory\mem0[40]$3061 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[40]).
+Adding EN signal on $memory\mem0[41]$3063 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[41]).
+Adding EN signal on $memory\mem0[42]$3065 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[42]).
+Adding EN signal on $memory\mem0[43]$3067 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[43]).
+Adding EN signal on $memory\mem0[44]$3069 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[44]).
+Adding EN signal on $memory\mem0[45]$3071 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[45]).
+Adding EN signal on $memory\mem0[46]$3073 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[46]).
+Adding EN signal on $memory\mem0[47]$3075 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[47]).
+Adding EN signal on $memory\mem0[48]$3077 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[48]).
+Adding EN signal on $memory\mem0[49]$3079 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[49]).
+Adding EN signal on $memory\mem0[50]$3081 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[50]).
+Adding EN signal on $memory\mem0[51]$3083 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[51]).
+Adding EN signal on $memory\mem0[52]$3085 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[52]).
+Adding EN signal on $memory\mem0[53]$3087 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[53]).
+Adding EN signal on $memory\mem0[54]$3089 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[54]).
+Adding EN signal on $memory\mem0[55]$3091 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[55]).
+Adding EN signal on $memory\mem0[56]$3093 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[56]).
+Adding EN signal on $memory\mem0[57]$3095 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[57]).
+Adding EN signal on $memory\mem0[58]$3097 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[58]).
+Adding EN signal on $memory\mem0[59]$3099 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[59]).
+Adding EN signal on $memory\mem0[60]$3101 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[60]).
+Adding EN signal on $memory\mem0[61]$3103 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[61]).
+Adding EN signal on $memory\mem0[62]$3105 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[62]).
+Adding EN signal on $memory\mem0[63]$3107 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[63]).
+Adding EN signal on $memory\mem0[64]$3109 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[64]).
+Adding EN signal on $memory\mem0[65]$3111 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[65]).
+Adding EN signal on $memory\mem0[66]$3113 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[66]).
+Adding EN signal on $memory\mem0[67]$3115 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[67]).
+Adding EN signal on $memory\mem0[68]$3117 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[68]).
+Adding EN signal on $memory\mem0[69]$3119 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[69]).
+Adding EN signal on $memory\mem0[70]$3121 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[70]).
+Adding EN signal on $memory\mem0[71]$3123 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[71]).
+Adding EN signal on $memory\mem0[72]$3125 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[72]).
+Adding EN signal on $memory\mem0[73]$3127 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[73]).
+Adding EN signal on $memory\mem0[74]$3129 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[74]).
+Adding EN signal on $memory\mem0[75]$3131 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[75]).
+Adding EN signal on $memory\mem0[76]$3133 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[76]).
+Adding EN signal on $memory\mem0[77]$3135 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[77]).
+Adding EN signal on $memory\mem0[78]$3137 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[78]).
+Adding EN signal on $memory\mem0[79]$3139 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[79]).
+Adding EN signal on $memory\mem0[80]$3141 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[80]).
+Adding EN signal on $memory\mem0[81]$3143 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[81]).
+Adding EN signal on $memory\mem0[82]$3145 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[82]).
+Adding EN signal on $memory\mem0[83]$3147 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[83]).
+Adding EN signal on $memory\mem0[84]$3149 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[84]).
+Adding EN signal on $memory\mem0[85]$3151 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[85]).
+Adding EN signal on $memory\mem0[86]$3153 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[86]).
+Adding EN signal on $memory\mem0[87]$3155 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[87]).
+Adding EN signal on $memory\mem0[88]$3157 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[88]).
+Adding EN signal on $memory\mem0[89]$3159 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[89]).
+Adding EN signal on $memory\mem0[90]$3161 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[90]).
+Adding EN signal on $memory\mem0[91]$3163 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[91]).
+Adding EN signal on $memory\mem0[92]$3165 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[92]).
+Adding EN signal on $memory\mem0[93]$3167 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[93]).
+Adding EN signal on $memory\mem0[94]$3169 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[94]).
+Adding EN signal on $memory\mem0[95]$3171 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[95]).
+Adding EN signal on $memory\mem0[96]$3173 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[96]).
+Adding EN signal on $memory\mem0[97]$3175 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[97]).
+Adding EN signal on $memory\mem0[98]$3177 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[98]).
+Adding EN signal on $memory\mem0[99]$3179 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[99]).
+Adding EN signal on $memory\mem0[100]$3181 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[100]).
+Adding EN signal on $memory\mem0[101]$3183 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[101]).
+Adding EN signal on $memory\mem0[102]$3185 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[102]).
+Adding EN signal on $memory\mem0[103]$3187 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[103]).
+Adding EN signal on $memory\mem0[104]$3189 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[104]).
+Adding EN signal on $memory\mem0[105]$3191 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[105]).
+Adding EN signal on $memory\mem0[106]$3193 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[106]).
+Adding EN signal on $memory\mem0[107]$3195 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[107]).
+Adding EN signal on $memory\mem0[108]$3197 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[108]).
+Adding EN signal on $memory\mem0[109]$3199 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[109]).
+Adding EN signal on $memory\mem0[110]$3201 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[110]).
+Adding EN signal on $memory\mem0[111]$3203 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[111]).
+Adding EN signal on $memory\mem0[112]$3205 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[112]).
+Adding EN signal on $memory\mem0[113]$3207 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[113]).
+Adding EN signal on $memory\mem0[114]$3209 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[114]).
+Adding EN signal on $memory\mem0[115]$3211 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[115]).
+Adding EN signal on $memory\mem0[116]$3213 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[116]).
+Adding EN signal on $memory\mem0[117]$3215 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[117]).
+Adding EN signal on $memory\mem0[118]$3217 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[118]).
+Adding EN signal on $memory\mem0[119]$3219 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[119]).
+Adding EN signal on $memory\mem0[120]$3221 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[120]).
+Adding EN signal on $memory\mem0[121]$3223 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[121]).
+Adding EN signal on $memory\mem0[122]$3225 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[122]).
+Adding EN signal on $memory\mem0[123]$3227 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[123]).
+Adding EN signal on $memory\mem0[124]$3229 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[124]).
+Adding EN signal on $memory\mem0[125]$3231 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[125]).
+Adding EN signal on $memory\mem0[126]$3233 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[126]).
+Adding EN signal on $memory\mem0[127]$3235 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[127]).
+Adding EN signal on $memory\mem0[128]$3237 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[128]).
+Adding EN signal on $memory\mem0[129]$3239 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[129]).
+Adding EN signal on $memory\mem0[130]$3241 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[130]).
+Adding EN signal on $memory\mem0[131]$3243 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[131]).
+Adding EN signal on $memory\mem0[132]$3245 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[132]).
+Adding EN signal on $memory\mem0[133]$3247 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[133]).
+Adding EN signal on $memory\mem0[134]$3249 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[134]).
+Adding EN signal on $memory\mem0[135]$3251 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[135]).
+Adding EN signal on $memory\mem0[136]$3253 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[136]).
+Adding EN signal on $memory\mem0[137]$3255 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[137]).
+Adding EN signal on $memory\mem0[138]$3257 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[138]).
+Adding EN signal on $memory\mem0[139]$3259 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[139]).
+Adding EN signal on $memory\mem0[140]$3261 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[140]).
+Adding EN signal on $memory\mem0[141]$3263 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[141]).
+Adding EN signal on $memory\mem0[142]$3265 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[142]).
+Adding EN signal on $memory\mem0[143]$3267 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[143]).
+Adding EN signal on $memory\mem0[144]$3269 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[144]).
+Adding EN signal on $memory\mem0[145]$3271 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[145]).
+Adding EN signal on $memory\mem0[146]$3273 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[146]).
+Adding EN signal on $memory\mem0[147]$3275 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[147]).
+Adding EN signal on $memory\mem0[148]$3277 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[148]).
+Adding EN signal on $memory\mem0[149]$3279 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[149]).
+Adding EN signal on $memory\mem0[150]$3281 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[150]).
+Adding EN signal on $memory\mem0[151]$3283 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[151]).
+Adding EN signal on $memory\mem0[152]$3285 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[152]).
+Adding EN signal on $memory\mem0[153]$3287 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[153]).
+Adding EN signal on $memory\mem0[154]$3289 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[154]).
+Adding EN signal on $memory\mem0[155]$3291 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[155]).
+Adding EN signal on $memory\mem0[156]$3293 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[156]).
+Adding EN signal on $memory\mem0[157]$3295 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[157]).
+Adding EN signal on $memory\mem0[158]$3297 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[158]).
+Adding EN signal on $memory\mem0[159]$3299 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[159]).
+Adding EN signal on $memory\mem0[160]$3301 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[160]).
+Adding EN signal on $memory\mem0[161]$3303 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[161]).
+Adding EN signal on $memory\mem0[162]$3305 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[162]).
+Adding EN signal on $memory\mem0[163]$3307 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[163]).
+Adding EN signal on $memory\mem0[164]$3309 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[164]).
+Adding EN signal on $memory\mem0[165]$3311 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[165]).
+Adding EN signal on $memory\mem0[166]$3313 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[166]).
+Adding EN signal on $memory\mem0[167]$3315 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[167]).
+Adding EN signal on $memory\mem0[168]$3317 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[168]).
+Adding EN signal on $memory\mem0[169]$3319 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[169]).
+Adding EN signal on $memory\mem0[170]$3321 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[170]).
+Adding EN signal on $memory\mem0[171]$3323 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[171]).
+Adding EN signal on $memory\mem0[172]$3325 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[172]).
+Adding EN signal on $memory\mem0[173]$3327 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[173]).
+Adding EN signal on $memory\mem0[174]$3329 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[174]).
+Adding EN signal on $memory\mem0[175]$3331 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[175]).
+Adding EN signal on $memory\mem0[176]$3333 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[176]).
+Adding EN signal on $memory\mem0[177]$3335 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[177]).
+Adding EN signal on $memory\mem0[178]$3337 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[178]).
+Adding EN signal on $memory\mem0[179]$3339 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[179]).
+Adding EN signal on $memory\mem0[180]$3341 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[180]).
+Adding EN signal on $memory\mem0[181]$3343 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[181]).
+Adding EN signal on $memory\mem0[182]$3345 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[182]).
+Adding EN signal on $memory\mem0[183]$3347 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[183]).
+Adding EN signal on $memory\mem0[184]$3349 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[184]).
+Adding EN signal on $memory\mem0[185]$3351 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[185]).
+Adding EN signal on $memory\mem0[186]$3353 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[186]).
+Adding EN signal on $memory\mem0[187]$3355 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[187]).
+Adding EN signal on $memory\mem0[188]$3357 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[188]).
+Adding EN signal on $memory\mem0[189]$3359 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[189]).
+Adding EN signal on $memory\mem0[190]$3361 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[190]).
+Adding EN signal on $memory\mem0[191]$3363 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[191]).
+Adding EN signal on $memory\mem0[192]$3365 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[192]).
+Adding EN signal on $memory\mem0[193]$3367 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[193]).
+Adding EN signal on $memory\mem0[194]$3369 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[194]).
+Adding EN signal on $memory\mem0[195]$3371 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[195]).
+Adding EN signal on $memory\mem0[196]$3373 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[196]).
+Adding EN signal on $memory\mem0[197]$3375 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[197]).
+Adding EN signal on $memory\mem0[198]$3377 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[198]).
+Adding EN signal on $memory\mem0[199]$3379 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[199]).
+Adding EN signal on $memory\mem0[200]$3381 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[200]).
+Adding EN signal on $memory\mem0[201]$3383 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[201]).
+Adding EN signal on $memory\mem0[202]$3385 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[202]).
+Adding EN signal on $memory\mem0[203]$3387 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[203]).
+Adding EN signal on $memory\mem0[204]$3389 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[204]).
+Adding EN signal on $memory\mem0[205]$3391 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[205]).
+Adding EN signal on $memory\mem0[206]$3393 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[206]).
+Adding EN signal on $memory\mem0[207]$3395 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[207]).
+Adding EN signal on $memory\mem0[208]$3397 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[208]).
+Adding EN signal on $memory\mem0[209]$3399 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[209]).
+Adding EN signal on $memory\mem0[210]$3401 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[210]).
+Adding EN signal on $memory\mem0[211]$3403 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[211]).
+Adding EN signal on $memory\mem0[212]$3405 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[212]).
+Adding EN signal on $memory\mem0[213]$3407 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[213]).
+Adding EN signal on $memory\mem0[214]$3409 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[214]).
+Adding EN signal on $memory\mem0[215]$3411 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[215]).
+Adding EN signal on $memory\mem0[216]$3413 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[216]).
+Adding EN signal on $memory\mem0[217]$3415 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[217]).
+Adding EN signal on $memory\mem0[218]$3417 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[218]).
+Adding EN signal on $memory\mem0[219]$3419 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[219]).
+Adding EN signal on $memory\mem0[220]$3421 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[220]).
+Adding EN signal on $memory\mem0[221]$3423 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[221]).
+Adding EN signal on $memory\mem0[222]$3425 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[222]).
+Adding EN signal on $memory\mem0[223]$3427 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[223]).
+Adding EN signal on $memory\mem0[224]$3429 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[224]).
+Adding EN signal on $memory\mem0[225]$3431 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[225]).
+Adding EN signal on $memory\mem0[226]$3433 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[226]).
+Adding EN signal on $memory\mem0[227]$3435 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[227]).
+Adding EN signal on $memory\mem0[228]$3437 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[228]).
+Adding EN signal on $memory\mem0[229]$3439 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[229]).
+Adding EN signal on $memory\mem0[230]$3441 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[230]).
+Adding EN signal on $memory\mem0[231]$3443 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[231]).
+Adding EN signal on $memory\mem0[232]$3445 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[232]).
+Adding EN signal on $memory\mem0[233]$3447 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[233]).
+Adding EN signal on $memory\mem0[234]$3449 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[234]).
+Adding EN signal on $memory\mem0[235]$3451 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[235]).
+Adding EN signal on $memory\mem0[236]$3453 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[236]).
+Adding EN signal on $memory\mem0[237]$3455 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[237]).
+Adding EN signal on $memory\mem0[238]$3457 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[238]).
+Adding EN signal on $memory\mem0[239]$3459 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[239]).
+Adding EN signal on $memory\mem0[240]$3461 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[240]).
+Adding EN signal on $memory\mem0[241]$3463 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[241]).
+Adding EN signal on $memory\mem0[242]$3465 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[242]).
+Adding EN signal on $memory\mem0[243]$3467 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[243]).
+Adding EN signal on $memory\mem0[244]$3469 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[244]).
+Adding EN signal on $memory\mem0[245]$3471 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[245]).
+Adding EN signal on $memory\mem0[246]$3473 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[246]).
+Adding EN signal on $memory\mem0[247]$3475 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[247]).
+Adding EN signal on $memory\mem0[248]$3477 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[248]).
+Adding EN signal on $memory\mem0[249]$3479 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[249]).
+Adding EN signal on $memory\mem0[250]$3481 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[250]).
+Adding EN signal on $memory\mem0[251]$3483 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[251]).
+Adding EN signal on $memory\mem0[252]$3485 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[252]).
+Adding EN signal on $memory\mem0[253]$3487 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[253]).
+Adding EN signal on $memory\mem0[254]$3489 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[254]).
+Adding EN signal on $memory\mem0[255]$3491 ($dff) from module scratchpad_dbuf (D = \wr_data, Q = \mem0[255]).
+
+2.19.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \scratchpad_dbuf..
+Removed 512 unused cells and 512 unused wires.
+<suppressed ~513 debug messages>
+
+2.19.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module scratchpad_dbuf.
+
+2.19.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.19.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \scratchpad_dbuf..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~514 debug messages>
+
+2.19.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \scratchpad_dbuf.
+Performed a total of 0 changes.
+
+2.19.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\scratchpad_dbuf'.
+Computing hashes of 1855 cells of `\scratchpad_dbuf'.
+Finding duplicate cells in `\scratchpad_dbuf'.
+Removed a total of 0 cells.
+
+2.19.22. Executing OPT_SHARE pass.
+
+2.19.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.19.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \scratchpad_dbuf..
+
+2.19.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module scratchpad_dbuf.
+
+2.19.26. Finished fast OPT passes. (There is nothing left to do.)
+
+2.20. Executing TECHMAP pass (map to technology primitives).
+
+2.20.1. Executing Verilog-2005 frontend: /home/bomma/oss-cad-suite/lib/../share/yosys/techmap.v
+Parsing Verilog input from `/home/bomma/oss-cad-suite/lib/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+2.20.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $sdff.
+Using extmapper simplemap for cells of type $sdffe.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $mux.
+No more expansions possible.
+<suppressed ~1932 debug messages>
+
+2.21. Executing OPT pass (performing simple optimizations).
+
+2.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module scratchpad_dbuf.
+
+2.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\scratchpad_dbuf'.
+Computing hashes of 33599 cells of `\scratchpad_dbuf'.
+Finding duplicate cells in `\scratchpad_dbuf'.
+Computing hashes of 33598 cells of `\scratchpad_dbuf'.
+Finding duplicate cells in `\scratchpad_dbuf'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+2.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \scratchpad_dbuf..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+2.21.5. Finished fast OPT passes.
+
+2.22. Executing ABC pass (technology mapping using ABC).
+
+2.22.1. Extracting gate netlist of module `\scratchpad_dbuf' to `<abc-temp-dir>/input.blif'..
+
+2.22.1.1. Executed ABC.
+Extracted 17180 gates and 33583 wires to a netlist network with 16402 inputs and 545 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Sep 12 2026 05:01:00)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+2.22.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:     7967
+ABC RESULTS:            ANDNOT cells:      120
+ABC RESULTS:               MUX cells:     7599
+ABC RESULTS:              NAND cells:    12621
+ABC RESULTS:               NOR cells:        4
+ABC RESULTS:               NOT cells:        9
+ABC RESULTS:                OR cells:     3440
+ABC RESULTS:             ORNOT cells:     2925
+ABC RESULTS:        internal signals:    16636
+ABC RESULTS:           input signals:    16402
+ABC RESULTS:          output signals:      545
+Removing temp directory.
+Removing global temp directory.
+
+2.23. Executing OPT pass (performing simple optimizations).
+
+2.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module scratchpad_dbuf.
+<suppressed ~1671 debug messages>
+
+2.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\scratchpad_dbuf'.
+Computing hashes of 51103 cells of `\scratchpad_dbuf'.
+Finding duplicate cells in `\scratchpad_dbuf'.
+Removed a total of 0 cells.
+
+2.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \scratchpad_dbuf..
+Removed 0 unused cells and 17772 unused wires.
+<suppressed ~1 debug messages>
+
+2.23.5. Finished fast OPT passes.
+
+2.24. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `scratchpad_dbuf'. Setting top module to scratchpad_dbuf.
+
+2.24.1. Analyzing design hierarchy..
+Top module:  \scratchpad_dbuf
+
+2.24.2. Analyzing design hierarchy..
+Top module:  \scratchpad_dbuf
+Removed 0 unused modules.
+
+2.25. Printing statistics.
+
+=== scratchpad_dbuf ===
+
+        +----------Local Count, excluding submodules.
+        | 
+    35179 wires
+    51158 wire bits
+      526 public wires
+    16474 public wire bits
+       13 ports
+       89 port bits
+    51103 cells
+      120   $_ANDNOT_
+     7967   $_AND_
+    16384   $_DFFE_PP_
+     7599   $_MUX_
+    12621   $_NAND_
+        4   $_NOR_
+        9   $_NOT_
+     2925   $_ORNOT_
+     3440   $_OR_
+       32   $_SDFFE_PP0P_
+        1   $_SDFFE_PP1P_
+        1   $_SDFF_PP0_
+
+2.26. Executing CHECK pass (checking for obvious problems).
+Checking module scratchpad_dbuf...
+Found and reported 0 problems.
+
+3. Executing DFFLIBMAP pass (mapping DFF/DLATCH cells to sequential cells from liberty file).
+  cell sg13g2_dfrbpq_1 (noninv, pins=4, area=48.99) is a direct match for cell type $_DFF_PN0_.
+  cell sg13g2_dlhq_1 (noninv, pins=3, area=30.84) is a direct match for cell type $_DLATCH_P_.
+  cell sg13g2_dllrq_1 (noninv, pins=4, area=29.03) is a direct match for cell type $_DLATCH_NN0_.
+  cell sg13g2_dlhrq_1 (noninv, pins=4, area=27.22) is a direct match for cell type $_DLATCH_PN0_.
+  final dff/dlatch cell mappings:
+    unmapped dff/dlatch cell: $_DFF_N_
+    unmapped dff/dlatch cell: $_DFF_P_
+    unmapped dff/dlatch cell: $_DFF_NN0_
+    unmapped dff/dlatch cell: $_DFF_NN1_
+    unmapped dff/dlatch cell: $_DFF_NP0_
+    unmapped dff/dlatch cell: $_DFF_NP1_
+    \sg13g2_dfrbpq_1 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    unmapped dff/dlatch cell: $_DFF_PN1_
+    unmapped dff/dlatch cell: $_DFF_PP0_
+    unmapped dff/dlatch cell: $_DFF_PP1_
+    unmapped dff/dlatch cell: $_DFFE_NN_
+    unmapped dff/dlatch cell: $_DFFE_NP_
+    unmapped dff/dlatch cell: $_DFFE_PN_
+    unmapped dff/dlatch cell: $_DFFE_PP_
+    unmapped dff/dlatch cell: $_DFFSR_NNN_
+    unmapped dff/dlatch cell: $_DFFSR_NNP_
+    unmapped dff/dlatch cell: $_DFFSR_NPN_
+    unmapped dff/dlatch cell: $_DFFSR_NPP_
+    unmapped dff/dlatch cell: $_DFFSR_PNN_
+    unmapped dff/dlatch cell: $_DFFSR_PNP_
+    unmapped dff/dlatch cell: $_DFFSR_PPN_
+    unmapped dff/dlatch cell: $_DFFSR_PPP_
+    unmapped dff/dlatch cell: $_DLATCH_N_
+    \sg13g2_dlhq_1 _DLATCH_P_ (.D( D), .GATE( E), .Q( Q));
+    \sg13g2_dllrq_1 _DLATCH_NN0_ (.D( D), .GATE_N( E), .Q( Q), .RESET_B( R));
+    unmapped dff/dlatch cell: $_DLATCH_NN1_
+    unmapped dff/dlatch cell: $_DLATCH_NP0_
+    unmapped dff/dlatch cell: $_DLATCH_NP1_
+    \sg13g2_dlhrq_1 _DLATCH_PN0_ (.D( D), .GATE( E), .Q( Q), .RESET_B( R));
+    unmapped dff/dlatch cell: $_DLATCH_PN1_
+    unmapped dff/dlatch cell: $_DLATCH_PP0_
+    unmapped dff/dlatch cell: $_DLATCH_PP1_
+    unmapped dff/dlatch cell: $_DLATCHSR_NNN_
+    unmapped dff/dlatch cell: $_DLATCHSR_NNP_
+    unmapped dff/dlatch cell: $_DLATCHSR_NPN_
+    unmapped dff/dlatch cell: $_DLATCHSR_NPP_
+    unmapped dff/dlatch cell: $_DLATCHSR_PNN_
+    unmapped dff/dlatch cell: $_DLATCHSR_PNP_
+    unmapped dff/dlatch cell: $_DLATCHSR_PPN_
+    unmapped dff/dlatch cell: $_DLATCHSR_PPP_
+
+3.1. Executing DFFLEGALIZE pass (convert FFs and LATCHes to types supported by the target).
+<suppressed ~4 debug messages>
+Mapping DFF/DLATCH cells in module `\scratchpad_dbuf':
+  mapped 16418 $_DFF_PN0_ cells to \sg13g2_dfrbpq_1 cells.
+
+4. Executing ABC pass (technology mapping using ABC).
+
+4.1. Extracting gate netlist of module `\scratchpad_dbuf' to `<abc-temp-dir>/input.blif'..
+ABC: using cached merged SCL: /tmp/yosys-liberty-scl-cache-1000/yosys_merged_0a0e92c0.scl (1 files)
+
+4.1.1. Executed ABC.
+Extracted 51136 gates and 67607 wires to a netlist network with 16469 inputs and 16419 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Sep 12 2026 05:01:00)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_scl /tmp/yosys-liberty-scl-cache-1000/yosys_merged_0a0e92c0.scl 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + retime -o -D 3000 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf -D 3000 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+4.1.2. Re-integrating ABC results.
+ABC RESULTS:     sg13g2_a21o_1 cells:      224
+ABC RESULTS:    sg13g2_a21oi_1 cells:     2855
+ABC RESULTS:   sg13g2_a221oi_1 cells:      643
+ABC RESULTS:    sg13g2_a22oi_1 cells:      124
+ABC RESULTS:     sg13g2_and2_1 cells:      232
+ABC RESULTS:     sg13g2_and3_1 cells:        5
+ABC RESULTS:      sg13g2_inv_1 cells:      406
+ABC RESULTS:     sg13g2_mux2_1 cells:    16896
+ABC RESULTS:     sg13g2_mux4_1 cells:     3301
+ABC RESULTS:    sg13g2_nand2_1 cells:     1471
+ABC RESULTS:   sg13g2_nand2b_1 cells:      207
+ABC RESULTS:    sg13g2_nand3_1 cells:      455
+ABC RESULTS:   sg13g2_nand3b_1 cells:       15
+ABC RESULTS:     sg13g2_nor2_1 cells:     1022
+ABC RESULTS:    sg13g2_nor2b_1 cells:      123
+ABC RESULTS:     sg13g2_nor3_1 cells:      546
+ABC RESULTS:    sg13g2_o21ai_1 cells:     2323
+ABC RESULTS:      sg13g2_or2_1 cells:      148
+ABC RESULTS:      sg13g2_or3_1 cells:       34
+ABC RESULTS:    sg13g2_xnor2_1 cells:        1
+ABC RESULTS:        internal signals:    34719
+ABC RESULTS:           input signals:    16469
+ABC RESULTS:          output signals:    16419
+Removing temp directory.
+Removing global temp directory.
+Removed 0 unused cells and 67574 unused wires.
+
+5. Printing statistics.
+
+=== scratchpad_dbuf ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+    31556        - wires
+    47504        - wire bits
+      526        - public wires
+    16474        - public wire bits
+       13        - ports
+       89        - port bits
+    47449 1.33E+06 cells
+      224 2.84E+03   sg13g2_a21o_1
+     2855 2.59E+04   sg13g2_a21oi_1
+      643 9.33E+03   sg13g2_a221oi_1
+      124 1.35E+03   sg13g2_a22oi_1
+      232  2.1E+03   sg13g2_and2_1
+        5   63.504   sg13g2_and3_1
+    16418 8.04E+05   sg13g2_dfrbpq_1
+      406 2.21E+03   sg13g2_inv_1
+    16896 3.07E+05   sg13g2_mux2_1
+     3301 1.26E+05   sg13g2_mux4_1
+     1471 1.07E+04   sg13g2_nand2_1
+      207 1.88E+03   sg13g2_nand2b_1
+      455  4127.76   sg13g2_nand3_1
+       15  190.512   sg13g2_nand3b_1
+     1022 7.42E+03   sg13g2_nor2_1
+      123 1.12E+03   sg13g2_nor2b_1
+      546 4.95E+03   sg13g2_nor3_1
+     2323 2.11E+04   sg13g2_o21ai_1
+      148 1.34E+03   sg13g2_or2_1
+       34  431.827   sg13g2_or3_1
+        1   14.515   sg13g2_xnor2_1
+
+   Chip area for module '\scratchpad_dbuf': 1333659.146400
+     of which used for sequential elements: 804298.118400 (60.31%)
+
+6. Executing Verilog backend.
+
+6.1. Executing BMUXMAP pass.
+
+6.2. Executing DEMUXMAP pass.
+Dumping module `\scratchpad_dbuf'.
+
+End of script. Logfile hash: 0acbe9334b, time: 22.28s, user: 4.92s, system: 0.53s, MEM: 196.68 MB peak
+Yosys 0.69+24 (git sha1 d0e71cfb7-dirty, Release, Clang /usr/bin/clang++ 21.1.8)
+Time spent: 82% 2x abc (18 sec), 4% 17x opt_clean (0 sec), ...

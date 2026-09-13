@@ -1,0 +1,71 @@
+OpenSTA 3.1.0 d97587f669 Copyright (c) 2026, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details. 
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+Startpoint: act_in_flat[31] (input port clocked by clk)
+Endpoint: _19477_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.8800    0.8800 ^ input external delay
+   0.0000    0.8800 ^ act_in_flat[31] (in)
+   0.0343    0.9143 v _18180_/Y (sg13g2_o21ai_1)
+   1.3341    2.2484 ^ _18181_/Y (sg13g2_a21oi_1)
+   0.3581    2.6065 ^ _18631_/Y (sg13g2_xnor2_1)
+   0.2084    2.8149 ^ _18633_/X (sg13g2_xor2_1)
+   0.1414    2.9563 ^ _18634_/Y (sg13g2_xnor2_1)
+   0.1677    3.1240 ^ _18673_/X (sg13g2_xor2_1)
+   0.1331    3.2571 ^ _18676_/Y (sg13g2_xnor2_1)
+   0.1609    3.4181 ^ _18710_/X (sg13g2_xor2_1)
+   0.1217    3.5398 ^ _18741_/Y (sg13g2_xnor2_1)
+   0.0626    3.6024 v _18742_/Y (sg13g2_a21oi_1)
+   0.1094    3.7118 ^ _18823_/Y (sg13g2_nor2b_1)
+   0.1215    3.8333 v _18824_/Y (sg13g2_a21oi_1)
+   0.1831    4.0164 ^ _18827_/Y (sg13g2_o21ai_1)
+   0.1034    4.1197 v _18832_/Y (sg13g2_a221oi_1)
+   0.1509    4.2706 v _18833_/Y (sg13g2_nand3b_1)
+   0.1576    4.4283 v _18836_/X (sg13g2_a21o_1)
+   0.1343    4.5626 v _18839_/X (sg13g2_a21o_1)
+   0.1341    4.6967 v _18842_/X (sg13g2_a21o_1)
+   0.1341    4.8308 v _18845_/X (sg13g2_a21o_1)
+   0.1337    4.9645 v _18848_/X (sg13g2_a21o_1)
+   0.1417    5.1063 v _18849_/X (sg13g2_a21o_1)
+   0.1211    5.2274 v _18851_/X (sg13g2_a21o_1)
+   0.1074    5.3348 ^ _18863_/Y (sg13g2_a21oi_1)
+   0.1112    5.4460 v _18871_/Y (sg13g2_a21oi_1)
+   0.1752    5.6212 v _18880_/X (sg13g2_or3_1)
+   0.1152    5.7365 ^ _18883_/Y (sg13g2_a21oi_1)
+   0.1075    5.8440 v _18885_/Y (sg13g2_o21ai_1)
+   0.1358    5.9798 ^ _18889_/Y (sg13g2_a21oi_1)
+   0.1224    6.1022 v _18890_/Y (sg13g2_o21ai_1)
+   0.1367    6.2390 v _18894_/X (sg13g2_a21o_1)
+   0.1133    6.3523 ^ _18895_/Y (sg13g2_a21oi_1)
+   0.1024    6.4547 v _18911_/Y (sg13g2_o21ai_1)
+   0.0977    6.5524 v _19017_/X (sg13g2_and3_1)
+   0.0786    6.6310 ^ _19019_/Y (sg13g2_nor3_1)
+   0.0000    6.6310 ^ _19477_/D (sg13g2_dfrbpq_1)
+             6.6310   data arrival time
+
+   4.4000    4.4000   clock clk (rise edge)
+   0.0000    4.4000   clock network delay (ideal)
+   0.0000    4.4000   clock reconvergence pessimism
+             4.4000 ^ _19477_/CLK (sg13g2_dfrbpq_1)
+  -0.1305    4.2695   library setup time
+             4.2695   data required time
+-------------------------------------------------------------
+             4.2695   data required time
+            -6.6310   data arrival time
+-------------------------------------------------------------
+            -2.3615   slack (VIOLATED)
+
+
+---SUMMARY---
+wns max -2.36
+tns max -101.35
+worst slack max -2.36

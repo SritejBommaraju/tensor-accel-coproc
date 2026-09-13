@@ -1,0 +1,43 @@
+
+5. Printing statistics.
+
+=== top ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+    47017        - wires
+    60574        - wire bits
+      721        - public wires
+    14278        - public wire bits
+        6        - ports
+      835        - port bits
+    49056 6.09E+05 cells
+      909 1.15E+04   sg13g2_a21o_1
+     4080  3.7E+04   sg13g2_a21oi_1
+       58  841.882   sg13g2_a221oi_1
+      957 1.04E+04   sg13g2_a22oi_1
+     1157 1.05E+04   sg13g2_and2_1
+      492 6.25E+03   sg13g2_and3_1
+      363 5.27E+03   sg13g2_and4_1
+     2760 1.35E+05   sg13g2_dfrbpq_1
+     2507 1.36E+04   sg13g2_inv_1
+       37  671.328   sg13g2_mux2_1
+     4770 3.46E+04   sg13g2_nand2_1
+     3077 2.79E+04   sg13g2_nand2b_1
+      994 9.02E+03   sg13g2_nand3_1
+      137  1740.01   sg13g2_nand3b_1
+      293 3.19E+03   sg13g2_nand4_1
+     4402 3.19E+04   sg13g2_nor2_1
+     2706 2.45E+04   sg13g2_nor2b_1
+     1200  10886.4   sg13g2_nor3_1
+      144 1.57E+03   sg13g2_nor4_1
+     4152 3.77E+04   sg13g2_o21ai_1
+     1025   9298.8   sg13g2_or2_1
+      412  5232.73   sg13g2_or3_1
+     8026 1.16E+05   sg13g2_xnor2_1
+     4398 6.38E+04   sg13g2_xor2_1
+
+   Chip area for module '\top': 609290.148600
+     of which used for sequential elements: 135209.088000 (22.19%)
+

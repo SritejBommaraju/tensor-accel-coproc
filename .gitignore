@@ -9,3 +9,9 @@ sim/vectors/
 *.log
 build/
 __pycache__/
+pd/out/*_netlist.v
+pd/out/*_netlist.sta.v
+!pd/out/*.log
+sim/power/vcd/
+sim/power/tb_power_*
+pd/librelane/runs/

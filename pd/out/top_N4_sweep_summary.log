@@ -1,0 +1,19 @@
+period=4.0ns  wns=-2.68
+period=4.200ns  wns=-2.52
+period=4.400ns  wns=-2.36
+period=4.600ns  wns=-2.20
+period=4.800ns  wns=-2.04
+period=5.000ns  wns=-1.88
+period=5.200ns  wns=-1.72
+period=5.400ns  wns=-1.56
+period=5.600ns  wns=-1.40
+period=5.800ns  wns=-1.24
+period=6.000ns  wns=-1.08
+period=6.200ns  wns=-0.92
+period=6.400ns  wns=-0.76
+period=6.600ns  wns=-0.60
+period=6.800ns  wns=-0.44
+period=7.000ns  wns=-0.28
+period=7.200ns  wns=-0.12
+period=7.400ns  wns=0.00
+CONVERGED: period=7.400ns -> fmax=135.14MHz (log: out/top_N4_sweep_7.400ns.log)

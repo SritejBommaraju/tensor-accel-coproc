@@ -1,0 +1,29 @@
+{
+  "_comment": "All energy numbers below are ESTIMATES for a first-order energy/roofline model, not silicon-measured or PDK-characterized values. Baseline is the widely-cited Horowitz ISSCC'14 'Computing's Energy Problem' 45nm numbers (8b add 0.03pJ, 8b mult 0.20pJ, 32b SRAM read/8KB 5pJ). Other nodes are derived by scaling switching energy E ~ C*V^2 ~ L^2 (quadratic feature-size scaling), which is a coarse approximation -- real node energy also depends on Vdd, threshold voltage, and PDK-specific process tuning not captured here.",
+  "target_freq_mhz": 500,
+  "target_freq_note": "500 MHz matches the freq_mhz used by sim/perf/tb_perf.cpp to fill the tops_at_freq column in results.csv (its default, never overridden by `make sweep`), so TOPS figures here are directly comparable to the CSV. This is NOT a claim that either node can close timing at 500MHz in real silicon -- 130nm sg13g2 in particular would typically target well under 200MHz for a design like this.",
+  "nodes": {
+    "sg13g2_130nm": {
+      "node_nm": 130,
+      "description": "IHP sg13g2 open-source 130nm BiCMOS PDK, digital logic corner (estimate)",
+      "scaling_factor_vs_45nm": 8.35,
+      "scaling_assumption": "E_130nm = E_45nm * (130/45)^2 = 8.35x, i.e. energy scales with the square of minimum feature size (capacitance ~ L, and this coarse model folds Vdd scaling into the same L^2 term since older nodes also run at higher Vdd).",
+      "energy_mac_int8_pJ": 1.921,
+      "energy_reg_bitflip_pJ": 1.253,
+      "energy_sram_byte_read_pJ": 10.44,
+      "energy_sram_byte_write_pJ": 10.44,
+      "source": "Horowitz ISSCC'14 45nm baseline (8b MAC = 8b add 0.03pJ + 8b mult 0.20pJ = 0.23pJ; 32b SRAM read from an 8KB array = 5pJ -> 1.25pJ/byte; register bit-flip is not in Horowitz's table, estimated here as ~0.65x the SRAM-byte-read energy per bit as a rough clocked-flop lower bound) scaled to 130nm by the (130/45)^2 rule above. SRAM write assumed equal to read absent a per-op breakdown -- a real 130nm SRAM macro (e.g. IHP's sg13g2 SRAM compiler output) would need to be characterized to replace this."
+    },
+    "generic_28nm": {
+      "node_nm": 28,
+      "description": "Generic bulk 28nm reference point (estimate), for comparison only -- not IHP sg13g2",
+      "scaling_factor_vs_45nm": 0.45,
+      "scaling_assumption": "E_28nm = E_45nm * (28/45)^2 approx 0.45x (rounded down slightly from 0.386 to account for the fact that voltage scaling slows below ~45nm, so pure quadratic feature-size scaling understates 28nm energy a bit); same (130/45)^2-style capacitance model as above, applied in the shrink direction.",
+      "energy_mac_int8_pJ": 0.1035,
+      "energy_reg_bitflip_pJ": 0.0675,
+      "energy_sram_byte_read_pJ": 0.5625,
+      "energy_sram_byte_write_pJ": 0.5625,
+      "source": "Same Horowitz ISSCC'14 45nm baseline as sg13g2_130nm above, scaled down by the 0.45x factor stated in scaling_assumption. Included purely as an aged-but-common 'modern-ish' reference point to show the energy gap vs. the 130nm target node; not a claim about any specific 28nm PDK."
+    }
+  }
+}

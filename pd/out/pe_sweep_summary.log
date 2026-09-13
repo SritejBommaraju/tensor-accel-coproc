@@ -1,0 +1,9 @@
+period=6.0ns  wns=-0.97
+period=6.200ns  wns=-0.81
+period=6.400ns  wns=-0.65
+period=6.600ns  wns=-0.49
+period=6.800ns  wns=-0.33
+period=7.000ns  wns=-0.17
+period=7.200ns  wns=-0.01
+period=7.400ns  wns=0.00
+CONVERGED: period=7.400ns -> fmax=135.14MHz (log: out/pe_sweep_7.400ns.log)

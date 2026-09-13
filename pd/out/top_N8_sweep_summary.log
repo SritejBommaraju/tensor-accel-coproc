@@ -1,0 +1,7 @@
+period=20.0ns  wns=-1.50
+period=20.400ns  wns=-1.18
+period=20.800ns  wns=-0.86
+period=21.200ns  wns=-0.54
+period=21.600ns  wns=-0.22
+period=22.000ns  wns=0.00
+CONVERGED: period=22.000ns -> fmax=45.45MHz (log: out/top_N8_sweep_22.000ns.log)

@@ -1,0 +1,7 @@
+N images: 200
+RTL int8 accuracy:   98.50%
+numpy int8 accuracy: 98.50%
+fp32 accuracy:       98.50%
+bit-exact vs numpy int8 matmul: True (100.0000% of 14800 accumulators)
+tiles=3184 cycles=665456 MACs=10163200 MACs/cycle=15.273
+wall-clock: 3.60s

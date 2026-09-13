@@ -1,0 +1,2937 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69+24 (git sha1 d0e71cfb7-dirty, Release, Clang /usr/bin/clang++ 21.1.8)
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+
+1. Executing SLANG frontend.
+Top level design units:
+    top
+
+
+Build succeeded: 0 errors, 0 warnings
+
+1.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\top.$1219'.
+Found and cleaned up 1 empty switch in `\top.$1216'.
+Found and cleaned up 1 empty switch in `\top.$1201'.
+Found and cleaned up 1 empty switch in `\top.$1198'.
+Found and cleaned up 1 empty switch in `\top.$1183'.
+Found and cleaned up 1 empty switch in `\top.$1180'.
+Found and cleaned up 1 empty switch in `\top.$1165'.
+Found and cleaned up 1 empty switch in `\top.$1162'.
+Found and cleaned up 1 empty switch in `\top.$1147'.
+Found and cleaned up 1 empty switch in `\top.$1144'.
+Found and cleaned up 1 empty switch in `\top.$1129'.
+Found and cleaned up 1 empty switch in `\top.$1126'.
+Found and cleaned up 1 empty switch in `\top.$1111'.
+Found and cleaned up 1 empty switch in `\top.$1108'.
+Found and cleaned up 1 empty switch in `\top.$1093'.
+Found and cleaned up 1 empty switch in `\top.$1090'.
+Found and cleaned up 1 empty switch in `\top.$1075'.
+Found and cleaned up 1 empty switch in `\top.$1072'.
+Found and cleaned up 1 empty switch in `\top.$1057'.
+Found and cleaned up 1 empty switch in `\top.$1054'.
+Found and cleaned up 1 empty switch in `\top.$1039'.
+Found and cleaned up 1 empty switch in `\top.$1036'.
+Found and cleaned up 1 empty switch in `\top.$1021'.
+Found and cleaned up 1 empty switch in `\top.$1018'.
+Found and cleaned up 1 empty switch in `\top.$1003'.
+Found and cleaned up 1 empty switch in `\top.$1000'.
+Found and cleaned up 1 empty switch in `\top.$985'.
+Found and cleaned up 1 empty switch in `\top.$982'.
+Found and cleaned up 1 empty switch in `\top.$967'.
+Found and cleaned up 1 empty switch in `\top.$964'.
+Found and cleaned up 1 empty switch in `\top.$949'.
+Found and cleaned up 1 empty switch in `\top.$946'.
+Found and cleaned up 1 empty switch in `\top.$931'.
+Found and cleaned up 1 empty switch in `\top.$928'.
+Found and cleaned up 1 empty switch in `\top.$913'.
+Found and cleaned up 1 empty switch in `\top.$910'.
+Found and cleaned up 1 empty switch in `\top.$895'.
+Found and cleaned up 1 empty switch in `\top.$892'.
+Found and cleaned up 1 empty switch in `\top.$877'.
+Found and cleaned up 1 empty switch in `\top.$874'.
+Found and cleaned up 1 empty switch in `\top.$859'.
+Found and cleaned up 1 empty switch in `\top.$856'.
+Found and cleaned up 1 empty switch in `\top.$841'.
+Found and cleaned up 1 empty switch in `\top.$838'.
+Found and cleaned up 1 empty switch in `\top.$823'.
+Found and cleaned up 1 empty switch in `\top.$820'.
+Found and cleaned up 1 empty switch in `\top.$805'.
+Found and cleaned up 1 empty switch in `\top.$802'.
+Found and cleaned up 1 empty switch in `\top.$787'.
+Found and cleaned up 1 empty switch in `\top.$784'.
+Found and cleaned up 1 empty switch in `\top.$769'.
+Found and cleaned up 1 empty switch in `\top.$766'.
+Found and cleaned up 1 empty switch in `\top.$751'.
+Found and cleaned up 1 empty switch in `\top.$748'.
+Found and cleaned up 1 empty switch in `\top.$733'.
+Found and cleaned up 1 empty switch in `\top.$730'.
+Found and cleaned up 1 empty switch in `\top.$715'.
+Found and cleaned up 1 empty switch in `\top.$712'.
+Found and cleaned up 1 empty switch in `\top.$697'.
+Found and cleaned up 1 empty switch in `\top.$694'.
+Found and cleaned up 1 empty switch in `\top.$679'.
+Found and cleaned up 1 empty switch in `\top.$676'.
+Found and cleaned up 1 empty switch in `\top.$661'.
+Found and cleaned up 1 empty switch in `\top.$658'.
+Found and cleaned up 1 empty switch in `\top.$643'.
+Found and cleaned up 1 empty switch in `\top.$640'.
+Found and cleaned up 1 empty switch in `\top.$625'.
+Found and cleaned up 1 empty switch in `\top.$622'.
+Found and cleaned up 1 empty switch in `\top.$607'.
+Found and cleaned up 1 empty switch in `\top.$604'.
+Found and cleaned up 1 empty switch in `\top.$589'.
+Found and cleaned up 1 empty switch in `\top.$586'.
+Found and cleaned up 1 empty switch in `\top.$571'.
+Found and cleaned up 1 empty switch in `\top.$568'.
+Found and cleaned up 1 empty switch in `\top.$553'.
+Found and cleaned up 1 empty switch in `\top.$550'.
+Found and cleaned up 1 empty switch in `\top.$535'.
+Found and cleaned up 1 empty switch in `\top.$532'.
+Found and cleaned up 1 empty switch in `\top.$517'.
+Found and cleaned up 1 empty switch in `\top.$514'.
+Found and cleaned up 1 empty switch in `\top.$499'.
+Found and cleaned up 1 empty switch in `\top.$496'.
+Found and cleaned up 1 empty switch in `\top.$481'.
+Found and cleaned up 1 empty switch in `\top.$478'.
+Found and cleaned up 1 empty switch in `\top.$463'.
+Found and cleaned up 1 empty switch in `\top.$460'.
+Found and cleaned up 1 empty switch in `\top.$445'.
+Found and cleaned up 1 empty switch in `\top.$442'.
+Found and cleaned up 1 empty switch in `\top.$427'.
+Found and cleaned up 1 empty switch in `\top.$424'.
+Found and cleaned up 1 empty switch in `\top.$409'.
+Found and cleaned up 1 empty switch in `\top.$406'.
+Found and cleaned up 1 empty switch in `\top.$391'.
+Found and cleaned up 1 empty switch in `\top.$388'.
+Found and cleaned up 1 empty switch in `\top.$373'.
+Found and cleaned up 1 empty switch in `\top.$370'.
+Found and cleaned up 1 empty switch in `\top.$355'.
+Found and cleaned up 1 empty switch in `\top.$352'.
+Found and cleaned up 1 empty switch in `\top.$337'.
+Found and cleaned up 1 empty switch in `\top.$334'.
+Found and cleaned up 1 empty switch in `\top.$319'.
+Found and cleaned up 1 empty switch in `\top.$316'.
+Found and cleaned up 1 empty switch in `\top.$301'.
+Found and cleaned up 1 empty switch in `\top.$298'.
+Found and cleaned up 1 empty switch in `\top.$283'.
+Found and cleaned up 1 empty switch in `\top.$280'.
+Found and cleaned up 1 empty switch in `\top.$265'.
+Found and cleaned up 1 empty switch in `\top.$262'.
+Found and cleaned up 1 empty switch in `\top.$247'.
+Found and cleaned up 1 empty switch in `\top.$244'.
+Found and cleaned up 1 empty switch in `\top.$229'.
+Found and cleaned up 1 empty switch in `\top.$226'.
+Found and cleaned up 1 empty switch in `\top.$211'.
+Found and cleaned up 1 empty switch in `\top.$208'.
+Found and cleaned up 1 empty switch in `\top.$193'.
+Found and cleaned up 1 empty switch in `\top.$190'.
+Found and cleaned up 1 empty switch in `\top.$175'.
+Found and cleaned up 1 empty switch in `\top.$172'.
+Found and cleaned up 1 empty switch in `\top.$157'.
+Found and cleaned up 1 empty switch in `\top.$154'.
+Found and cleaned up 1 empty switch in `\top.$139'.
+Found and cleaned up 1 empty switch in `\top.$136'.
+Found and cleaned up 1 empty switch in `\top.$121'.
+Found and cleaned up 1 empty switch in `\top.$118'.
+Found and cleaned up 1 empty switch in `\top.$103'.
+Found and cleaned up 1 empty switch in `\top.$100'.
+Found and cleaned up 1 empty switch in `\top.$85'.
+Found and cleaned up 1 empty switch in `\top.$82'.
+Cleaned up 128 empty switches.
+
+1.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $1219 in module top.
+Marked 2 switch rules as full_case in process $1216 in module top.
+Marked 1 switch rules as full_case in process $1201 in module top.
+Marked 2 switch rules as full_case in process $1198 in module top.
+Marked 1 switch rules as full_case in process $1183 in module top.
+Marked 2 switch rules as full_case in process $1180 in module top.
+Marked 1 switch rules as full_case in process $1165 in module top.
+Marked 2 switch rules as full_case in process $1162 in module top.
+Marked 1 switch rules as full_case in process $1147 in module top.
+Marked 2 switch rules as full_case in process $1144 in module top.
+Marked 1 switch rules as full_case in process $1129 in module top.
+Marked 2 switch rules as full_case in process $1126 in module top.
+Marked 1 switch rules as full_case in process $1111 in module top.
+Marked 2 switch rules as full_case in process $1108 in module top.
+Marked 1 switch rules as full_case in process $1093 in module top.
+Marked 2 switch rules as full_case in process $1090 in module top.
+Marked 1 switch rules as full_case in process $1075 in module top.
+Marked 2 switch rules as full_case in process $1072 in module top.
+Marked 1 switch rules as full_case in process $1057 in module top.
+Marked 2 switch rules as full_case in process $1054 in module top.
+Marked 1 switch rules as full_case in process $1039 in module top.
+Marked 2 switch rules as full_case in process $1036 in module top.
+Marked 1 switch rules as full_case in process $1021 in module top.
+Marked 2 switch rules as full_case in process $1018 in module top.
+Marked 1 switch rules as full_case in process $1003 in module top.
+Marked 2 switch rules as full_case in process $1000 in module top.
+Marked 1 switch rules as full_case in process $985 in module top.
+Marked 2 switch rules as full_case in process $982 in module top.
+Marked 1 switch rules as full_case in process $967 in module top.
+Marked 2 switch rules as full_case in process $964 in module top.
+Marked 1 switch rules as full_case in process $949 in module top.
+Marked 2 switch rules as full_case in process $946 in module top.
+Marked 1 switch rules as full_case in process $931 in module top.
+Marked 2 switch rules as full_case in process $928 in module top.
+Marked 1 switch rules as full_case in process $913 in module top.
+Marked 2 switch rules as full_case in process $910 in module top.
+Marked 1 switch rules as full_case in process $895 in module top.
+Marked 2 switch rules as full_case in process $892 in module top.
+Marked 1 switch rules as full_case in process $877 in module top.
+Marked 2 switch rules as full_case in process $874 in module top.
+Marked 1 switch rules as full_case in process $859 in module top.
+Marked 2 switch rules as full_case in process $856 in module top.
+Marked 1 switch rules as full_case in process $841 in module top.
+Marked 2 switch rules as full_case in process $838 in module top.
+Marked 1 switch rules as full_case in process $823 in module top.
+Marked 2 switch rules as full_case in process $820 in module top.
+Marked 1 switch rules as full_case in process $805 in module top.
+Marked 2 switch rules as full_case in process $802 in module top.
+Marked 1 switch rules as full_case in process $787 in module top.
+Marked 2 switch rules as full_case in process $784 in module top.
+Marked 1 switch rules as full_case in process $769 in module top.
+Marked 2 switch rules as full_case in process $766 in module top.
+Marked 1 switch rules as full_case in process $751 in module top.
+Marked 2 switch rules as full_case in process $748 in module top.
+Marked 1 switch rules as full_case in process $733 in module top.
+Marked 2 switch rules as full_case in process $730 in module top.
+Marked 1 switch rules as full_case in process $715 in module top.
+Marked 2 switch rules as full_case in process $712 in module top.
+Marked 1 switch rules as full_case in process $697 in module top.
+Marked 2 switch rules as full_case in process $694 in module top.
+Marked 1 switch rules as full_case in process $679 in module top.
+Marked 2 switch rules as full_case in process $676 in module top.
+Marked 1 switch rules as full_case in process $661 in module top.
+Marked 2 switch rules as full_case in process $658 in module top.
+Marked 1 switch rules as full_case in process $643 in module top.
+Marked 2 switch rules as full_case in process $640 in module top.
+Marked 1 switch rules as full_case in process $625 in module top.
+Marked 2 switch rules as full_case in process $622 in module top.
+Marked 1 switch rules as full_case in process $607 in module top.
+Marked 2 switch rules as full_case in process $604 in module top.
+Marked 1 switch rules as full_case in process $589 in module top.
+Marked 2 switch rules as full_case in process $586 in module top.
+Marked 1 switch rules as full_case in process $571 in module top.
+Marked 2 switch rules as full_case in process $568 in module top.
+Marked 1 switch rules as full_case in process $553 in module top.
+Marked 2 switch rules as full_case in process $550 in module top.
+Marked 1 switch rules as full_case in process $535 in module top.
+Marked 2 switch rules as full_case in process $532 in module top.
+Marked 1 switch rules as full_case in process $517 in module top.
+Marked 2 switch rules as full_case in process $514 in module top.
+Marked 1 switch rules as full_case in process $499 in module top.
+Marked 2 switch rules as full_case in process $496 in module top.
+Marked 1 switch rules as full_case in process $481 in module top.
+Marked 2 switch rules as full_case in process $478 in module top.
+Marked 1 switch rules as full_case in process $463 in module top.
+Marked 2 switch rules as full_case in process $460 in module top.
+Marked 1 switch rules as full_case in process $445 in module top.
+Marked 2 switch rules as full_case in process $442 in module top.
+Marked 1 switch rules as full_case in process $427 in module top.
+Marked 2 switch rules as full_case in process $424 in module top.
+Marked 1 switch rules as full_case in process $409 in module top.
+Marked 2 switch rules as full_case in process $406 in module top.
+Marked 1 switch rules as full_case in process $391 in module top.
+Marked 2 switch rules as full_case in process $388 in module top.
+Marked 1 switch rules as full_case in process $373 in module top.
+Marked 2 switch rules as full_case in process $370 in module top.
+Marked 1 switch rules as full_case in process $355 in module top.
+Marked 2 switch rules as full_case in process $352 in module top.
+Marked 1 switch rules as full_case in process $337 in module top.
+Marked 2 switch rules as full_case in process $334 in module top.
+Marked 1 switch rules as full_case in process $319 in module top.
+Marked 2 switch rules as full_case in process $316 in module top.
+Marked 1 switch rules as full_case in process $301 in module top.
+Marked 2 switch rules as full_case in process $298 in module top.
+Marked 1 switch rules as full_case in process $283 in module top.
+Marked 2 switch rules as full_case in process $280 in module top.
+Marked 1 switch rules as full_case in process $265 in module top.
+Marked 2 switch rules as full_case in process $262 in module top.
+Marked 1 switch rules as full_case in process $247 in module top.
+Marked 2 switch rules as full_case in process $244 in module top.
+Marked 1 switch rules as full_case in process $229 in module top.
+Marked 2 switch rules as full_case in process $226 in module top.
+Marked 1 switch rules as full_case in process $211 in module top.
+Marked 2 switch rules as full_case in process $208 in module top.
+Marked 1 switch rules as full_case in process $193 in module top.
+Marked 2 switch rules as full_case in process $190 in module top.
+Marked 1 switch rules as full_case in process $175 in module top.
+Marked 2 switch rules as full_case in process $172 in module top.
+Marked 1 switch rules as full_case in process $157 in module top.
+Marked 2 switch rules as full_case in process $154 in module top.
+Marked 1 switch rules as full_case in process $139 in module top.
+Marked 2 switch rules as full_case in process $136 in module top.
+Marked 1 switch rules as full_case in process $121 in module top.
+Marked 2 switch rules as full_case in process $118 in module top.
+Marked 1 switch rules as full_case in process $103 in module top.
+Marked 2 switch rules as full_case in process $100 in module top.
+Marked 1 switch rules as full_case in process $85 in module top.
+Marked 2 switch rules as full_case in process $82 in module top.
+Removed a total of 0 dead cases.
+
+1.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 192 redundant assignments.
+Promoted 0 assignments to connections.
+
+1.4. Executing PROC_INIT pass (extract init attributes).
+
+1.5. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~256 debug messages>
+
+1.6. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\top.$1219'.
+     1/2: $u_array.rows[7].cols[7].u_pe.psum_out$1223
+     2/2: $u_array.rows[7].cols[7].u_pe.act_out$1222
+Creating decoders for process `\top.$1216'.
+     1/2: $u_array.rows[7].cols[7].u_pe.weight$1217
+     2/2: $u_array.rows[7].cols[7].u_pe.weight$1218
+Creating decoders for process `\top.$1201'.
+     1/2: $u_array.rows[7].cols[6].u_pe.psum_out$1205
+     2/2: $u_array.rows[7].cols[6].u_pe.act_out$1204
+Creating decoders for process `\top.$1198'.
+     1/2: $u_array.rows[7].cols[6].u_pe.weight$1199
+     2/2: $u_array.rows[7].cols[6].u_pe.weight$1200
+Creating decoders for process `\top.$1183'.
+     1/2: $u_array.rows[7].cols[5].u_pe.psum_out$1187
+     2/2: $u_array.rows[7].cols[5].u_pe.act_out$1186
+Creating decoders for process `\top.$1180'.
+     1/2: $u_array.rows[7].cols[5].u_pe.weight$1181
+     2/2: $u_array.rows[7].cols[5].u_pe.weight$1182
+Creating decoders for process `\top.$1165'.
+     1/2: $u_array.rows[7].cols[4].u_pe.psum_out$1169
+     2/2: $u_array.rows[7].cols[4].u_pe.act_out$1168
+Creating decoders for process `\top.$1162'.
+     1/2: $u_array.rows[7].cols[4].u_pe.weight$1163
+     2/2: $u_array.rows[7].cols[4].u_pe.weight$1164
+Creating decoders for process `\top.$1147'.
+     1/2: $u_array.rows[7].cols[3].u_pe.psum_out$1151
+     2/2: $u_array.rows[7].cols[3].u_pe.act_out$1150
+Creating decoders for process `\top.$1144'.
+     1/2: $u_array.rows[7].cols[3].u_pe.weight$1145
+     2/2: $u_array.rows[7].cols[3].u_pe.weight$1146
+Creating decoders for process `\top.$1129'.
+     1/2: $u_array.rows[7].cols[2].u_pe.psum_out$1133
+     2/2: $u_array.rows[7].cols[2].u_pe.act_out$1132
+Creating decoders for process `\top.$1126'.
+     1/2: $u_array.rows[7].cols[2].u_pe.weight$1127
+     2/2: $u_array.rows[7].cols[2].u_pe.weight$1128
+Creating decoders for process `\top.$1111'.
+     1/2: $u_array.rows[7].cols[1].u_pe.psum_out$1115
+     2/2: $u_array.rows[7].cols[1].u_pe.act_out$1114
+Creating decoders for process `\top.$1108'.
+     1/2: $u_array.rows[7].cols[1].u_pe.weight$1109
+     2/2: $u_array.rows[7].cols[1].u_pe.weight$1110
+Creating decoders for process `\top.$1093'.
+     1/2: $u_array.rows[7].cols[0].u_pe.psum_out$1097
+     2/2: $u_array.rows[7].cols[0].u_pe.act_out$1096
+Creating decoders for process `\top.$1090'.
+     1/2: $u_array.rows[7].cols[0].u_pe.weight$1091
+     2/2: $u_array.rows[7].cols[0].u_pe.weight$1092
+Creating decoders for process `\top.$1075'.
+     1/2: $u_array.rows[6].cols[7].u_pe.psum_out$1079
+     2/2: $u_array.rows[6].cols[7].u_pe.act_out$1078
+Creating decoders for process `\top.$1072'.
+     1/2: $u_array.rows[6].cols[7].u_pe.weight$1073
+     2/2: $u_array.rows[6].cols[7].u_pe.weight$1074
+Creating decoders for process `\top.$1057'.
+     1/2: $u_array.rows[6].cols[6].u_pe.psum_out$1061
+     2/2: $u_array.rows[6].cols[6].u_pe.act_out$1060
+Creating decoders for process `\top.$1054'.
+     1/2: $u_array.rows[6].cols[6].u_pe.weight$1055
+     2/2: $u_array.rows[6].cols[6].u_pe.weight$1056
+Creating decoders for process `\top.$1039'.
+     1/2: $u_array.rows[6].cols[5].u_pe.psum_out$1043
+     2/2: $u_array.rows[6].cols[5].u_pe.act_out$1042
+Creating decoders for process `\top.$1036'.
+     1/2: $u_array.rows[6].cols[5].u_pe.weight$1037
+     2/2: $u_array.rows[6].cols[5].u_pe.weight$1038
+Creating decoders for process `\top.$1021'.
+     1/2: $u_array.rows[6].cols[4].u_pe.psum_out$1025
+     2/2: $u_array.rows[6].cols[4].u_pe.act_out$1024
+Creating decoders for process `\top.$1018'.
+     1/2: $u_array.rows[6].cols[4].u_pe.weight$1019
+     2/2: $u_array.rows[6].cols[4].u_pe.weight$1020
+Creating decoders for process `\top.$1003'.
+     1/2: $u_array.rows[6].cols[3].u_pe.psum_out$1007
+     2/2: $u_array.rows[6].cols[3].u_pe.act_out$1006
+Creating decoders for process `\top.$1000'.
+     1/2: $u_array.rows[6].cols[3].u_pe.weight$1001
+     2/2: $u_array.rows[6].cols[3].u_pe.weight$1002
+Creating decoders for process `\top.$985'.
+     1/2: $u_array.rows[6].cols[2].u_pe.psum_out$989
+     2/2: $u_array.rows[6].cols[2].u_pe.act_out$988
+Creating decoders for process `\top.$982'.
+     1/2: $u_array.rows[6].cols[2].u_pe.weight$983
+     2/2: $u_array.rows[6].cols[2].u_pe.weight$984
+Creating decoders for process `\top.$967'.
+     1/2: $u_array.rows[6].cols[1].u_pe.psum_out$971
+     2/2: $u_array.rows[6].cols[1].u_pe.act_out$970
+Creating decoders for process `\top.$964'.
+     1/2: $u_array.rows[6].cols[1].u_pe.weight$965
+     2/2: $u_array.rows[6].cols[1].u_pe.weight$966
+Creating decoders for process `\top.$949'.
+     1/2: $u_array.rows[6].cols[0].u_pe.psum_out$953
+     2/2: $u_array.rows[6].cols[0].u_pe.act_out$952
+Creating decoders for process `\top.$946'.
+     1/2: $u_array.rows[6].cols[0].u_pe.weight$947
+     2/2: $u_array.rows[6].cols[0].u_pe.weight$948
+Creating decoders for process `\top.$931'.
+     1/2: $u_array.rows[5].cols[7].u_pe.psum_out$935
+     2/2: $u_array.rows[5].cols[7].u_pe.act_out$934
+Creating decoders for process `\top.$928'.
+     1/2: $u_array.rows[5].cols[7].u_pe.weight$929
+     2/2: $u_array.rows[5].cols[7].u_pe.weight$930
+Creating decoders for process `\top.$913'.
+     1/2: $u_array.rows[5].cols[6].u_pe.psum_out$917
+     2/2: $u_array.rows[5].cols[6].u_pe.act_out$916
+Creating decoders for process `\top.$910'.
+     1/2: $u_array.rows[5].cols[6].u_pe.weight$911
+     2/2: $u_array.rows[5].cols[6].u_pe.weight$912
+Creating decoders for process `\top.$895'.
+     1/2: $u_array.rows[5].cols[5].u_pe.psum_out$899
+     2/2: $u_array.rows[5].cols[5].u_pe.act_out$898
+Creating decoders for process `\top.$892'.
+     1/2: $u_array.rows[5].cols[5].u_pe.weight$893
+     2/2: $u_array.rows[5].cols[5].u_pe.weight$894
+Creating decoders for process `\top.$877'.
+     1/2: $u_array.rows[5].cols[4].u_pe.psum_out$881
+     2/2: $u_array.rows[5].cols[4].u_pe.act_out$880
+Creating decoders for process `\top.$874'.
+     1/2: $u_array.rows[5].cols[4].u_pe.weight$875
+     2/2: $u_array.rows[5].cols[4].u_pe.weight$876
+Creating decoders for process `\top.$859'.
+     1/2: $u_array.rows[5].cols[3].u_pe.psum_out$863
+     2/2: $u_array.rows[5].cols[3].u_pe.act_out$862
+Creating decoders for process `\top.$856'.
+     1/2: $u_array.rows[5].cols[3].u_pe.weight$857
+     2/2: $u_array.rows[5].cols[3].u_pe.weight$858
+Creating decoders for process `\top.$841'.
+     1/2: $u_array.rows[5].cols[2].u_pe.psum_out$845
+     2/2: $u_array.rows[5].cols[2].u_pe.act_out$844
+Creating decoders for process `\top.$838'.
+     1/2: $u_array.rows[5].cols[2].u_pe.weight$839
+     2/2: $u_array.rows[5].cols[2].u_pe.weight$840
+Creating decoders for process `\top.$823'.
+     1/2: $u_array.rows[5].cols[1].u_pe.psum_out$827
+     2/2: $u_array.rows[5].cols[1].u_pe.act_out$826
+Creating decoders for process `\top.$820'.
+     1/2: $u_array.rows[5].cols[1].u_pe.weight$821
+     2/2: $u_array.rows[5].cols[1].u_pe.weight$822
+Creating decoders for process `\top.$805'.
+     1/2: $u_array.rows[5].cols[0].u_pe.psum_out$809
+     2/2: $u_array.rows[5].cols[0].u_pe.act_out$808
+Creating decoders for process `\top.$802'.
+     1/2: $u_array.rows[5].cols[0].u_pe.weight$803
+     2/2: $u_array.rows[5].cols[0].u_pe.weight$804
+Creating decoders for process `\top.$787'.
+     1/2: $u_array.rows[4].cols[7].u_pe.psum_out$791
+     2/2: $u_array.rows[4].cols[7].u_pe.act_out$790
+Creating decoders for process `\top.$784'.
+     1/2: $u_array.rows[4].cols[7].u_pe.weight$785
+     2/2: $u_array.rows[4].cols[7].u_pe.weight$786
+Creating decoders for process `\top.$769'.
+     1/2: $u_array.rows[4].cols[6].u_pe.psum_out$773
+     2/2: $u_array.rows[4].cols[6].u_pe.act_out$772
+Creating decoders for process `\top.$766'.
+     1/2: $u_array.rows[4].cols[6].u_pe.weight$767
+     2/2: $u_array.rows[4].cols[6].u_pe.weight$768
+Creating decoders for process `\top.$751'.
+     1/2: $u_array.rows[4].cols[5].u_pe.psum_out$755
+     2/2: $u_array.rows[4].cols[5].u_pe.act_out$754
+Creating decoders for process `\top.$748'.
+     1/2: $u_array.rows[4].cols[5].u_pe.weight$749
+     2/2: $u_array.rows[4].cols[5].u_pe.weight$750
+Creating decoders for process `\top.$733'.
+     1/2: $u_array.rows[4].cols[4].u_pe.psum_out$737
+     2/2: $u_array.rows[4].cols[4].u_pe.act_out$736
+Creating decoders for process `\top.$730'.
+     1/2: $u_array.rows[4].cols[4].u_pe.weight$731
+     2/2: $u_array.rows[4].cols[4].u_pe.weight$732
+Creating decoders for process `\top.$715'.
+     1/2: $u_array.rows[4].cols[3].u_pe.psum_out$719
+     2/2: $u_array.rows[4].cols[3].u_pe.act_out$718
+Creating decoders for process `\top.$712'.
+     1/2: $u_array.rows[4].cols[3].u_pe.weight$713
+     2/2: $u_array.rows[4].cols[3].u_pe.weight$714
+Creating decoders for process `\top.$697'.
+     1/2: $u_array.rows[4].cols[2].u_pe.psum_out$701
+     2/2: $u_array.rows[4].cols[2].u_pe.act_out$700
+Creating decoders for process `\top.$694'.
+     1/2: $u_array.rows[4].cols[2].u_pe.weight$695
+     2/2: $u_array.rows[4].cols[2].u_pe.weight$696
+Creating decoders for process `\top.$679'.
+     1/2: $u_array.rows[4].cols[1].u_pe.psum_out$683
+     2/2: $u_array.rows[4].cols[1].u_pe.act_out$682
+Creating decoders for process `\top.$676'.
+     1/2: $u_array.rows[4].cols[1].u_pe.weight$677
+     2/2: $u_array.rows[4].cols[1].u_pe.weight$678
+Creating decoders for process `\top.$661'.
+     1/2: $u_array.rows[4].cols[0].u_pe.psum_out$665
+     2/2: $u_array.rows[4].cols[0].u_pe.act_out$664
+Creating decoders for process `\top.$658'.
+     1/2: $u_array.rows[4].cols[0].u_pe.weight$659
+     2/2: $u_array.rows[4].cols[0].u_pe.weight$660
+Creating decoders for process `\top.$643'.
+     1/2: $u_array.rows[3].cols[7].u_pe.psum_out$647
+     2/2: $u_array.rows[3].cols[7].u_pe.act_out$646
+Creating decoders for process `\top.$640'.
+     1/2: $u_array.rows[3].cols[7].u_pe.weight$641
+     2/2: $u_array.rows[3].cols[7].u_pe.weight$642
+Creating decoders for process `\top.$625'.
+     1/2: $u_array.rows[3].cols[6].u_pe.psum_out$629
+     2/2: $u_array.rows[3].cols[6].u_pe.act_out$628
+Creating decoders for process `\top.$622'.
+     1/2: $u_array.rows[3].cols[6].u_pe.weight$623
+     2/2: $u_array.rows[3].cols[6].u_pe.weight$624
+Creating decoders for process `\top.$607'.
+     1/2: $u_array.rows[3].cols[5].u_pe.psum_out$611
+     2/2: $u_array.rows[3].cols[5].u_pe.act_out$610
+Creating decoders for process `\top.$604'.
+     1/2: $u_array.rows[3].cols[5].u_pe.weight$605
+     2/2: $u_array.rows[3].cols[5].u_pe.weight$606
+Creating decoders for process `\top.$589'.
+     1/2: $u_array.rows[3].cols[4].u_pe.psum_out$593
+     2/2: $u_array.rows[3].cols[4].u_pe.act_out$592
+Creating decoders for process `\top.$586'.
+     1/2: $u_array.rows[3].cols[4].u_pe.weight$587
+     2/2: $u_array.rows[3].cols[4].u_pe.weight$588
+Creating decoders for process `\top.$571'.
+     1/2: $u_array.rows[3].cols[3].u_pe.psum_out$575
+     2/2: $u_array.rows[3].cols[3].u_pe.act_out$574
+Creating decoders for process `\top.$568'.
+     1/2: $u_array.rows[3].cols[3].u_pe.weight$569
+     2/2: $u_array.rows[3].cols[3].u_pe.weight$570
+Creating decoders for process `\top.$553'.
+     1/2: $u_array.rows[3].cols[2].u_pe.psum_out$557
+     2/2: $u_array.rows[3].cols[2].u_pe.act_out$556
+Creating decoders for process `\top.$550'.
+     1/2: $u_array.rows[3].cols[2].u_pe.weight$551
+     2/2: $u_array.rows[3].cols[2].u_pe.weight$552
+Creating decoders for process `\top.$535'.
+     1/2: $u_array.rows[3].cols[1].u_pe.psum_out$539
+     2/2: $u_array.rows[3].cols[1].u_pe.act_out$538
+Creating decoders for process `\top.$532'.
+     1/2: $u_array.rows[3].cols[1].u_pe.weight$533
+     2/2: $u_array.rows[3].cols[1].u_pe.weight$534
+Creating decoders for process `\top.$517'.
+     1/2: $u_array.rows[3].cols[0].u_pe.psum_out$521
+     2/2: $u_array.rows[3].cols[0].u_pe.act_out$520
+Creating decoders for process `\top.$514'.
+     1/2: $u_array.rows[3].cols[0].u_pe.weight$515
+     2/2: $u_array.rows[3].cols[0].u_pe.weight$516
+Creating decoders for process `\top.$499'.
+     1/2: $u_array.rows[2].cols[7].u_pe.psum_out$503
+     2/2: $u_array.rows[2].cols[7].u_pe.act_out$502
+Creating decoders for process `\top.$496'.
+     1/2: $u_array.rows[2].cols[7].u_pe.weight$497
+     2/2: $u_array.rows[2].cols[7].u_pe.weight$498
+Creating decoders for process `\top.$481'.
+     1/2: $u_array.rows[2].cols[6].u_pe.psum_out$485
+     2/2: $u_array.rows[2].cols[6].u_pe.act_out$484
+Creating decoders for process `\top.$478'.
+     1/2: $u_array.rows[2].cols[6].u_pe.weight$479
+     2/2: $u_array.rows[2].cols[6].u_pe.weight$480
+Creating decoders for process `\top.$463'.
+     1/2: $u_array.rows[2].cols[5].u_pe.psum_out$467
+     2/2: $u_array.rows[2].cols[5].u_pe.act_out$466
+Creating decoders for process `\top.$460'.
+     1/2: $u_array.rows[2].cols[5].u_pe.weight$461
+     2/2: $u_array.rows[2].cols[5].u_pe.weight$462
+Creating decoders for process `\top.$445'.
+     1/2: $u_array.rows[2].cols[4].u_pe.psum_out$449
+     2/2: $u_array.rows[2].cols[4].u_pe.act_out$448
+Creating decoders for process `\top.$442'.
+     1/2: $u_array.rows[2].cols[4].u_pe.weight$443
+     2/2: $u_array.rows[2].cols[4].u_pe.weight$444
+Creating decoders for process `\top.$427'.
+     1/2: $u_array.rows[2].cols[3].u_pe.psum_out$431
+     2/2: $u_array.rows[2].cols[3].u_pe.act_out$430
+Creating decoders for process `\top.$424'.
+     1/2: $u_array.rows[2].cols[3].u_pe.weight$425
+     2/2: $u_array.rows[2].cols[3].u_pe.weight$426
+Creating decoders for process `\top.$409'.
+     1/2: $u_array.rows[2].cols[2].u_pe.psum_out$413
+     2/2: $u_array.rows[2].cols[2].u_pe.act_out$412
+Creating decoders for process `\top.$406'.
+     1/2: $u_array.rows[2].cols[2].u_pe.weight$407
+     2/2: $u_array.rows[2].cols[2].u_pe.weight$408
+Creating decoders for process `\top.$391'.
+     1/2: $u_array.rows[2].cols[1].u_pe.psum_out$395
+     2/2: $u_array.rows[2].cols[1].u_pe.act_out$394
+Creating decoders for process `\top.$388'.
+     1/2: $u_array.rows[2].cols[1].u_pe.weight$389
+     2/2: $u_array.rows[2].cols[1].u_pe.weight$390
+Creating decoders for process `\top.$373'.
+     1/2: $u_array.rows[2].cols[0].u_pe.psum_out$377
+     2/2: $u_array.rows[2].cols[0].u_pe.act_out$376
+Creating decoders for process `\top.$370'.
+     1/2: $u_array.rows[2].cols[0].u_pe.weight$371
+     2/2: $u_array.rows[2].cols[0].u_pe.weight$372
+Creating decoders for process `\top.$355'.
+     1/2: $u_array.rows[1].cols[7].u_pe.psum_out$359
+     2/2: $u_array.rows[1].cols[7].u_pe.act_out$358
+Creating decoders for process `\top.$352'.
+     1/2: $u_array.rows[1].cols[7].u_pe.weight$353
+     2/2: $u_array.rows[1].cols[7].u_pe.weight$354
+Creating decoders for process `\top.$337'.
+     1/2: $u_array.rows[1].cols[6].u_pe.psum_out$341
+     2/2: $u_array.rows[1].cols[6].u_pe.act_out$340
+Creating decoders for process `\top.$334'.
+     1/2: $u_array.rows[1].cols[6].u_pe.weight$335
+     2/2: $u_array.rows[1].cols[6].u_pe.weight$336
+Creating decoders for process `\top.$319'.
+     1/2: $u_array.rows[1].cols[5].u_pe.psum_out$323
+     2/2: $u_array.rows[1].cols[5].u_pe.act_out$322
+Creating decoders for process `\top.$316'.
+     1/2: $u_array.rows[1].cols[5].u_pe.weight$317
+     2/2: $u_array.rows[1].cols[5].u_pe.weight$318
+Creating decoders for process `\top.$301'.
+     1/2: $u_array.rows[1].cols[4].u_pe.psum_out$305
+     2/2: $u_array.rows[1].cols[4].u_pe.act_out$304
+Creating decoders for process `\top.$298'.
+     1/2: $u_array.rows[1].cols[4].u_pe.weight$299
+     2/2: $u_array.rows[1].cols[4].u_pe.weight$300
+Creating decoders for process `\top.$283'.
+     1/2: $u_array.rows[1].cols[3].u_pe.psum_out$287
+     2/2: $u_array.rows[1].cols[3].u_pe.act_out$286
+Creating decoders for process `\top.$280'.
+     1/2: $u_array.rows[1].cols[3].u_pe.weight$281
+     2/2: $u_array.rows[1].cols[3].u_pe.weight$282
+Creating decoders for process `\top.$265'.
+     1/2: $u_array.rows[1].cols[2].u_pe.psum_out$269
+     2/2: $u_array.rows[1].cols[2].u_pe.act_out$268
+Creating decoders for process `\top.$262'.
+     1/2: $u_array.rows[1].cols[2].u_pe.weight$263
+     2/2: $u_array.rows[1].cols[2].u_pe.weight$264
+Creating decoders for process `\top.$247'.
+     1/2: $u_array.rows[1].cols[1].u_pe.psum_out$251
+     2/2: $u_array.rows[1].cols[1].u_pe.act_out$250
+Creating decoders for process `\top.$244'.
+     1/2: $u_array.rows[1].cols[1].u_pe.weight$245
+     2/2: $u_array.rows[1].cols[1].u_pe.weight$246
+Creating decoders for process `\top.$229'.
+     1/2: $u_array.rows[1].cols[0].u_pe.psum_out$233
+     2/2: $u_array.rows[1].cols[0].u_pe.act_out$232
+Creating decoders for process `\top.$226'.
+     1/2: $u_array.rows[1].cols[0].u_pe.weight$227
+     2/2: $u_array.rows[1].cols[0].u_pe.weight$228
+Creating decoders for process `\top.$211'.
+     1/2: $u_array.rows[0].cols[7].u_pe.psum_out$215
+     2/2: $u_array.rows[0].cols[7].u_pe.act_out$214
+Creating decoders for process `\top.$208'.
+     1/2: $u_array.rows[0].cols[7].u_pe.weight$209
+     2/2: $u_array.rows[0].cols[7].u_pe.weight$210
+Creating decoders for process `\top.$193'.
+     1/2: $u_array.rows[0].cols[6].u_pe.psum_out$197
+     2/2: $u_array.rows[0].cols[6].u_pe.act_out$196
+Creating decoders for process `\top.$190'.
+     1/2: $u_array.rows[0].cols[6].u_pe.weight$191
+     2/2: $u_array.rows[0].cols[6].u_pe.weight$192
+Creating decoders for process `\top.$175'.
+     1/2: $u_array.rows[0].cols[5].u_pe.psum_out$179
+     2/2: $u_array.rows[0].cols[5].u_pe.act_out$178
+Creating decoders for process `\top.$172'.
+     1/2: $u_array.rows[0].cols[5].u_pe.weight$173
+     2/2: $u_array.rows[0].cols[5].u_pe.weight$174
+Creating decoders for process `\top.$157'.
+     1/2: $u_array.rows[0].cols[4].u_pe.psum_out$161
+     2/2: $u_array.rows[0].cols[4].u_pe.act_out$160
+Creating decoders for process `\top.$154'.
+     1/2: $u_array.rows[0].cols[4].u_pe.weight$155
+     2/2: $u_array.rows[0].cols[4].u_pe.weight$156
+Creating decoders for process `\top.$139'.
+     1/2: $u_array.rows[0].cols[3].u_pe.psum_out$143
+     2/2: $u_array.rows[0].cols[3].u_pe.act_out$142
+Creating decoders for process `\top.$136'.
+     1/2: $u_array.rows[0].cols[3].u_pe.weight$137
+     2/2: $u_array.rows[0].cols[3].u_pe.weight$138
+Creating decoders for process `\top.$121'.
+     1/2: $u_array.rows[0].cols[2].u_pe.psum_out$125
+     2/2: $u_array.rows[0].cols[2].u_pe.act_out$124
+Creating decoders for process `\top.$118'.
+     1/2: $u_array.rows[0].cols[2].u_pe.weight$119
+     2/2: $u_array.rows[0].cols[2].u_pe.weight$120
+Creating decoders for process `\top.$103'.
+     1/2: $u_array.rows[0].cols[1].u_pe.psum_out$107
+     2/2: $u_array.rows[0].cols[1].u_pe.act_out$106
+Creating decoders for process `\top.$100'.
+     1/2: $u_array.rows[0].cols[1].u_pe.weight$101
+     2/2: $u_array.rows[0].cols[1].u_pe.weight$102
+Creating decoders for process `\top.$85'.
+     1/2: $u_array.rows[0].cols[0].u_pe.psum_out$89
+     2/2: $u_array.rows[0].cols[0].u_pe.act_out$88
+Creating decoders for process `\top.$82'.
+     1/2: $u_array.rows[0].cols[0].u_pe.weight$83
+     2/2: $u_array.rows[0].cols[0].u_pe.weight$84
+
+1.7. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\top.$1219'.
+Removing empty process `top.$1219'.
+Found and cleaned up 3 empty switches in `\top.$1216'.
+Removing empty process `top.$1216'.
+Found and cleaned up 1 empty switch in `\top.$1201'.
+Removing empty process `top.$1201'.
+Found and cleaned up 3 empty switches in `\top.$1198'.
+Removing empty process `top.$1198'.
+Found and cleaned up 1 empty switch in `\top.$1183'.
+Removing empty process `top.$1183'.
+Found and cleaned up 3 empty switches in `\top.$1180'.
+Removing empty process `top.$1180'.
+Found and cleaned up 1 empty switch in `\top.$1165'.
+Removing empty process `top.$1165'.
+Found and cleaned up 3 empty switches in `\top.$1162'.
+Removing empty process `top.$1162'.
+Found and cleaned up 1 empty switch in `\top.$1147'.
+Removing empty process `top.$1147'.
+Found and cleaned up 3 empty switches in `\top.$1144'.
+Removing empty process `top.$1144'.
+Found and cleaned up 1 empty switch in `\top.$1129'.
+Removing empty process `top.$1129'.
+Found and cleaned up 3 empty switches in `\top.$1126'.
+Removing empty process `top.$1126'.
+Found and cleaned up 1 empty switch in `\top.$1111'.
+Removing empty process `top.$1111'.
+Found and cleaned up 3 empty switches in `\top.$1108'.
+Removing empty process `top.$1108'.
+Found and cleaned up 1 empty switch in `\top.$1093'.
+Removing empty process `top.$1093'.
+Found and cleaned up 3 empty switches in `\top.$1090'.
+Removing empty process `top.$1090'.
+Found and cleaned up 1 empty switch in `\top.$1075'.
+Removing empty process `top.$1075'.
+Found and cleaned up 3 empty switches in `\top.$1072'.
+Removing empty process `top.$1072'.
+Found and cleaned up 1 empty switch in `\top.$1057'.
+Removing empty process `top.$1057'.
+Found and cleaned up 3 empty switches in `\top.$1054'.
+Removing empty process `top.$1054'.
+Found and cleaned up 1 empty switch in `\top.$1039'.
+Removing empty process `top.$1039'.
+Found and cleaned up 3 empty switches in `\top.$1036'.
+Removing empty process `top.$1036'.
+Found and cleaned up 1 empty switch in `\top.$1021'.
+Removing empty process `top.$1021'.
+Found and cleaned up 3 empty switches in `\top.$1018'.
+Removing empty process `top.$1018'.
+Found and cleaned up 1 empty switch in `\top.$1003'.
+Removing empty process `top.$1003'.
+Found and cleaned up 3 empty switches in `\top.$1000'.
+Removing empty process `top.$1000'.
+Found and cleaned up 1 empty switch in `\top.$985'.
+Removing empty process `top.$985'.
+Found and cleaned up 3 empty switches in `\top.$982'.
+Removing empty process `top.$982'.
+Found and cleaned up 1 empty switch in `\top.$967'.
+Removing empty process `top.$967'.
+Found and cleaned up 3 empty switches in `\top.$964'.
+Removing empty process `top.$964'.
+Found and cleaned up 1 empty switch in `\top.$949'.
+Removing empty process `top.$949'.
+Found and cleaned up 3 empty switches in `\top.$946'.
+Removing empty process `top.$946'.
+Found and cleaned up 1 empty switch in `\top.$931'.
+Removing empty process `top.$931'.
+Found and cleaned up 3 empty switches in `\top.$928'.
+Removing empty process `top.$928'.
+Found and cleaned up 1 empty switch in `\top.$913'.
+Removing empty process `top.$913'.
+Found and cleaned up 3 empty switches in `\top.$910'.
+Removing empty process `top.$910'.
+Found and cleaned up 1 empty switch in `\top.$895'.
+Removing empty process `top.$895'.
+Found and cleaned up 3 empty switches in `\top.$892'.
+Removing empty process `top.$892'.
+Found and cleaned up 1 empty switch in `\top.$877'.
+Removing empty process `top.$877'.
+Found and cleaned up 3 empty switches in `\top.$874'.
+Removing empty process `top.$874'.
+Found and cleaned up 1 empty switch in `\top.$859'.
+Removing empty process `top.$859'.
+Found and cleaned up 3 empty switches in `\top.$856'.
+Removing empty process `top.$856'.
+Found and cleaned up 1 empty switch in `\top.$841'.
+Removing empty process `top.$841'.
+Found and cleaned up 3 empty switches in `\top.$838'.
+Removing empty process `top.$838'.
+Found and cleaned up 1 empty switch in `\top.$823'.
+Removing empty process `top.$823'.
+Found and cleaned up 3 empty switches in `\top.$820'.
+Removing empty process `top.$820'.
+Found and cleaned up 1 empty switch in `\top.$805'.
+Removing empty process `top.$805'.
+Found and cleaned up 3 empty switches in `\top.$802'.
+Removing empty process `top.$802'.
+Found and cleaned up 1 empty switch in `\top.$787'.
+Removing empty process `top.$787'.
+Found and cleaned up 3 empty switches in `\top.$784'.
+Removing empty process `top.$784'.
+Found and cleaned up 1 empty switch in `\top.$769'.
+Removing empty process `top.$769'.
+Found and cleaned up 3 empty switches in `\top.$766'.
+Removing empty process `top.$766'.
+Found and cleaned up 1 empty switch in `\top.$751'.
+Removing empty process `top.$751'.
+Found and cleaned up 3 empty switches in `\top.$748'.
+Removing empty process `top.$748'.
+Found and cleaned up 1 empty switch in `\top.$733'.
+Removing empty process `top.$733'.
+Found and cleaned up 3 empty switches in `\top.$730'.
+Removing empty process `top.$730'.
+Found and cleaned up 1 empty switch in `\top.$715'.
+Removing empty process `top.$715'.
+Found and cleaned up 3 empty switches in `\top.$712'.
+Removing empty process `top.$712'.
+Found and cleaned up 1 empty switch in `\top.$697'.
+Removing empty process `top.$697'.
+Found and cleaned up 3 empty switches in `\top.$694'.
+Removing empty process `top.$694'.
+Found and cleaned up 1 empty switch in `\top.$679'.
+Removing empty process `top.$679'.
+Found and cleaned up 3 empty switches in `\top.$676'.
+Removing empty process `top.$676'.
+Found and cleaned up 1 empty switch in `\top.$661'.
+Removing empty process `top.$661'.
+Found and cleaned up 3 empty switches in `\top.$658'.
+Removing empty process `top.$658'.
+Found and cleaned up 1 empty switch in `\top.$643'.
+Removing empty process `top.$643'.
+Found and cleaned up 3 empty switches in `\top.$640'.
+Removing empty process `top.$640'.
+Found and cleaned up 1 empty switch in `\top.$625'.
+Removing empty process `top.$625'.
+Found and cleaned up 3 empty switches in `\top.$622'.
+Removing empty process `top.$622'.
+Found and cleaned up 1 empty switch in `\top.$607'.
+Removing empty process `top.$607'.
+Found and cleaned up 3 empty switches in `\top.$604'.
+Removing empty process `top.$604'.
+Found and cleaned up 1 empty switch in `\top.$589'.
+Removing empty process `top.$589'.
+Found and cleaned up 3 empty switches in `\top.$586'.
+Removing empty process `top.$586'.
+Found and cleaned up 1 empty switch in `\top.$571'.
+Removing empty process `top.$571'.
+Found and cleaned up 3 empty switches in `\top.$568'.
+Removing empty process `top.$568'.
+Found and cleaned up 1 empty switch in `\top.$553'.
+Removing empty process `top.$553'.
+Found and cleaned up 3 empty switches in `\top.$550'.
+Removing empty process `top.$550'.
+Found and cleaned up 1 empty switch in `\top.$535'.
+Removing empty process `top.$535'.
+Found and cleaned up 3 empty switches in `\top.$532'.
+Removing empty process `top.$532'.
+Found and cleaned up 1 empty switch in `\top.$517'.
+Removing empty process `top.$517'.
+Found and cleaned up 3 empty switches in `\top.$514'.
+Removing empty process `top.$514'.
+Found and cleaned up 1 empty switch in `\top.$499'.
+Removing empty process `top.$499'.
+Found and cleaned up 3 empty switches in `\top.$496'.
+Removing empty process `top.$496'.
+Found and cleaned up 1 empty switch in `\top.$481'.
+Removing empty process `top.$481'.
+Found and cleaned up 3 empty switches in `\top.$478'.
+Removing empty process `top.$478'.
+Found and cleaned up 1 empty switch in `\top.$463'.
+Removing empty process `top.$463'.
+Found and cleaned up 3 empty switches in `\top.$460'.
+Removing empty process `top.$460'.
+Found and cleaned up 1 empty switch in `\top.$445'.
+Removing empty process `top.$445'.
+Found and cleaned up 3 empty switches in `\top.$442'.
+Removing empty process `top.$442'.
+Found and cleaned up 1 empty switch in `\top.$427'.
+Removing empty process `top.$427'.
+Found and cleaned up 3 empty switches in `\top.$424'.
+Removing empty process `top.$424'.
+Found and cleaned up 1 empty switch in `\top.$409'.
+Removing empty process `top.$409'.
+Found and cleaned up 3 empty switches in `\top.$406'.
+Removing empty process `top.$406'.
+Found and cleaned up 1 empty switch in `\top.$391'.
+Removing empty process `top.$391'.
+Found and cleaned up 3 empty switches in `\top.$388'.
+Removing empty process `top.$388'.
+Found and cleaned up 1 empty switch in `\top.$373'.
+Removing empty process `top.$373'.
+Found and cleaned up 3 empty switches in `\top.$370'.
+Removing empty process `top.$370'.
+Found and cleaned up 1 empty switch in `\top.$355'.
+Removing empty process `top.$355'.
+Found and cleaned up 3 empty switches in `\top.$352'.
+Removing empty process `top.$352'.
+Found and cleaned up 1 empty switch in `\top.$337'.
+Removing empty process `top.$337'.
+Found and cleaned up 3 empty switches in `\top.$334'.
+Removing empty process `top.$334'.
+Found and cleaned up 1 empty switch in `\top.$319'.
+Removing empty process `top.$319'.
+Found and cleaned up 3 empty switches in `\top.$316'.
+Removing empty process `top.$316'.
+Found and cleaned up 1 empty switch in `\top.$301'.
+Removing empty process `top.$301'.
+Found and cleaned up 3 empty switches in `\top.$298'.
+Removing empty process `top.$298'.
+Found and cleaned up 1 empty switch in `\top.$283'.
+Removing empty process `top.$283'.
+Found and cleaned up 3 empty switches in `\top.$280'.
+Removing empty process `top.$280'.
+Found and cleaned up 1 empty switch in `\top.$265'.
+Removing empty process `top.$265'.
+Found and cleaned up 3 empty switches in `\top.$262'.
+Removing empty process `top.$262'.
+Found and cleaned up 1 empty switch in `\top.$247'.
+Removing empty process `top.$247'.
+Found and cleaned up 3 empty switches in `\top.$244'.
+Removing empty process `top.$244'.
+Found and cleaned up 1 empty switch in `\top.$229'.
+Removing empty process `top.$229'.
+Found and cleaned up 3 empty switches in `\top.$226'.
+Removing empty process `top.$226'.
+Found and cleaned up 1 empty switch in `\top.$211'.
+Removing empty process `top.$211'.
+Found and cleaned up 3 empty switches in `\top.$208'.
+Removing empty process `top.$208'.
+Found and cleaned up 1 empty switch in `\top.$193'.
+Removing empty process `top.$193'.
+Found and cleaned up 3 empty switches in `\top.$190'.
+Removing empty process `top.$190'.
+Found and cleaned up 1 empty switch in `\top.$175'.
+Removing empty process `top.$175'.
+Found and cleaned up 3 empty switches in `\top.$172'.
+Removing empty process `top.$172'.
+Found and cleaned up 1 empty switch in `\top.$157'.
+Removing empty process `top.$157'.
+Found and cleaned up 3 empty switches in `\top.$154'.
+Removing empty process `top.$154'.
+Found and cleaned up 1 empty switch in `\top.$139'.
+Removing empty process `top.$139'.
+Found and cleaned up 3 empty switches in `\top.$136'.
+Removing empty process `top.$136'.
+Found and cleaned up 1 empty switch in `\top.$121'.
+Removing empty process `top.$121'.
+Found and cleaned up 3 empty switches in `\top.$118'.
+Removing empty process `top.$118'.
+Found and cleaned up 1 empty switch in `\top.$103'.
+Removing empty process `top.$103'.
+Found and cleaned up 3 empty switches in `\top.$100'.
+Removing empty process `top.$100'.
+Found and cleaned up 1 empty switch in `\top.$85'.
+Removing empty process `top.$85'.
+Found and cleaned up 3 empty switches in `\top.$82'.
+Removing empty process `top.$82'.
+Cleaned up 256 empty switches.
+
+1.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2. Executing SYNTH pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1.1. Analyzing design hierarchy..
+Top module:  \top
+
+2.1.2. Analyzing design hierarchy..
+Top module:  \top
+Removed 0 unused modules.
+
+2.2. Executing PROC pass (convert processes to netlists).
+
+2.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+2.2.4. Executing PROC_INIT pass (extract init attributes).
+
+2.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+2.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+2.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+2.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.4. Executing CHECK pass (checking for obvious problems).
+Checking module top...
+Found and reported 0 problems.
+
+2.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 16 unused cells and 584 unused wires.
+<suppressed ~753 debug messages>
+
+2.6. Executing OPT pass (performing simple optimizations).
+
+2.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~8 debug messages>
+
+2.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Computing hashes of 624 cells of `\top'.
+Finding duplicate cells in `\top'.
+Removed a total of 0 cells.
+
+2.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$70.
+    dead port 1/2 on $mux $procmux$55.
+    dead port 1/2 on $mux $procmux$40.
+    dead port 1/2 on $mux $procmux$25.
+    dead port 1/2 on $mux $procmux$10.
+    dead port 1/2 on $mux $procmux$955.
+    dead port 1/2 on $mux $procmux$940.
+    dead port 1/2 on $mux $procmux$925.
+    dead port 1/2 on $mux $procmux$910.
+    dead port 1/2 on $mux $procmux$895.
+    dead port 1/2 on $mux $procmux$880.
+    dead port 1/2 on $mux $procmux$865.
+    dead port 1/2 on $mux $procmux$850.
+    dead port 1/2 on $mux $procmux$835.
+    dead port 1/2 on $mux $procmux$820.
+    dead port 1/2 on $mux $procmux$805.
+    dead port 1/2 on $mux $procmux$790.
+    dead port 1/2 on $mux $procmux$775.
+    dead port 1/2 on $mux $procmux$760.
+    dead port 1/2 on $mux $procmux$745.
+    dead port 1/2 on $mux $procmux$730.
+    dead port 1/2 on $mux $procmux$715.
+    dead port 1/2 on $mux $procmux$700.
+    dead port 1/2 on $mux $procmux$685.
+    dead port 1/2 on $mux $procmux$670.
+    dead port 1/2 on $mux $procmux$655.
+    dead port 1/2 on $mux $procmux$640.
+    dead port 1/2 on $mux $procmux$625.
+    dead port 1/2 on $mux $procmux$610.
+    dead port 1/2 on $mux $procmux$595.
+    dead port 1/2 on $mux $procmux$580.
+    dead port 1/2 on $mux $procmux$565.
+    dead port 1/2 on $mux $procmux$550.
+    dead port 1/2 on $mux $procmux$535.
+    dead port 1/2 on $mux $procmux$520.
+    dead port 1/2 on $mux $procmux$505.
+    dead port 1/2 on $mux $procmux$490.
+    dead port 1/2 on $mux $procmux$475.
+    dead port 1/2 on $mux $procmux$460.
+    dead port 1/2 on $mux $procmux$445.
+    dead port 1/2 on $mux $procmux$430.
+    dead port 1/2 on $mux $procmux$415.
+    dead port 1/2 on $mux $procmux$100.
+    dead port 1/2 on $mux $procmux$400.
+    dead port 1/2 on $mux $procmux$385.
+    dead port 1/2 on $mux $procmux$370.
+    dead port 1/2 on $mux $procmux$355.
+    dead port 1/2 on $mux $procmux$340.
+    dead port 1/2 on $mux $procmux$325.
+    dead port 1/2 on $mux $procmux$310.
+    dead port 1/2 on $mux $procmux$295.
+    dead port 1/2 on $mux $procmux$280.
+    dead port 1/2 on $mux $procmux$265.
+    dead port 1/2 on $mux $procmux$250.
+    dead port 1/2 on $mux $procmux$85.
+    dead port 1/2 on $mux $procmux$235.
+    dead port 1/2 on $mux $procmux$220.
+    dead port 1/2 on $mux $procmux$205.
+    dead port 1/2 on $mux $procmux$190.
+    dead port 1/2 on $mux $procmux$175.
+    dead port 1/2 on $mux $procmux$160.
+    dead port 1/2 on $mux $procmux$145.
+    dead port 1/2 on $mux $procmux$130.
+    dead port 1/2 on $mux $procmux$115.
+Removed 64 multiplexer ports.
+<suppressed ~496 debug messages>
+
+2.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Computing hashes of 560 cells of `\top'.
+Finding duplicate cells in `\top'.
+Removed a total of 0 cells.
+
+2.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 72 unused wires.
+<suppressed ~9 debug messages>
+
+2.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~432 debug messages>
+
+2.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Computing hashes of 552 cells of `\top'.
+Finding duplicate cells in `\top'.
+Removed a total of 0 cells.
+
+2.6.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.6.16. Finished fast OPT passes. (There is nothing left to do.)
+
+2.7. Executing FSM pass (extract and optimize FSM).
+
+2.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+2.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+2.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+2.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+2.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+2.8. Executing OPT pass (performing simple optimizations).
+
+2.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Computing hashes of 552 cells of `\top'.
+Finding duplicate cells in `\top'.
+Removed a total of 0 cells.
+
+2.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~432 debug messages>
+
+2.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Computing hashes of 552 cells of `\top'.
+Finding duplicate cells in `\top'.
+Removed a total of 0 cells.
+
+2.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $driver$u_array.rows[4].cols[5].u_pe.act_out ($dff) from module top (D = \u_array.rows[4].cols[4].u_pe.act_out, Q = \u_array.rows[4].cols[5].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[4].cols[5].u_pe.psum_out ($dff) from module top (D = $753y, Q = \u_array.rows[4].cols[5].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[4].cols[6].u_pe.weight ($dff) from module top (D = $procmux$382_Y, Q = \u_array.rows[4].cols[6].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$963 ($sdff) from module top (D = \weight_in_flat [311:304], Q = \u_array.rows[4].cols[6].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[4].cols[6].u_pe.act_out ($dff) from module top (D = \u_array.rows[4].cols[5].u_pe.act_out, Q = \u_array.rows[4].cols[6].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[4].cols[6].u_pe.psum_out ($dff) from module top (D = $771y, Q = \u_array.rows[4].cols[6].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[4].cols[0].u_pe.weight ($dff) from module top (D = $procmux$472_Y, Q = \u_array.rows[4].cols[0].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$967 ($sdff) from module top (D = \weight_in_flat [263:256], Q = \u_array.rows[4].cols[0].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[4].cols[7].u_pe.weight ($dff) from module top (D = $procmux$367_Y, Q = \u_array.rows[4].cols[7].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$969 ($sdff) from module top (D = \weight_in_flat [319:312], Q = \u_array.rows[4].cols[7].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[4].cols[7].u_pe.psum_out ($dff) from module top (D = $789y, Q = \u_array.rows[4].cols[7].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[4].cols[0].u_pe.act_out ($dff) from module top (D = \act_in_flat [39:32], Q = \u_array.rows[4].cols[0].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[5].cols[0].u_pe.weight ($dff) from module top (D = $procmux$352_Y, Q = \u_array.rows[5].cols[0].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$973 ($sdff) from module top (D = \weight_in_flat [327:320], Q = \u_array.rows[5].cols[0].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[5].cols[0].u_pe.act_out ($dff) from module top (D = \act_in_flat [47:40], Q = \u_array.rows[5].cols[0].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[5].cols[0].u_pe.psum_out ($dff) from module top (D = $807y, Q = \u_array.rows[5].cols[0].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[4].cols[0].u_pe.psum_out ($dff) from module top (D = $663y, Q = \u_array.rows[4].cols[0].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[5].cols[1].u_pe.weight ($dff) from module top (D = $procmux$337_Y, Q = \u_array.rows[5].cols[1].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$978 ($sdff) from module top (D = \weight_in_flat [335:328], Q = \u_array.rows[5].cols[1].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[5].cols[1].u_pe.act_out ($dff) from module top (D = \u_array.rows[5].cols[0].u_pe.act_out, Q = \u_array.rows[5].cols[1].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[5].cols[1].u_pe.psum_out ($dff) from module top (D = $825y, Q = \u_array.rows[5].cols[1].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[5].cols[2].u_pe.weight ($dff) from module top (D = $procmux$322_Y, Q = \u_array.rows[5].cols[2].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$982 ($sdff) from module top (D = \weight_in_flat [343:336], Q = \u_array.rows[5].cols[2].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[5].cols[2].u_pe.act_out ($dff) from module top (D = \u_array.rows[5].cols[1].u_pe.act_out, Q = \u_array.rows[5].cols[2].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[5].cols[2].u_pe.psum_out ($dff) from module top (D = $843y, Q = \u_array.rows[5].cols[2].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[0].cols[0].u_pe.weight ($dff) from module top (D = $procmux$952_Y, Q = \u_array.rows[0].cols[0].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$986 ($sdff) from module top (D = \weight_in_flat [7:0], Q = \u_array.rows[0].cols[0].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[0].cols[0].u_pe.act_out ($dff) from module top (D = \act_in_flat [7:0], Q = \u_array.rows[0].cols[0].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[0].cols[0].u_pe.psum_out ($dff) from module top (D = $86y, Q = \u_array.rows[0].cols[0].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[5].cols[3].u_pe.weight ($dff) from module top (D = $procmux$307_Y, Q = \u_array.rows[5].cols[3].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$990 ($sdff) from module top (D = \weight_in_flat [351:344], Q = \u_array.rows[5].cols[3].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[5].cols[3].u_pe.act_out ($dff) from module top (D = \u_array.rows[5].cols[2].u_pe.act_out, Q = \u_array.rows[5].cols[3].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[5].cols[3].u_pe.psum_out ($dff) from module top (D = $861y, Q = \u_array.rows[5].cols[3].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[0].cols[1].u_pe.weight ($dff) from module top (D = $procmux$937_Y, Q = \u_array.rows[0].cols[1].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$994 ($sdff) from module top (D = \weight_in_flat [15:8], Q = \u_array.rows[0].cols[1].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[0].cols[1].u_pe.act_out ($dff) from module top (D = \u_array.rows[0].cols[0].u_pe.act_out, Q = \u_array.rows[0].cols[1].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[0].cols[1].u_pe.psum_out ($dff) from module top (D = $104y, Q = \u_array.rows[0].cols[1].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[0].cols[2].u_pe.weight ($dff) from module top (D = $procmux$922_Y, Q = \u_array.rows[0].cols[2].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$998 ($sdff) from module top (D = \weight_in_flat [23:16], Q = \u_array.rows[0].cols[2].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[4].cols[4].u_pe.weight ($dff) from module top (D = $procmux$412_Y, Q = \u_array.rows[4].cols[4].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1000 ($sdff) from module top (D = \weight_in_flat [295:288], Q = \u_array.rows[4].cols[4].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[0].cols[2].u_pe.act_out ($dff) from module top (D = \u_array.rows[0].cols[1].u_pe.act_out, Q = \u_array.rows[0].cols[2].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[0].cols[2].u_pe.psum_out ($dff) from module top (D = $122y, Q = \u_array.rows[0].cols[2].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[5].cols[4].u_pe.weight ($dff) from module top (D = $procmux$292_Y, Q = \u_array.rows[5].cols[4].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1004 ($sdff) from module top (D = \weight_in_flat [359:352], Q = \u_array.rows[5].cols[4].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[5].cols[4].u_pe.act_out ($dff) from module top (D = \u_array.rows[5].cols[3].u_pe.act_out, Q = \u_array.rows[5].cols[4].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[5].cols[4].u_pe.psum_out ($dff) from module top (D = $879y, Q = \u_array.rows[5].cols[4].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[0].cols[3].u_pe.weight ($dff) from module top (D = $procmux$907_Y, Q = \u_array.rows[0].cols[3].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1008 ($sdff) from module top (D = \weight_in_flat [31:24], Q = \u_array.rows[0].cols[3].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[0].cols[3].u_pe.act_out ($dff) from module top (D = \u_array.rows[0].cols[2].u_pe.act_out, Q = \u_array.rows[0].cols[3].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[0].cols[3].u_pe.psum_out ($dff) from module top (D = $140y, Q = \u_array.rows[0].cols[3].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[5].cols[5].u_pe.weight ($dff) from module top (D = $procmux$277_Y, Q = \u_array.rows[5].cols[5].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1012 ($sdff) from module top (D = \weight_in_flat [367:360], Q = \u_array.rows[5].cols[5].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[5].cols[5].u_pe.act_out ($dff) from module top (D = \u_array.rows[5].cols[4].u_pe.act_out, Q = \u_array.rows[5].cols[5].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[5].cols[5].u_pe.psum_out ($dff) from module top (D = $897y, Q = \u_array.rows[5].cols[5].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[0].cols[4].u_pe.weight ($dff) from module top (D = $procmux$892_Y, Q = \u_array.rows[0].cols[4].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1016 ($sdff) from module top (D = \weight_in_flat [39:32], Q = \u_array.rows[0].cols[4].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[0].cols[4].u_pe.act_out ($dff) from module top (D = \u_array.rows[0].cols[3].u_pe.act_out, Q = \u_array.rows[0].cols[4].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[0].cols[4].u_pe.psum_out ($dff) from module top (D = $158y, Q = \u_array.rows[0].cols[4].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[4].cols[1].u_pe.weight ($dff) from module top (D = $procmux$457_Y, Q = \u_array.rows[4].cols[1].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1020 ($sdff) from module top (D = \weight_in_flat [271:264], Q = \u_array.rows[4].cols[1].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[0].cols[5].u_pe.weight ($dff) from module top (D = $procmux$877_Y, Q = \u_array.rows[0].cols[5].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1022 ($sdff) from module top (D = \weight_in_flat [47:40], Q = \u_array.rows[0].cols[5].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[0].cols[5].u_pe.act_out ($dff) from module top (D = \u_array.rows[0].cols[4].u_pe.act_out, Q = \u_array.rows[0].cols[5].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[0].cols[5].u_pe.psum_out ($dff) from module top (D = $176y, Q = \u_array.rows[0].cols[5].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[5].cols[6].u_pe.weight ($dff) from module top (D = $procmux$262_Y, Q = \u_array.rows[5].cols[6].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1026 ($sdff) from module top (D = \weight_in_flat [375:368], Q = \u_array.rows[5].cols[6].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[5].cols[6].u_pe.act_out ($dff) from module top (D = \u_array.rows[5].cols[5].u_pe.act_out, Q = \u_array.rows[5].cols[6].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[5].cols[6].u_pe.psum_out ($dff) from module top (D = $915y, Q = \u_array.rows[5].cols[6].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[0].cols[6].u_pe.weight ($dff) from module top (D = $procmux$862_Y, Q = \u_array.rows[0].cols[6].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1030 ($sdff) from module top (D = \weight_in_flat [55:48], Q = \u_array.rows[0].cols[6].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[0].cols[6].u_pe.act_out ($dff) from module top (D = \u_array.rows[0].cols[5].u_pe.act_out, Q = \u_array.rows[0].cols[6].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[0].cols[6].u_pe.psum_out ($dff) from module top (D = $194y, Q = \u_array.rows[0].cols[6].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[4].cols[1].u_pe.act_out ($dff) from module top (D = \u_array.rows[4].cols[0].u_pe.act_out, Q = \u_array.rows[4].cols[1].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[5].cols[7].u_pe.weight ($dff) from module top (D = $procmux$247_Y, Q = \u_array.rows[5].cols[7].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1035 ($sdff) from module top (D = \weight_in_flat [383:376], Q = \u_array.rows[5].cols[7].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[4].cols[1].u_pe.psum_out ($dff) from module top (D = $681y, Q = \u_array.rows[4].cols[1].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[5].cols[7].u_pe.psum_out ($dff) from module top (D = $933y, Q = \u_array.rows[5].cols[7].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[0].cols[7].u_pe.weight ($dff) from module top (D = $procmux$847_Y, Q = \u_array.rows[0].cols[7].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1039 ($sdff) from module top (D = \weight_in_flat [63:56], Q = \u_array.rows[0].cols[7].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[0].cols[7].u_pe.psum_out ($dff) from module top (D = $212y, Q = \u_array.rows[0].cols[7].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[1].cols[0].u_pe.weight ($dff) from module top (D = $procmux$832_Y, Q = \u_array.rows[1].cols[0].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1042 ($sdff) from module top (D = \weight_in_flat [71:64], Q = \u_array.rows[1].cols[0].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[1].cols[0].u_pe.act_out ($dff) from module top (D = \act_in_flat [15:8], Q = \u_array.rows[1].cols[0].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[1].cols[0].u_pe.psum_out ($dff) from module top (D = $231y, Q = \u_array.rows[1].cols[0].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[6].cols[0].u_pe.weight ($dff) from module top (D = $procmux$232_Y, Q = \u_array.rows[6].cols[0].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1046 ($sdff) from module top (D = \weight_in_flat [391:384], Q = \u_array.rows[6].cols[0].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[6].cols[0].u_pe.act_out ($dff) from module top (D = \act_in_flat [55:48], Q = \u_array.rows[6].cols[0].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[6].cols[0].u_pe.psum_out ($dff) from module top (D = $951y, Q = \u_array.rows[6].cols[0].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[1].cols[1].u_pe.weight ($dff) from module top (D = $procmux$817_Y, Q = \u_array.rows[1].cols[1].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1050 ($sdff) from module top (D = \weight_in_flat [79:72], Q = \u_array.rows[1].cols[1].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[1].cols[1].u_pe.act_out ($dff) from module top (D = \u_array.rows[1].cols[0].u_pe.act_out, Q = \u_array.rows[1].cols[1].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[1].cols[1].u_pe.psum_out ($dff) from module top (D = $249y, Q = \u_array.rows[1].cols[1].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[6].cols[1].u_pe.weight ($dff) from module top (D = $procmux$217_Y, Q = \u_array.rows[6].cols[1].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1054 ($sdff) from module top (D = \weight_in_flat [399:392], Q = \u_array.rows[6].cols[1].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[6].cols[1].u_pe.act_out ($dff) from module top (D = \u_array.rows[6].cols[0].u_pe.act_out, Q = \u_array.rows[6].cols[1].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[6].cols[1].u_pe.psum_out ($dff) from module top (D = $969y, Q = \u_array.rows[6].cols[1].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[1].cols[2].u_pe.weight ($dff) from module top (D = $procmux$802_Y, Q = \u_array.rows[1].cols[2].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1058 ($sdff) from module top (D = \weight_in_flat [87:80], Q = \u_array.rows[1].cols[2].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[1].cols[2].u_pe.act_out ($dff) from module top (D = \u_array.rows[1].cols[1].u_pe.act_out, Q = \u_array.rows[1].cols[2].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[1].cols[2].u_pe.psum_out ($dff) from module top (D = $267y, Q = \u_array.rows[1].cols[2].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[1].cols[3].u_pe.weight ($dff) from module top (D = $procmux$787_Y, Q = \u_array.rows[1].cols[3].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1062 ($sdff) from module top (D = \weight_in_flat [95:88], Q = \u_array.rows[1].cols[3].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[1].cols[3].u_pe.act_out ($dff) from module top (D = \u_array.rows[1].cols[2].u_pe.act_out, Q = \u_array.rows[1].cols[3].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[1].cols[3].u_pe.psum_out ($dff) from module top (D = $285y, Q = \u_array.rows[1].cols[3].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[6].cols[2].u_pe.weight ($dff) from module top (D = $procmux$202_Y, Q = \u_array.rows[6].cols[2].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1066 ($sdff) from module top (D = \weight_in_flat [407:400], Q = \u_array.rows[6].cols[2].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[6].cols[2].u_pe.act_out ($dff) from module top (D = \u_array.rows[6].cols[1].u_pe.act_out, Q = \u_array.rows[6].cols[2].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[6].cols[2].u_pe.psum_out ($dff) from module top (D = $987y, Q = \u_array.rows[6].cols[2].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[1].cols[4].u_pe.weight ($dff) from module top (D = $procmux$772_Y, Q = \u_array.rows[1].cols[4].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1070 ($sdff) from module top (D = \weight_in_flat [103:96], Q = \u_array.rows[1].cols[4].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[1].cols[4].u_pe.act_out ($dff) from module top (D = \u_array.rows[1].cols[3].u_pe.act_out, Q = \u_array.rows[1].cols[4].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[1].cols[4].u_pe.psum_out ($dff) from module top (D = $303y, Q = \u_array.rows[1].cols[4].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[6].cols[3].u_pe.weight ($dff) from module top (D = $procmux$187_Y, Q = \u_array.rows[6].cols[3].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1074 ($sdff) from module top (D = \weight_in_flat [415:408], Q = \u_array.rows[6].cols[3].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[6].cols[3].u_pe.act_out ($dff) from module top (D = \u_array.rows[6].cols[2].u_pe.act_out, Q = \u_array.rows[6].cols[3].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[6].cols[3].u_pe.psum_out ($dff) from module top (D = $1005y, Q = \u_array.rows[6].cols[3].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[1].cols[5].u_pe.weight ($dff) from module top (D = $procmux$757_Y, Q = \u_array.rows[1].cols[5].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1078 ($sdff) from module top (D = \weight_in_flat [111:104], Q = \u_array.rows[1].cols[5].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[1].cols[5].u_pe.act_out ($dff) from module top (D = \u_array.rows[1].cols[4].u_pe.act_out, Q = \u_array.rows[1].cols[5].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[1].cols[5].u_pe.psum_out ($dff) from module top (D = $321y, Q = \u_array.rows[1].cols[5].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[1].cols[6].u_pe.weight ($dff) from module top (D = $procmux$742_Y, Q = \u_array.rows[1].cols[6].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1082 ($sdff) from module top (D = \weight_in_flat [119:112], Q = \u_array.rows[1].cols[6].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[1].cols[6].u_pe.act_out ($dff) from module top (D = \u_array.rows[1].cols[5].u_pe.act_out, Q = \u_array.rows[1].cols[6].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[1].cols[6].u_pe.psum_out ($dff) from module top (D = $339y, Q = \u_array.rows[1].cols[6].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[6].cols[4].u_pe.weight ($dff) from module top (D = $procmux$172_Y, Q = \u_array.rows[6].cols[4].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1086 ($sdff) from module top (D = \weight_in_flat [423:416], Q = \u_array.rows[6].cols[4].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[6].cols[4].u_pe.act_out ($dff) from module top (D = \u_array.rows[6].cols[3].u_pe.act_out, Q = \u_array.rows[6].cols[4].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[6].cols[4].u_pe.psum_out ($dff) from module top (D = $1023y, Q = \u_array.rows[6].cols[4].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[4].cols[2].u_pe.weight ($dff) from module top (D = $procmux$442_Y, Q = \u_array.rows[4].cols[2].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1090 ($sdff) from module top (D = \weight_in_flat [279:272], Q = \u_array.rows[4].cols[2].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[1].cols[7].u_pe.weight ($dff) from module top (D = $procmux$727_Y, Q = \u_array.rows[1].cols[7].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1092 ($sdff) from module top (D = \weight_in_flat [127:120], Q = \u_array.rows[1].cols[7].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[1].cols[7].u_pe.psum_out ($dff) from module top (D = $357y, Q = \u_array.rows[1].cols[7].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[6].cols[5].u_pe.weight ($dff) from module top (D = $procmux$157_Y, Q = \u_array.rows[6].cols[5].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1095 ($sdff) from module top (D = \weight_in_flat [431:424], Q = \u_array.rows[6].cols[5].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[6].cols[5].u_pe.act_out ($dff) from module top (D = \u_array.rows[6].cols[4].u_pe.act_out, Q = \u_array.rows[6].cols[5].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[6].cols[5].u_pe.psum_out ($dff) from module top (D = $1041y, Q = \u_array.rows[6].cols[5].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[2].cols[0].u_pe.weight ($dff) from module top (D = $procmux$712_Y, Q = \u_array.rows[2].cols[0].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1099 ($sdff) from module top (D = \weight_in_flat [135:128], Q = \u_array.rows[2].cols[0].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[2].cols[0].u_pe.act_out ($dff) from module top (D = \act_in_flat [23:16], Q = \u_array.rows[2].cols[0].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[2].cols[0].u_pe.psum_out ($dff) from module top (D = $375y, Q = \u_array.rows[2].cols[0].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[4].cols[4].u_pe.psum_out ($dff) from module top (D = $735y, Q = \u_array.rows[4].cols[4].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[4].cols[2].u_pe.act_out ($dff) from module top (D = \u_array.rows[4].cols[1].u_pe.act_out, Q = \u_array.rows[4].cols[2].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[2].cols[1].u_pe.weight ($dff) from module top (D = $procmux$697_Y, Q = \u_array.rows[2].cols[1].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1105 ($sdff) from module top (D = \weight_in_flat [143:136], Q = \u_array.rows[2].cols[1].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[2].cols[1].u_pe.act_out ($dff) from module top (D = \u_array.rows[2].cols[0].u_pe.act_out, Q = \u_array.rows[2].cols[1].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[2].cols[1].u_pe.psum_out ($dff) from module top (D = $393y, Q = \u_array.rows[2].cols[1].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[6].cols[6].u_pe.weight ($dff) from module top (D = $procmux$142_Y, Q = \u_array.rows[6].cols[6].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1109 ($sdff) from module top (D = \weight_in_flat [439:432], Q = \u_array.rows[6].cols[6].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[6].cols[6].u_pe.act_out ($dff) from module top (D = \u_array.rows[6].cols[5].u_pe.act_out, Q = \u_array.rows[6].cols[6].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[6].cols[6].u_pe.psum_out ($dff) from module top (D = $1059y, Q = \u_array.rows[6].cols[6].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[4].cols[2].u_pe.psum_out ($dff) from module top (D = $699y, Q = \u_array.rows[4].cols[2].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[2].cols[2].u_pe.weight ($dff) from module top (D = $procmux$682_Y, Q = \u_array.rows[2].cols[2].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1114 ($sdff) from module top (D = \weight_in_flat [151:144], Q = \u_array.rows[2].cols[2].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[2].cols[2].u_pe.act_out ($dff) from module top (D = \u_array.rows[2].cols[1].u_pe.act_out, Q = \u_array.rows[2].cols[2].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[2].cols[2].u_pe.psum_out ($dff) from module top (D = $411y, Q = \u_array.rows[2].cols[2].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[6].cols[7].u_pe.weight ($dff) from module top (D = $procmux$127_Y, Q = \u_array.rows[6].cols[7].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1118 ($sdff) from module top (D = \weight_in_flat [447:440], Q = \u_array.rows[6].cols[7].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[6].cols[7].u_pe.psum_out ($dff) from module top (D = $1077y, Q = \u_array.rows[6].cols[7].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[2].cols[3].u_pe.weight ($dff) from module top (D = $procmux$667_Y, Q = \u_array.rows[2].cols[3].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1121 ($sdff) from module top (D = \weight_in_flat [159:152], Q = \u_array.rows[2].cols[3].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[2].cols[3].u_pe.act_out ($dff) from module top (D = \u_array.rows[2].cols[2].u_pe.act_out, Q = \u_array.rows[2].cols[3].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[2].cols[3].u_pe.psum_out ($dff) from module top (D = $429y, Q = \u_array.rows[2].cols[3].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[2].cols[4].u_pe.weight ($dff) from module top (D = $procmux$652_Y, Q = \u_array.rows[2].cols[4].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1125 ($sdff) from module top (D = \weight_in_flat [167:160], Q = \u_array.rows[2].cols[4].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[2].cols[4].u_pe.act_out ($dff) from module top (D = \u_array.rows[2].cols[3].u_pe.act_out, Q = \u_array.rows[2].cols[4].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[2].cols[4].u_pe.psum_out ($dff) from module top (D = $447y, Q = \u_array.rows[2].cols[4].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[7].cols[0].u_pe.weight ($dff) from module top (D = $procmux$112_Y, Q = \u_array.rows[7].cols[0].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1129 ($sdff) from module top (D = \weight_in_flat [455:448], Q = \u_array.rows[7].cols[0].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[7].cols[0].u_pe.act_out ($dff) from module top (D = \act_in_flat [63:56], Q = \u_array.rows[7].cols[0].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[7].cols[0].u_pe.psum_out ($dff) from module top (D = $1095y, Q = \u_array.rows[7].cols[0].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[2].cols[5].u_pe.weight ($dff) from module top (D = $procmux$637_Y, Q = \u_array.rows[2].cols[5].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1133 ($sdff) from module top (D = \weight_in_flat [175:168], Q = \u_array.rows[2].cols[5].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[2].cols[5].u_pe.act_out ($dff) from module top (D = \u_array.rows[2].cols[4].u_pe.act_out, Q = \u_array.rows[2].cols[5].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[2].cols[5].u_pe.psum_out ($dff) from module top (D = $465y, Q = \u_array.rows[2].cols[5].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[7].cols[1].u_pe.weight ($dff) from module top (D = $procmux$100_Y, Q = \u_array.rows[7].cols[1].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1137 ($sdff) from module top (D = \weight_in_flat [463:456], Q = \u_array.rows[7].cols[1].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[7].cols[1].u_pe.act_out ($dff) from module top (D = \u_array.rows[7].cols[0].u_pe.act_out, Q = \u_array.rows[7].cols[1].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[7].cols[1].u_pe.psum_out ($dff) from module top (D = $1113y, Q = \u_array.rows[7].cols[1].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[2].cols[6].u_pe.weight ($dff) from module top (D = $procmux$622_Y, Q = \u_array.rows[2].cols[6].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1141 ($sdff) from module top (D = \weight_in_flat [183:176], Q = \u_array.rows[2].cols[6].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[2].cols[6].u_pe.act_out ($dff) from module top (D = \u_array.rows[2].cols[5].u_pe.act_out, Q = \u_array.rows[2].cols[6].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[2].cols[6].u_pe.psum_out ($dff) from module top (D = $483y, Q = \u_array.rows[2].cols[6].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[4].cols[4].u_pe.act_out ($dff) from module top (D = \u_array.rows[4].cols[3].u_pe.act_out, Q = \u_array.rows[4].cols[4].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[2].cols[7].u_pe.weight ($dff) from module top (D = $procmux$607_Y, Q = \u_array.rows[2].cols[7].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1146 ($sdff) from module top (D = \weight_in_flat [191:184], Q = \u_array.rows[2].cols[7].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[4].cols[5].u_pe.weight ($dff) from module top (D = $procmux$397_Y, Q = \u_array.rows[4].cols[5].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1148 ($sdff) from module top (D = \weight_in_flat [303:296], Q = \u_array.rows[4].cols[5].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[2].cols[7].u_pe.psum_out ($dff) from module top (D = $501y, Q = \u_array.rows[2].cols[7].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[7].cols[2].u_pe.weight ($dff) from module top (D = $procmux$82_Y, Q = \u_array.rows[7].cols[2].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1151 ($sdff) from module top (D = \weight_in_flat [471:464], Q = \u_array.rows[7].cols[2].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[7].cols[2].u_pe.act_out ($dff) from module top (D = \u_array.rows[7].cols[1].u_pe.act_out, Q = \u_array.rows[7].cols[2].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[7].cols[2].u_pe.psum_out ($dff) from module top (D = $1131y, Q = \u_array.rows[7].cols[2].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[3].cols[0].u_pe.weight ($dff) from module top (D = $procmux$592_Y, Q = \u_array.rows[3].cols[0].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1155 ($sdff) from module top (D = \weight_in_flat [199:192], Q = \u_array.rows[3].cols[0].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[3].cols[0].u_pe.act_out ($dff) from module top (D = \act_in_flat [31:24], Q = \u_array.rows[3].cols[0].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[3].cols[0].u_pe.psum_out ($dff) from module top (D = $519y, Q = \u_array.rows[3].cols[0].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[7].cols[3].u_pe.weight ($dff) from module top (D = $procmux$67_Y, Q = \u_array.rows[7].cols[3].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1159 ($sdff) from module top (D = \weight_in_flat [479:472], Q = \u_array.rows[7].cols[3].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[7].cols[3].u_pe.act_out ($dff) from module top (D = \u_array.rows[7].cols[2].u_pe.act_out, Q = \u_array.rows[7].cols[3].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[7].cols[3].u_pe.psum_out ($dff) from module top (D = $1149y, Q = \u_array.rows[7].cols[3].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[3].cols[1].u_pe.weight ($dff) from module top (D = $procmux$577_Y, Q = \u_array.rows[3].cols[1].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1163 ($sdff) from module top (D = \weight_in_flat [207:200], Q = \u_array.rows[3].cols[1].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[3].cols[1].u_pe.act_out ($dff) from module top (D = \u_array.rows[3].cols[0].u_pe.act_out, Q = \u_array.rows[3].cols[1].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[3].cols[1].u_pe.psum_out ($dff) from module top (D = $537y, Q = \u_array.rows[3].cols[1].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[4].cols[3].u_pe.weight ($dff) from module top (D = $procmux$427_Y, Q = \u_array.rows[4].cols[3].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1167 ($sdff) from module top (D = \weight_in_flat [287:280], Q = \u_array.rows[4].cols[3].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[3].cols[2].u_pe.weight ($dff) from module top (D = $procmux$562_Y, Q = \u_array.rows[3].cols[2].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1169 ($sdff) from module top (D = \weight_in_flat [215:208], Q = \u_array.rows[3].cols[2].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[3].cols[2].u_pe.act_out ($dff) from module top (D = \u_array.rows[3].cols[1].u_pe.act_out, Q = \u_array.rows[3].cols[2].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[3].cols[2].u_pe.psum_out ($dff) from module top (D = $555y, Q = \u_array.rows[3].cols[2].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[7].cols[4].u_pe.weight ($dff) from module top (D = $procmux$52_Y, Q = \u_array.rows[7].cols[4].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1173 ($sdff) from module top (D = \weight_in_flat [487:480], Q = \u_array.rows[7].cols[4].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[7].cols[4].u_pe.act_out ($dff) from module top (D = \u_array.rows[7].cols[3].u_pe.act_out, Q = \u_array.rows[7].cols[4].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[7].cols[4].u_pe.psum_out ($dff) from module top (D = $1167y, Q = \u_array.rows[7].cols[4].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[3].cols[3].u_pe.weight ($dff) from module top (D = $procmux$547_Y, Q = \u_array.rows[3].cols[3].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1177 ($sdff) from module top (D = \weight_in_flat [223:216], Q = \u_array.rows[3].cols[3].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[3].cols[3].u_pe.act_out ($dff) from module top (D = \u_array.rows[3].cols[2].u_pe.act_out, Q = \u_array.rows[3].cols[3].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[3].cols[3].u_pe.psum_out ($dff) from module top (D = $573y, Q = \u_array.rows[3].cols[3].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[7].cols[5].u_pe.weight ($dff) from module top (D = $procmux$37_Y, Q = \u_array.rows[7].cols[5].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1181 ($sdff) from module top (D = \weight_in_flat [495:488], Q = \u_array.rows[7].cols[5].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[7].cols[5].u_pe.act_out ($dff) from module top (D = \u_array.rows[7].cols[4].u_pe.act_out, Q = \u_array.rows[7].cols[5].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[7].cols[5].u_pe.psum_out ($dff) from module top (D = $1185y, Q = \u_array.rows[7].cols[5].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[3].cols[4].u_pe.weight ($dff) from module top (D = $procmux$532_Y, Q = \u_array.rows[3].cols[4].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1185 ($sdff) from module top (D = \weight_in_flat [231:224], Q = \u_array.rows[3].cols[4].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[3].cols[4].u_pe.act_out ($dff) from module top (D = \u_array.rows[3].cols[3].u_pe.act_out, Q = \u_array.rows[3].cols[4].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[3].cols[4].u_pe.psum_out ($dff) from module top (D = $591y, Q = \u_array.rows[3].cols[4].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[4].cols[3].u_pe.act_out ($dff) from module top (D = \u_array.rows[4].cols[2].u_pe.act_out, Q = \u_array.rows[4].cols[3].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[4].cols[3].u_pe.psum_out ($dff) from module top (D = $717y, Q = \u_array.rows[4].cols[3].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[3].cols[5].u_pe.weight ($dff) from module top (D = $procmux$517_Y, Q = \u_array.rows[3].cols[5].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1191 ($sdff) from module top (D = \weight_in_flat [239:232], Q = \u_array.rows[3].cols[5].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[3].cols[5].u_pe.act_out ($dff) from module top (D = \u_array.rows[3].cols[4].u_pe.act_out, Q = \u_array.rows[3].cols[5].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[3].cols[5].u_pe.psum_out ($dff) from module top (D = $609y, Q = \u_array.rows[3].cols[5].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[7].cols[6].u_pe.weight ($dff) from module top (D = $procmux$22_Y, Q = \u_array.rows[7].cols[6].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1195 ($sdff) from module top (D = \weight_in_flat [503:496], Q = \u_array.rows[7].cols[6].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[7].cols[6].u_pe.act_out ($dff) from module top (D = \u_array.rows[7].cols[5].u_pe.act_out, Q = \u_array.rows[7].cols[6].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[7].cols[6].u_pe.psum_out ($dff) from module top (D = $1203y, Q = \u_array.rows[7].cols[6].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[3].cols[6].u_pe.weight ($dff) from module top (D = $procmux$502_Y, Q = \u_array.rows[3].cols[6].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1199 ($sdff) from module top (D = \weight_in_flat [247:240], Q = \u_array.rows[3].cols[6].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[3].cols[6].u_pe.act_out ($dff) from module top (D = \u_array.rows[3].cols[5].u_pe.act_out, Q = \u_array.rows[3].cols[6].u_pe.act_out, rval = 8'00000000).
+Adding SRST signal on $driver$u_array.rows[3].cols[6].u_pe.psum_out ($dff) from module top (D = $627y, Q = \u_array.rows[3].cols[6].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[7].cols[7].u_pe.weight ($dff) from module top (D = $procmux$10_Y, Q = \u_array.rows[7].cols[7].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1203 ($sdff) from module top (D = \weight_in_flat [511:504], Q = \u_array.rows[7].cols[7].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[7].cols[7].u_pe.psum_out ($dff) from module top (D = $1221y, Q = \u_array.rows[7].cols[7].u_pe.psum_out, rval = 0).
+Adding SRST signal on $driver$u_array.rows[3].cols[7].u_pe.weight ($dff) from module top (D = $procmux$487_Y, Q = \u_array.rows[3].cols[7].u_pe.weight, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$1206 ($sdff) from module top (D = \weight_in_flat [255:248], Q = \u_array.rows[3].cols[7].u_pe.weight).
+Adding SRST signal on $driver$u_array.rows[3].cols[7].u_pe.psum_out ($dff) from module top (D = $645y, Q = \u_array.rows[3].cols[7].u_pe.psum_out, rval = 0).
+
+2.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 248 unused cells and 248 unused wires.
+<suppressed ~249 debug messages>
+
+2.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.8.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.8.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.8.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.8.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Computing hashes of 304 cells of `\top'.
+Finding duplicate cells in `\top'.
+Removed a total of 0 cells.
+
+2.8.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.8.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.8.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.8.16. Finished fast OPT passes. (There is nothing left to do.)
+
+2.9. Executing WREDUCE pass (reducing word size of cells).
+Converting cell top.$86 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$86 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$86 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$86 ($mul).
+Converting cell top.$104 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$104 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$104 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$104 ($mul).
+Converting cell top.$122 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$122 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$122 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$122 ($mul).
+Converting cell top.$140 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$140 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$140 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$140 ($mul).
+Converting cell top.$158 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$158 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$158 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$158 ($mul).
+Converting cell top.$176 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$176 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$176 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$176 ($mul).
+Converting cell top.$194 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$194 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$194 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$194 ($mul).
+Converting cell top.$212 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$212 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$212 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$212 ($mul).
+Converting cell top.$230 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$230 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$230 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$230 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$231 ($add).
+Converting cell top.$248 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$248 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$248 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$248 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$249 ($add).
+Converting cell top.$266 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$266 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$266 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$266 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$267 ($add).
+Converting cell top.$284 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$284 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$284 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$284 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$285 ($add).
+Converting cell top.$302 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$302 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$302 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$302 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$303 ($add).
+Converting cell top.$320 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$320 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$320 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$320 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$321 ($add).
+Converting cell top.$338 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$338 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$338 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$338 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$339 ($add).
+Converting cell top.$356 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$356 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$356 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$356 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$357 ($add).
+Converting cell top.$374 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$374 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$374 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$374 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$375 ($add).
+Converting cell top.$392 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$392 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$392 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$392 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$393 ($add).
+Converting cell top.$410 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$410 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$410 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$410 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$411 ($add).
+Converting cell top.$428 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$428 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$428 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$428 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$429 ($add).
+Converting cell top.$446 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$446 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$446 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$446 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$447 ($add).
+Converting cell top.$464 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$464 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$464 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$464 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$465 ($add).
+Converting cell top.$482 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$482 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$482 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$482 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$483 ($add).
+Converting cell top.$500 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$500 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$500 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$500 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$501 ($add).
+Converting cell top.$518 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$518 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$518 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$518 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$519 ($add).
+Converting cell top.$536 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$536 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$536 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$536 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$537 ($add).
+Converting cell top.$554 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$554 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$554 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$554 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$555 ($add).
+Converting cell top.$572 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$572 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$572 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$572 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$573 ($add).
+Converting cell top.$590 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$590 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$590 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$590 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$591 ($add).
+Converting cell top.$608 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$608 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$608 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$608 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$609 ($add).
+Converting cell top.$626 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$626 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$626 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$626 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$627 ($add).
+Converting cell top.$644 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$644 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$644 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$644 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$645 ($add).
+Converting cell top.$662 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$662 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$662 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$662 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$663 ($add).
+Converting cell top.$680 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$680 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$680 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$680 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$681 ($add).
+Converting cell top.$698 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$698 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$698 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$698 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$699 ($add).
+Converting cell top.$716 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$716 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$716 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$716 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$717 ($add).
+Converting cell top.$734 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$734 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$734 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$734 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$735 ($add).
+Converting cell top.$752 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$752 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$752 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$752 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$753 ($add).
+Converting cell top.$770 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$770 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$770 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$770 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$771 ($add).
+Converting cell top.$788 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$788 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$788 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$788 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$789 ($add).
+Converting cell top.$806 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$806 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$806 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$806 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$807 ($add).
+Converting cell top.$824 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$824 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$824 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$824 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$825 ($add).
+Converting cell top.$842 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$842 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$842 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$842 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$843 ($add).
+Converting cell top.$860 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$860 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$860 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$860 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$861 ($add).
+Converting cell top.$878 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$878 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$878 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$878 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$879 ($add).
+Converting cell top.$896 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$896 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$896 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$896 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$897 ($add).
+Converting cell top.$914 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$914 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$914 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$914 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$915 ($add).
+Converting cell top.$932 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$932 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$932 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$932 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$933 ($add).
+Converting cell top.$950 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$950 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$950 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$950 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$951 ($add).
+Converting cell top.$968 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$968 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$968 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$968 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$969 ($add).
+Converting cell top.$986 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$986 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$986 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$986 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$987 ($add).
+Converting cell top.$1004 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$1004 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$1004 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$1004 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$1005 ($add).
+Converting cell top.$1022 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$1022 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$1022 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$1022 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$1023 ($add).
+Converting cell top.$1040 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$1040 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$1040 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$1040 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$1041 ($add).
+Converting cell top.$1058 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$1058 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$1058 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$1058 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$1059 ($add).
+Converting cell top.$1076 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$1076 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$1076 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$1076 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$1077 ($add).
+Converting cell top.$1094 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$1094 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$1094 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$1094 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$1095 ($add).
+Converting cell top.$1112 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$1112 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$1112 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$1112 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$1113 ($add).
+Converting cell top.$1130 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$1130 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$1130 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$1130 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$1131 ($add).
+Converting cell top.$1148 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$1148 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$1148 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$1148 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$1149 ($add).
+Converting cell top.$1166 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$1166 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$1166 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$1166 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$1167 ($add).
+Converting cell top.$1184 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$1184 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$1184 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$1184 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$1185 ($add).
+Converting cell top.$1202 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$1202 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$1202 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$1202 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$1203 ($add).
+Converting cell top.$1220 ($mul) from unsigned to signed.
+Removed top 24 bits (of 32) from port A of cell top.$1220 ($mul).
+Removed top 24 bits (of 32) from port B of cell top.$1220 ($mul).
+Removed top 16 bits (of 32) from port Y of cell top.$1220 ($mul).
+Removed top 16 bits (of 32) from port B of cell top.$1221 ($add).
+
+2.10. Executing PEEPOPT pass (run peephole optimizers).
+
+2.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module top:
+  creating $macc model for $429 ($add).
+  creating $macc model for $1023 ($add).
+  creating $macc model for $1022 ($mul).
+  creating $macc model for $339 ($add).
+  creating $macc model for $338 ($mul).
+  creating $macc model for $1112 ($mul).
+  creating $macc model for $1113 ($add).
+  creating $macc model for $644 ($mul).
+  creating $macc model for $482 ($mul).
+  creating $macc model for $645 ($add).
+  creating $macc model for $483 ($add).
+  creating $macc model for $321 ($add).
+  creating $macc model for $320 ($mul).
+  creating $macc model for $1005 ($add).
+  creating $macc model for $1004 ($mul).
+  creating $macc model for $428 ($mul).
+  creating $macc model for $734 ($mul).
+  creating $macc model for $1220 ($mul).
+  creating $macc model for $303 ($add).
+  creating $macc model for $302 ($mul).
+  creating $macc model for $1203 ($add).
+  creating $macc model for $1077 ($add).
+  creating $macc model for $987 ($add).
+  creating $macc model for $986 ($mul).
+  creating $macc model for $285 ($add).
+  creating $macc model for $284 ($mul).
+  creating $macc model for $1076 ($mul).
+  creating $macc model for $699 ($add).
+  creating $macc model for $465 ($add).
+  creating $macc model for $500 ($mul).
+  creating $macc model for $501 ($add).
+  creating $macc model for $267 ($add).
+  creating $macc model for $266 ($mul).
+  creating $macc model for $969 ($add).
+  creating $macc model for $968 ($mul).
+  creating $macc model for $1130 ($mul).
+  creating $macc model for $1131 ($add).
+  creating $macc model for $249 ($add).
+  creating $macc model for $248 ($mul).
+  creating $macc model for $627 ($add).
+  creating $macc model for $951 ($add).
+  creating $macc model for $950 ($mul).
+  creating $macc model for $231 ($add).
+  creating $macc model for $230 ($mul).
+  creating $macc model for $518 ($mul).
+  creating $macc model for $519 ($add).
+  creating $macc model for $1221 ($add).
+  creating $macc model for $753 ($add).
+  creating $macc model for $212 ($mul).
+  creating $macc model for $933 ($add).
+  creating $macc model for $932 ($mul).
+  creating $macc model for $1094 ($mul).
+  creating $macc model for $374 ($mul).
+  creating $macc model for $194 ($mul).
+  creating $macc model for $411 ($add).
+  creating $macc model for $681 ($add).
+  creating $macc model for $1148 ($mul).
+  creating $macc model for $1149 ($add).
+  creating $macc model for $915 ($add).
+  creating $macc model for $914 ($mul).
+  creating $macc model for $1040 ($mul).
+  creating $macc model for $176 ($mul).
+  creating $macc model for $680 ($mul).
+  creating $macc model for $464 ($mul).
+  creating $macc model for $536 ($mul).
+  creating $macc model for $537 ($add).
+  creating $macc model for $1041 ($add).
+  creating $macc model for $158 ($mul).
+  creating $macc model for $897 ($add).
+  creating $macc model for $896 ($mul).
+  creating $macc model for $410 ($mul).
+  creating $macc model for $375 ($add).
+  creating $macc model for $1095 ($add).
+  creating $macc model for $140 ($mul).
+  creating $macc model for $356 ($mul).
+  creating $macc model for $879 ($add).
+  creating $macc model for $878 ($mul).
+  creating $macc model for $122 ($mul).
+  creating $macc model for $626 ($mul).
+  creating $macc model for $554 ($mul).
+  creating $macc model for $555 ($add).
+  creating $macc model for $357 ($add).
+  creating $macc model for $104 ($mul).
+  creating $macc model for $861 ($add).
+  creating $macc model for $860 ($mul).
+  creating $macc model for $1166 ($mul).
+  creating $macc model for $1167 ($add).
+  creating $macc model for $752 ($mul).
+  creating $macc model for $86 ($mul).
+  creating $macc model for $1059 ($add).
+  creating $macc model for $716 ($mul).
+  creating $macc model for $1058 ($mul).
+  creating $macc model for $843 ($add).
+  creating $macc model for $842 ($mul).
+  creating $macc model for $572 ($mul).
+  creating $macc model for $573 ($add).
+  creating $macc model for $447 ($add).
+  creating $macc model for $825 ($add).
+  creating $macc model for $824 ($mul).
+  creating $macc model for $717 ($add).
+  creating $macc model for $698 ($mul).
+  creating $macc model for $393 ($add).
+  creating $macc model for $392 ($mul).
+  creating $macc model for $1184 ($mul).
+  creating $macc model for $1185 ($add).
+  creating $macc model for $807 ($add).
+  creating $macc model for $806 ($mul).
+  creating $macc model for $590 ($mul).
+  creating $macc model for $591 ($add).
+  creating $macc model for $663 ($add).
+  creating $macc model for $789 ($add).
+  creating $macc model for $788 ($mul).
+  creating $macc model for $662 ($mul).
+  creating $macc model for $735 ($add).
+  creating $macc model for $446 ($mul).
+  creating $macc model for $771 ($add).
+  creating $macc model for $770 ($mul).
+  creating $macc model for $608 ($mul).
+  creating $macc model for $609 ($add).
+  creating $macc model for $1202 ($mul).
+  merging $macc model for $608 into $609.
+  merging $macc model for $770 into $771.
+  merging $macc model for $734 into $735.
+  merging $macc model for $788 into $789.
+  merging $macc model for $662 into $663.
+  merging $macc model for $590 into $591.
+  merging $macc model for $806 into $807.
+  merging $macc model for $1184 into $1185.
+  merging $macc model for $392 into $393.
+  merging $macc model for $716 into $717.
+  merging $macc model for $824 into $825.
+  merging $macc model for $446 into $447.
+  merging $macc model for $572 into $573.
+  merging $macc model for $842 into $843.
+  merging $macc model for $1058 into $1059.
+  merging $macc model for $1166 into $1167.
+  merging $macc model for $860 into $861.
+  merging $macc model for $356 into $357.
+  merging $macc model for $554 into $555.
+  merging $macc model for $878 into $879.
+  merging $macc model for $1094 into $1095.
+  merging $macc model for $374 into $375.
+  merging $macc model for $896 into $897.
+  merging $macc model for $1040 into $1041.
+  merging $macc model for $536 into $537.
+  merging $macc model for $914 into $915.
+  merging $macc model for $1148 into $1149.
+  merging $macc model for $680 into $681.
+  merging $macc model for $410 into $411.
+  merging $macc model for $932 into $933.
+  merging $macc model for $752 into $753.
+  merging $macc model for $1220 into $1221.
+  merging $macc model for $518 into $519.
+  merging $macc model for $230 into $231.
+  merging $macc model for $950 into $951.
+  merging $macc model for $626 into $627.
+  merging $macc model for $248 into $249.
+  merging $macc model for $1130 into $1131.
+  merging $macc model for $968 into $969.
+  merging $macc model for $266 into $267.
+  merging $macc model for $500 into $501.
+  merging $macc model for $464 into $465.
+  merging $macc model for $698 into $699.
+  merging $macc model for $284 into $285.
+  merging $macc model for $986 into $987.
+  merging $macc model for $1076 into $1077.
+  merging $macc model for $1202 into $1203.
+  merging $macc model for $302 into $303.
+  merging $macc model for $1004 into $1005.
+  merging $macc model for $320 into $321.
+  merging $macc model for $482 into $483.
+  merging $macc model for $644 into $645.
+  merging $macc model for $1112 into $1113.
+  merging $macc model for $338 into $339.
+  merging $macc model for $1022 into $1023.
+  merging $macc model for $428 into $429.
+  creating $macc cell for $807: $auto$alumacc.cc:399:replace_macc$1209
+  creating $macc cell for $717: $auto$alumacc.cc:399:replace_macc$1210
+  creating $macc cell for $176: $auto$alumacc.cc:399:replace_macc$1211
+  creating $macc cell for $861: $auto$alumacc.cc:399:replace_macc$1212
+  creating $macc cell for $1059: $auto$alumacc.cc:399:replace_macc$1213
+  creating $macc cell for $915: $auto$alumacc.cc:399:replace_macc$1214
+  creating $macc cell for $1149: $auto$alumacc.cc:399:replace_macc$1215
+  creating $macc cell for $140: $auto$alumacc.cc:399:replace_macc$1216
+  creating $macc cell for $681: $auto$alumacc.cc:399:replace_macc$1217
+  creating $macc cell for $411: $auto$alumacc.cc:399:replace_macc$1218
+  creating $macc cell for $194: $auto$alumacc.cc:399:replace_macc$1219
+  creating $macc cell for $104: $auto$alumacc.cc:399:replace_macc$1220
+  creating $macc cell for $555: $auto$alumacc.cc:399:replace_macc$1221
+  creating $macc cell for $122: $auto$alumacc.cc:399:replace_macc$1222
+  creating $macc cell for $933: $auto$alumacc.cc:399:replace_macc$1223
+  creating $macc cell for $212: $auto$alumacc.cc:399:replace_macc$1224
+  creating $macc cell for $753: $auto$alumacc.cc:399:replace_macc$1225
+  creating $macc cell for $1221: $auto$alumacc.cc:399:replace_macc$1226
+  creating $macc cell for $519: $auto$alumacc.cc:399:replace_macc$1227
+  creating $macc cell for $447: $auto$alumacc.cc:399:replace_macc$1228
+  creating $macc cell for $825: $auto$alumacc.cc:399:replace_macc$1229
+  creating $macc cell for $231: $auto$alumacc.cc:399:replace_macc$1230
+  creating $macc cell for $357: $auto$alumacc.cc:399:replace_macc$1231
+  creating $macc cell for $951: $auto$alumacc.cc:399:replace_macc$1232
+  creating $macc cell for $627: $auto$alumacc.cc:399:replace_macc$1233
+  creating $macc cell for $843: $auto$alumacc.cc:399:replace_macc$1234
+  creating $macc cell for $249: $auto$alumacc.cc:399:replace_macc$1235
+  creating $macc cell for $1131: $auto$alumacc.cc:399:replace_macc$1236
+  creating $macc cell for $393: $auto$alumacc.cc:399:replace_macc$1237
+  creating $macc cell for $1095: $auto$alumacc.cc:399:replace_macc$1238
+  creating $macc cell for $969: $auto$alumacc.cc:399:replace_macc$1239
+  creating $macc cell for $375: $auto$alumacc.cc:399:replace_macc$1240
+  creating $macc cell for $267: $auto$alumacc.cc:399:replace_macc$1241
+  creating $macc cell for $501: $auto$alumacc.cc:399:replace_macc$1242
+  creating $macc cell for $1185: $auto$alumacc.cc:399:replace_macc$1243
+  creating $macc cell for $465: $auto$alumacc.cc:399:replace_macc$1244
+  creating $macc cell for $699: $auto$alumacc.cc:399:replace_macc$1245
+  creating $macc cell for $663: $auto$alumacc.cc:399:replace_macc$1246
+  creating $macc cell for $1167: $auto$alumacc.cc:399:replace_macc$1247
+  creating $macc cell for $285: $auto$alumacc.cc:399:replace_macc$1248
+  creating $macc cell for $591: $auto$alumacc.cc:399:replace_macc$1249
+  creating $macc cell for $987: $auto$alumacc.cc:399:replace_macc$1250
+  creating $macc cell for $1077: $auto$alumacc.cc:399:replace_macc$1251
+  creating $macc cell for $1203: $auto$alumacc.cc:399:replace_macc$1252
+  creating $macc cell for $158: $auto$alumacc.cc:399:replace_macc$1253
+  creating $macc cell for $303: $auto$alumacc.cc:399:replace_macc$1254
+  creating $macc cell for $573: $auto$alumacc.cc:399:replace_macc$1255
+  creating $macc cell for $1041: $auto$alumacc.cc:399:replace_macc$1256
+  creating $macc cell for $789: $auto$alumacc.cc:399:replace_macc$1257
+  creating $macc cell for $897: $auto$alumacc.cc:399:replace_macc$1258
+  creating $macc cell for $1005: $auto$alumacc.cc:399:replace_macc$1259
+  creating $macc cell for $735: $auto$alumacc.cc:399:replace_macc$1260
+  creating $macc cell for $321: $auto$alumacc.cc:399:replace_macc$1261
+  creating $macc cell for $483: $auto$alumacc.cc:399:replace_macc$1262
+  creating $macc cell for $645: $auto$alumacc.cc:399:replace_macc$1263
+  creating $macc cell for $879: $auto$alumacc.cc:399:replace_macc$1264
+  creating $macc cell for $771: $auto$alumacc.cc:399:replace_macc$1265
+  creating $macc cell for $1113: $auto$alumacc.cc:399:replace_macc$1266
+  creating $macc cell for $537: $auto$alumacc.cc:399:replace_macc$1267
+  creating $macc cell for $86: $auto$alumacc.cc:399:replace_macc$1268
+  creating $macc cell for $339: $auto$alumacc.cc:399:replace_macc$1269
+  creating $macc cell for $609: $auto$alumacc.cc:399:replace_macc$1270
+  creating $macc cell for $1023: $auto$alumacc.cc:399:replace_macc$1271
+  creating $macc cell for $429: $auto$alumacc.cc:399:replace_macc$1272
+  created 0 $alu and 64 $macc cells.
+
+2.13. Executing SHARE pass (SAT-based resource sharing).
+Found 56 cells in module top that may be considered for resource sharing.
+  Analyzing resource sharing options for $1202 ($mul):
+    Found cell that is never activated: $1202
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $608 ($mul):
+    Found cell that is never activated: $608
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $770 ($mul):
+    Found cell that is never activated: $770
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $446 ($mul):
+    Found cell that is never activated: $446
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $662 ($mul):
+    Found cell that is never activated: $662
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $788 ($mul):
+    Found cell that is never activated: $788
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $590 ($mul):
+    Found cell that is never activated: $590
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $806 ($mul):
+    Found cell that is never activated: $806
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $1184 ($mul):
+    Found cell that is never activated: $1184
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $392 ($mul):
+    Found cell that is never activated: $392
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $698 ($mul):
+    Found cell that is never activated: $698
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $824 ($mul):
+    Found cell that is never activated: $824
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $572 ($mul):
+    Found cell that is never activated: $572
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $842 ($mul):
+    Found cell that is never activated: $842
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $1058 ($mul):
+    Found cell that is never activated: $1058
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $716 ($mul):
+    Found cell that is never activated: $716
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $752 ($mul):
+    Found cell that is never activated: $752
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $1166 ($mul):
+    Found cell that is never activated: $1166
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $860 ($mul):
+    Found cell that is never activated: $860
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $554 ($mul):
+    Found cell that is never activated: $554
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $626 ($mul):
+    Found cell that is never activated: $626
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $878 ($mul):
+    Found cell that is never activated: $878
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $356 ($mul):
+    Found cell that is never activated: $356
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $410 ($mul):
+    Found cell that is never activated: $410
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $896 ($mul):
+    Found cell that is never activated: $896
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $536 ($mul):
+    Found cell that is never activated: $536
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $464 ($mul):
+    Found cell that is never activated: $464
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $680 ($mul):
+    Found cell that is never activated: $680
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $1040 ($mul):
+    Found cell that is never activated: $1040
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $914 ($mul):
+    Found cell that is never activated: $914
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $1148 ($mul):
+    Found cell that is never activated: $1148
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $374 ($mul):
+    Found cell that is never activated: $374
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $1094 ($mul):
+    Found cell that is never activated: $1094
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $932 ($mul):
+    Found cell that is never activated: $932
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $518 ($mul):
+    Found cell that is never activated: $518
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $230 ($mul):
+    Found cell that is never activated: $230
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $950 ($mul):
+    Found cell that is never activated: $950
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $248 ($mul):
+    Found cell that is never activated: $248
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $1130 ($mul):
+    Found cell that is never activated: $1130
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $968 ($mul):
+    Found cell that is never activated: $968
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $266 ($mul):
+    Found cell that is never activated: $266
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $500 ($mul):
+    Found cell that is never activated: $500
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $1076 ($mul):
+    Found cell that is never activated: $1076
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $284 ($mul):
+    Found cell that is never activated: $284
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $986 ($mul):
+    Found cell that is never activated: $986
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $302 ($mul):
+    Found cell that is never activated: $302
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $1220 ($mul):
+    Found cell that is never activated: $1220
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $734 ($mul):
+    Found cell that is never activated: $734
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $428 ($mul):
+    Found cell that is never activated: $428
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $1004 ($mul):
+    Found cell that is never activated: $1004
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $320 ($mul):
+    Found cell that is never activated: $320
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $482 ($mul):
+    Found cell that is never activated: $482
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $644 ($mul):
+    Found cell that is never activated: $644
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $1112 ($mul):
+    Found cell that is never activated: $1112
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $338 ($mul):
+    Found cell that is never activated: $338
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $1022 ($mul):
+    Found cell that is never activated: $1022
+    Cell is never active. Sharing is pointless, we simply remove it.
+Removing 56 cells in module top:
+  Removing cell $1022 ($mul).
+  Removing cell $338 ($mul).
+  Removing cell $1112 ($mul).
+  Removing cell $644 ($mul).
+  Removing cell $482 ($mul).
+  Removing cell $320 ($mul).
+  Removing cell $1004 ($mul).
+  Removing cell $428 ($mul).
+  Removing cell $734 ($mul).
+  Removing cell $1220 ($mul).
+  Removing cell $302 ($mul).
+  Removing cell $986 ($mul).
+  Removing cell $284 ($mul).
+  Removing cell $1076 ($mul).
+  Removing cell $500 ($mul).
+  Removing cell $266 ($mul).
+  Removing cell $968 ($mul).
+  Removing cell $1130 ($mul).
+  Removing cell $248 ($mul).
+  Removing cell $950 ($mul).
+  Removing cell $230 ($mul).
+  Removing cell $518 ($mul).
+  Removing cell $932 ($mul).
+  Removing cell $1094 ($mul).
+  Removing cell $374 ($mul).
+  Removing cell $1148 ($mul).
+  Removing cell $914 ($mul).
+  Removing cell $1040 ($mul).
+  Removing cell $680 ($mul).
+  Removing cell $464 ($mul).
+  Removing cell $536 ($mul).
+  Removing cell $896 ($mul).
+  Removing cell $410 ($mul).
+  Removing cell $356 ($mul).
+  Removing cell $878 ($mul).
+  Removing cell $626 ($mul).
+  Removing cell $554 ($mul).
+  Removing cell $860 ($mul).
+  Removing cell $1166 ($mul).
+  Removing cell $752 ($mul).
+  Removing cell $716 ($mul).
+  Removing cell $1058 ($mul).
+  Removing cell $842 ($mul).
+  Removing cell $572 ($mul).
+  Removing cell $824 ($mul).
+  Removing cell $698 ($mul).
+  Removing cell $392 ($mul).
+  Removing cell $1184 ($mul).
+  Removing cell $806 ($mul).
+  Removing cell $590 ($mul).
+  Removing cell $788 ($mul).
+  Removing cell $662 ($mul).
+  Removing cell $446 ($mul).
+  Removing cell $770 ($mul).
+  Removing cell $608 ($mul).
+  Removing cell $1202 ($mul).
+
+2.14. Executing OPT pass (performing simple optimizations).
+
+2.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Computing hashes of 248 cells of `\top'.
+Finding duplicate cells in `\top'.
+Removed a total of 0 cells.
+
+2.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Computing hashes of 248 cells of `\top'.
+Finding duplicate cells in `\top'.
+Removed a total of 0 cells.
+
+2.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 56 unused wires.
+<suppressed ~1 debug messages>
+
+2.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.14.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.14.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.14.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.14.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Computing hashes of 248 cells of `\top'.
+Finding duplicate cells in `\top'.
+Removed a total of 0 cells.
+
+2.14.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.14.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.14.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.14.16. Finished fast OPT passes. (There is nothing left to do.)
+
+2.15. Executing MEMORY pass.
+
+2.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+2.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+2.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+2.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+2.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+2.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+2.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+2.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.17. Executing OPT pass (performing simple optimizations).
+
+2.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~54 debug messages>
+
+2.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Computing hashes of 248 cells of `\top'.
+Finding duplicate cells in `\top'.
+Removed a total of 0 cells.
+
+2.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.17.5. Finished fast OPT passes.
+
+2.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+2.19. Executing OPT pass (performing simple optimizations).
+
+2.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Computing hashes of 248 cells of `\top'.
+Finding duplicate cells in `\top'.
+Removed a total of 0 cells.
+
+2.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Computing hashes of 248 cells of `\top'.
+Finding duplicate cells in `\top'.
+Removed a total of 0 cells.
+
+2.19.6. Executing OPT_SHARE pass.
+
+2.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.19.10. Finished fast OPT passes. (There is nothing left to do.)
+
+2.20. Executing TECHMAP pass (map to technology primitives).
+
+2.20.1. Executing Verilog-2005 frontend: /home/bomma/oss-cad-suite/lib/../share/yosys/techmap.v
+Parsing Verilog input from `/home/bomma/oss-cad-suite/lib/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+2.20.2. Continuing TECHMAP pass.
+Using extmapper maccmap for cells of type $macc_v2.
+  add \u_array.rows[2].cols[2].u_pe.act_out * \u_array.rows[2].cols[3].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[1].cols[3].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[6].cols[3].u_pe.act_out * \u_array.rows[6].cols[4].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[5].cols[4].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[3].cols[4].u_pe.act_out * \u_array.rows[3].cols[5].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[2].cols[5].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[1].cols[5].u_pe.act_out * \u_array.rows[1].cols[6].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[0].cols[6].u_pe.psum_out (32 bits, signed)
+  add \act_in_flat [7:0] * \u_array.rows[0].cols[0].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[3].cols[0].u_pe.act_out * \u_array.rows[3].cols[1].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[2].cols[1].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[7].cols[0].u_pe.act_out * \u_array.rows[7].cols[1].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[6].cols[1].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[4].cols[5].u_pe.act_out * \u_array.rows[4].cols[6].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[3].cols[6].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[5].cols[3].u_pe.act_out * \u_array.rows[5].cols[4].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[4].cols[4].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[3].cols[6].u_pe.act_out * \u_array.rows[3].cols[7].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[2].cols[7].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[2].cols[5].u_pe.act_out * \u_array.rows[2].cols[6].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[1].cols[6].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[1].cols[4].u_pe.act_out * \u_array.rows[1].cols[5].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[0].cols[5].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[4].cols[3].u_pe.act_out * \u_array.rows[4].cols[4].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[3].cols[4].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[6].cols[2].u_pe.act_out * \u_array.rows[6].cols[3].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[5].cols[3].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[5].cols[4].u_pe.act_out * \u_array.rows[5].cols[5].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[4].cols[5].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[4].cols[6].u_pe.act_out * \u_array.rows[4].cols[7].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[3].cols[7].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[6].cols[4].u_pe.act_out * \u_array.rows[6].cols[5].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[5].cols[5].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[3].cols[2].u_pe.act_out * \u_array.rows[3].cols[3].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[2].cols[3].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[1].cols[3].u_pe.act_out * \u_array.rows[1].cols[4].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[0].cols[4].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[0].cols[3].u_pe.act_out * \u_array.rows[0].cols[4].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[7].cols[5].u_pe.act_out * \u_array.rows[7].cols[6].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[6].cols[6].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[6].cols[6].u_pe.act_out * \u_array.rows[6].cols[7].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[5].cols[7].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[6].cols[1].u_pe.act_out * \u_array.rows[6].cols[2].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[5].cols[2].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[3].cols[3].u_pe.act_out * \u_array.rows[3].cols[4].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[2].cols[4].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[1].cols[2].u_pe.act_out * \u_array.rows[1].cols[3].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[0].cols[3].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[7].cols[3].u_pe.act_out * \u_array.rows[7].cols[4].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[6].cols[4].u_pe.psum_out (32 bits, signed)
+  add \act_in_flat [39:32] * \u_array.rows[4].cols[0].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[3].cols[0].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[4].cols[1].u_pe.act_out * \u_array.rows[4].cols[2].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[3].cols[2].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[2].cols[4].u_pe.act_out * \u_array.rows[2].cols[5].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[1].cols[5].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[7].cols[4].u_pe.act_out * \u_array.rows[7].cols[5].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[6].cols[5].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[2].cols[6].u_pe.act_out * \u_array.rows[2].cols[7].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[1].cols[7].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[1].cols[1].u_pe.act_out * \u_array.rows[1].cols[2].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[0].cols[2].u_pe.psum_out (32 bits, signed)
+  add \act_in_flat [23:16] * \u_array.rows[2].cols[0].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[1].cols[0].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[6].cols[0].u_pe.act_out * \u_array.rows[6].cols[1].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[5].cols[1].u_pe.psum_out (32 bits, signed)
+  add \act_in_flat [63:56] * \u_array.rows[7].cols[0].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[6].cols[0].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[2].cols[0].u_pe.act_out * \u_array.rows[2].cols[1].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[1].cols[1].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[7].cols[1].u_pe.act_out * \u_array.rows[7].cols[2].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[6].cols[2].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[1].cols[0].u_pe.act_out * \u_array.rows[1].cols[1].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[0].cols[1].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[5].cols[1].u_pe.act_out * \u_array.rows[5].cols[2].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[4].cols[2].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[3].cols[5].u_pe.act_out * \u_array.rows[3].cols[6].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[2].cols[6].u_pe.psum_out (32 bits, signed)
+  add \act_in_flat [55:48] * \u_array.rows[6].cols[0].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[5].cols[0].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[1].cols[6].u_pe.act_out * \u_array.rows[1].cols[7].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[0].cols[7].u_pe.psum_out (32 bits, signed)
+  add \act_in_flat [15:8] * \u_array.rows[1].cols[0].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[0].cols[0].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[5].cols[0].u_pe.act_out * \u_array.rows[5].cols[1].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[4].cols[1].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[2].cols[3].u_pe.act_out * \u_array.rows[2].cols[4].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[1].cols[4].u_pe.psum_out (32 bits, signed)
+  add \act_in_flat [31:24] * \u_array.rows[3].cols[0].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[2].cols[0].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[7].cols[6].u_pe.act_out * \u_array.rows[7].cols[7].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[6].cols[7].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[4].cols[4].u_pe.act_out * \u_array.rows[4].cols[5].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[3].cols[5].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[0].cols[6].u_pe.act_out * \u_array.rows[0].cols[7].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[5].cols[6].u_pe.act_out * \u_array.rows[5].cols[7].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[4].cols[7].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[0].cols[1].u_pe.act_out * \u_array.rows[0].cols[2].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[3].cols[1].u_pe.act_out * \u_array.rows[3].cols[2].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[2].cols[2].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[0].cols[0].u_pe.act_out * \u_array.rows[0].cols[1].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[0].cols[5].u_pe.act_out * \u_array.rows[0].cols[6].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[2].cols[1].u_pe.act_out * \u_array.rows[2].cols[2].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[1].cols[2].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[4].cols[0].u_pe.act_out * \u_array.rows[4].cols[1].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[3].cols[1].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[0].cols[2].u_pe.act_out * \u_array.rows[0].cols[3].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[7].cols[2].u_pe.act_out * \u_array.rows[7].cols[3].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[6].cols[3].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[5].cols[5].u_pe.act_out * \u_array.rows[5].cols[6].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[4].cols[6].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[6].cols[5].u_pe.act_out * \u_array.rows[6].cols[6].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[5].cols[6].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[5].cols[2].u_pe.act_out * \u_array.rows[5].cols[3].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[4].cols[3].u_pe.psum_out (32 bits, signed)
+  add \u_array.rows[0].cols[4].u_pe.act_out * \u_array.rows[0].cols[5].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[4].cols[2].u_pe.act_out * \u_array.rows[4].cols[3].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[3].cols[3].u_pe.psum_out (32 bits, signed)
+  add \act_in_flat [47:40] * \u_array.rows[5].cols[0].u_pe.weight (8x8 bits, signed)
+  add \u_array.rows[4].cols[0].u_pe.psum_out (32 bits, signed)
+Using extmapper simplemap for cells of type $sdff.
+Using extmapper simplemap for cells of type $sdffe.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000100000 for cells of type $fa.
+Using template $paramod$fbc7873bff55778c0b3173955b7e4bce1d9d6834\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $not.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000010000 for cells of type $fa.
+Using template $paramod$6df0329addda9228fcc2546de2aaf14ad26c98e1\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000100000 for cells of type $lcu.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000010000 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~13501 debug messages>
+
+2.21. Executing OPT pass (performing simple optimizations).
+
+2.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~26152 debug messages>
+
+2.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Computing hashes of 93744 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 84144 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 78192 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 73712 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 70512 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 69248 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 67168 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 65232 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 64336 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 62656 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 62416 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 62296 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 62072 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 61848 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 61736 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 61528 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 61240 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 61160 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 61104 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 61088 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 61072 cells of `\top'.
+Finding duplicate cells in `\top'.
+<suppressed ~98016 debug messages>
+Removed a total of 32672 cells.
+
+2.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 3240 unused cells and 9360 unused wires.
+<suppressed ~3241 debug messages>
+
+2.21.5. Finished fast OPT passes.
+
+2.22. Executing ABC pass (technology mapping using ABC).
+
+2.22.1. Extracting gate netlist of module `\top' to `<abc-temp-dir>/input.blif'..
+
+2.22.1.1. Executed ABC.
+Extracted 54952 gates and 57640 wires to a netlist network with 2688 inputs and 1920 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Sep 12 2026 05:01:00)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+2.22.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:     6625
+ABC RESULTS:            ANDNOT cells:     1112
+ABC RESULTS:               MUX cells:      212
+ABC RESULTS:              NAND cells:    20189
+ABC RESULTS:               NOR cells:      109
+ABC RESULTS:               NOT cells:       65
+ABC RESULTS:                OR cells:     1710
+ABC RESULTS:             ORNOT cells:     1220
+ABC RESULTS:              XNOR cells:     4730
+ABC RESULTS:               XOR cells:    12611
+ABC RESULTS:        internal signals:    53032
+ABC RESULTS:           input signals:     2688
+ABC RESULTS:          output signals:     1920
+Removing temp directory.
+Removing global temp directory.
+
+2.23. Executing OPT pass (performing simple optimizations).
+
+2.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Computing hashes of 51463 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 51343 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 51223 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 50991 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 50655 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 50451 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 50269 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 50134 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 50005 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 49956 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 49873 cells of `\top'.
+Finding duplicate cells in `\top'.
+Computing hashes of 49822 cells of `\top'.
+Finding duplicate cells in `\top'.
+<suppressed ~4923 debug messages>
+Removed a total of 1641 cells.
+
+2.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 13705 unused wires.
+<suppressed ~1 debug messages>
+
+2.23.5. Finished fast OPT passes.
+
+2.24. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `top'. Setting top module to top.
+
+2.24.1. Analyzing design hierarchy..
+Top module:  \top
+
+2.24.2. Analyzing design hierarchy..
+Top module:  \top
+Removed 0 unused modules.
+
+2.25. Printing statistics.
+
+=== top ===
+
+        +----------Local Count, excluding submodules.
+        | 
+    46367 wires
+    71060 wire bits
+      721 public wires
+    14278 public wire bits
+        6 ports
+      835 port bits
+    49822 cells
+     1099   $_ANDNOT_
+     6443   $_AND_
+      212   $_MUX_
+    19581   $_NAND_
+      109   $_NOR_
+       65   $_NOT_
+     1151   $_ORNOT_
+     1601   $_OR_
+      512   $_SDFFE_PP0P_
+     2248   $_SDFF_PP0_
+     4445   $_XNOR_
+    12356   $_XOR_
+
+2.26. Executing CHECK pass (checking for obvious problems).
+Checking module top...
+Found and reported 0 problems.
+
+3. Executing DFFLIBMAP pass (mapping DFF/DLATCH cells to sequential cells from liberty file).
+  cell sg13g2_dfrbpq_1 (noninv, pins=4, area=48.99) is a direct match for cell type $_DFF_PN0_.
+  cell sg13g2_dlhq_1 (noninv, pins=3, area=30.84) is a direct match for cell type $_DLATCH_P_.
+  cell sg13g2_dllrq_1 (noninv, pins=4, area=29.03) is a direct match for cell type $_DLATCH_NN0_.
+  cell sg13g2_dlhrq_1 (noninv, pins=4, area=27.22) is a direct match for cell type $_DLATCH_PN0_.
+  final dff/dlatch cell mappings:
+    unmapped dff/dlatch cell: $_DFF_N_
+    unmapped dff/dlatch cell: $_DFF_P_
+    unmapped dff/dlatch cell: $_DFF_NN0_
+    unmapped dff/dlatch cell: $_DFF_NN1_
+    unmapped dff/dlatch cell: $_DFF_NP0_
+    unmapped dff/dlatch cell: $_DFF_NP1_
+    \sg13g2_dfrbpq_1 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    unmapped dff/dlatch cell: $_DFF_PN1_
+    unmapped dff/dlatch cell: $_DFF_PP0_
+    unmapped dff/dlatch cell: $_DFF_PP1_
+    unmapped dff/dlatch cell: $_DFFE_NN_
+    unmapped dff/dlatch cell: $_DFFE_NP_
+    unmapped dff/dlatch cell: $_DFFE_PN_
+    unmapped dff/dlatch cell: $_DFFE_PP_
+    unmapped dff/dlatch cell: $_DFFSR_NNN_
+    unmapped dff/dlatch cell: $_DFFSR_NNP_
+    unmapped dff/dlatch cell: $_DFFSR_NPN_
+    unmapped dff/dlatch cell: $_DFFSR_NPP_
+    unmapped dff/dlatch cell: $_DFFSR_PNN_
+    unmapped dff/dlatch cell: $_DFFSR_PNP_
+    unmapped dff/dlatch cell: $_DFFSR_PPN_
+    unmapped dff/dlatch cell: $_DFFSR_PPP_
+    unmapped dff/dlatch cell: $_DLATCH_N_
+    \sg13g2_dlhq_1 _DLATCH_P_ (.D( D), .GATE( E), .Q( Q));
+    \sg13g2_dllrq_1 _DLATCH_NN0_ (.D( D), .GATE_N( E), .Q( Q), .RESET_B( R));
+    unmapped dff/dlatch cell: $_DLATCH_NN1_
+    unmapped dff/dlatch cell: $_DLATCH_NP0_
+    unmapped dff/dlatch cell: $_DLATCH_NP1_
+    \sg13g2_dlhrq_1 _DLATCH_PN0_ (.D( D), .GATE( E), .Q( Q), .RESET_B( R));
+    unmapped dff/dlatch cell: $_DLATCH_PN1_
+    unmapped dff/dlatch cell: $_DLATCH_PP0_
+    unmapped dff/dlatch cell: $_DLATCH_PP1_
+    unmapped dff/dlatch cell: $_DLATCHSR_NNN_
+    unmapped dff/dlatch cell: $_DLATCHSR_NNP_
+    unmapped dff/dlatch cell: $_DLATCHSR_NPN_
+    unmapped dff/dlatch cell: $_DLATCHSR_NPP_
+    unmapped dff/dlatch cell: $_DLATCHSR_PNN_
+    unmapped dff/dlatch cell: $_DLATCHSR_PNP_
+    unmapped dff/dlatch cell: $_DLATCHSR_PPN_
+    unmapped dff/dlatch cell: $_DLATCHSR_PPP_
+
+3.1. Executing DFFLEGALIZE pass (convert FFs and LATCHes to types supported by the target).
+<suppressed ~4 debug messages>
+Mapping DFF/DLATCH cells in module `\top':
+  mapped 2760 $_DFF_PN0_ cells to \sg13g2_dfrbpq_1 cells.
+
+4. Executing ABC pass (technology mapping using ABC).
+
+4.1. Extracting gate netlist of module `\top' to `<abc-temp-dir>/input.blif'..
+ABC: using cached merged SCL: /tmp/yosys-liberty-scl-cache-1000/yosys_merged_0a0e92c0.scl (1 files)
+
+4.1.1. Executed ABC.
+Extracted 50334 gates and 53417 wires to a netlist network with 3082 inputs and 2760 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Sep 12 2026 05:01:00)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_scl /tmp/yosys-liberty-scl-cache-1000/yosys_merged_0a0e92c0.scl 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + retime -o -D 3000 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf -D 3000 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+4.1.2. Re-integrating ABC results.
+ABC RESULTS:     sg13g2_a21o_1 cells:      909
+ABC RESULTS:    sg13g2_a21oi_1 cells:     4080
+ABC RESULTS:   sg13g2_a221oi_1 cells:       58
+ABC RESULTS:    sg13g2_a22oi_1 cells:      957
+ABC RESULTS:     sg13g2_and2_1 cells:     1157
+ABC RESULTS:     sg13g2_and3_1 cells:      492
+ABC RESULTS:     sg13g2_and4_1 cells:      363
+ABC RESULTS:      sg13g2_inv_1 cells:     2507
+ABC RESULTS:     sg13g2_mux2_1 cells:       37
+ABC RESULTS:    sg13g2_nand2_1 cells:     4770
+ABC RESULTS:   sg13g2_nand2b_1 cells:     3077
+ABC RESULTS:    sg13g2_nand3_1 cells:      994
+ABC RESULTS:   sg13g2_nand3b_1 cells:      137
+ABC RESULTS:    sg13g2_nand4_1 cells:      293
+ABC RESULTS:     sg13g2_nor2_1 cells:     4402
+ABC RESULTS:    sg13g2_nor2b_1 cells:     2706
+ABC RESULTS:     sg13g2_nor3_1 cells:     1200
+ABC RESULTS:     sg13g2_nor4_1 cells:      144
+ABC RESULTS:    sg13g2_o21ai_1 cells:     4152
+ABC RESULTS:      sg13g2_or2_1 cells:     1025
+ABC RESULTS:      sg13g2_or3_1 cells:      412
+ABC RESULTS:    sg13g2_xnor2_1 cells:     8026
+ABC RESULTS:     sg13g2_xor2_1 cells:     4398
+ABC RESULTS:        internal signals:    47575
+ABC RESULTS:           input signals:     3082
+ABC RESULTS:          output signals:     2760
+Removing temp directory.
+Removing global temp directory.
+Removed 0 unused cells and 52000 unused wires.
+
+5. Printing statistics.
+
+=== top ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+    47017        - wires
+    60574        - wire bits
+      721        - public wires
+    14278        - public wire bits
+        6        - ports
+      835        - port bits
+    49056 6.09E+05 cells
+      909 1.15E+04   sg13g2_a21o_1
+     4080  3.7E+04   sg13g2_a21oi_1
+       58  841.882   sg13g2_a221oi_1
+      957 1.04E+04   sg13g2_a22oi_1
+     1157 1.05E+04   sg13g2_and2_1
+      492 6.25E+03   sg13g2_and3_1
+      363 5.27E+03   sg13g2_and4_1
+     2760 1.35E+05   sg13g2_dfrbpq_1
+     2507 1.36E+04   sg13g2_inv_1
+       37  671.328   sg13g2_mux2_1
+     4770 3.46E+04   sg13g2_nand2_1
+     3077 2.79E+04   sg13g2_nand2b_1
+      994 9.02E+03   sg13g2_nand3_1
+      137  1740.01   sg13g2_nand3b_1
+      293 3.19E+03   sg13g2_nand4_1
+     4402 3.19E+04   sg13g2_nor2_1
+     2706 2.45E+04   sg13g2_nor2b_1
+     1200  10886.4   sg13g2_nor3_1
+      144 1.57E+03   sg13g2_nor4_1
+     4152 3.77E+04   sg13g2_o21ai_1
+     1025   9298.8   sg13g2_or2_1
+      412  5232.73   sg13g2_or3_1
+     8026 1.16E+05   sg13g2_xnor2_1
+     4398 6.38E+04   sg13g2_xor2_1
+
+   Chip area for module '\top': 609290.148600
+     of which used for sequential elements: 135209.088000 (22.19%)
+
+6. Executing Verilog backend.
+
+6.1. Executing BMUXMAP pass.
+
+6.2. Executing DEMUXMAP pass.
+Dumping module `\top'.
+
+End of script. Logfile hash: 2ddf0e0c10, time: 21.91s, user: 10.43s, system: 0.66s, MEM: 282.71 MB peak
+Yosys 0.69+24 (git sha1 d0e71cfb7-dirty, Release, Clang /usr/bin/clang++ 21.1.8)
+Time spent: 61% 2x abc (14 sec), 10% 16x opt_merge (2 sec), ...
