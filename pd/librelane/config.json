@@ -6,6 +6,7 @@
         "dir::../../rtl/top.sv"
     ],
     "VERILOG_DEFINES": [],
+    "USE_SLANG": true,
     "SYNTH_PARAMETERS": ["N=4"],
     "CLOCK_PORT": "clk",
     "CLOCK_PERIOD": 10,

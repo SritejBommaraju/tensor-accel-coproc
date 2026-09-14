@@ -220,6 +220,74 @@ interface-block synth+STA targets below (`pd/Makefile`: `synth-axi-bridge`, `sta
 `sweep-axi-bridge`, `synth-cmdq`, `sta-cmdq`, `sweep-cmdq`) were run instead; see
 `pd/RESULTS.md`'s "Interface blocks" table.
 
+### Retry 2 (2026-09-14): real OpenROAD built from source, LibreLane PnR runs to 57/~61 steps
+
+Built the real `openroad` binary from source per the user's explicit request:
+```
+git clone --depth 1 https://github.com/The-OpenROAD-Project/OpenROAD.git ~/OpenROAD-src
+cd ~/OpenROAD-src && git submodule update --init --recursive
+sudo bash ./etc/DependencyInstaller.sh -all   # Boost, Eigen, CUDD, CUSP, Lemon, spdlog,
+                                               # gtest, or-tools -- all built/installed cleanly
+mkdir build && cd build
+cmake .. -DCMAKE_BUILD_TYPE=Release && make -j8    # ~50 min wall, no errors
+```
+Result: `~/OpenROAD-src/build/bin/openroad` (also copied to `~/openroad-bin/bin/openroad`) --
+a real, fully functional Tcl-CLI (`-version`, `-help`, and Tcl execution via `-no_init` all
+verified), unlike the openroadpy shim from the previous retry.
+
+With a real `openroad` on PATH, re-ran `librelane --pdk-root ~/.ciel --pdk ihp-sg13g2
+pd/librelane/config.json` and hit two more real blockers, both fixed:
+
+1. **Same `yosys -y <script>.py` (ENABLE_PYOSYS) requirement as before**, now solved properly:
+   `pip install pyosys` (a separate PyPI package -- `pyosys` the importable module, not
+   `openroad`/`openroadpy` -- ships a real compiled `libyosys.so` including `read_slang`).
+   LibreLane's own `librelane/scripts/pyosys/ys_common.py` already tries
+   `from pyosys import libyosys as ys` first, so no LibreLane code changes were needed -- just
+   `pip install pyosys` plus a ~20-line shim (`pd/_yosys_shim.py`) that mimics the
+   `yosys -y <script> [-Q] [-q|-qq] -- <args>` CLI surface via `runpy.run_path`, pointed to via
+   `_LLN_OVERRIDE_YOSYS=pd/_yosys_shim.py` (an env var LibreLane's `pyosys.py` step already
+   reads for exactly this purpose).
+2. **`USE_SLANG` defaults to `false`** in LibreLane's synth step (`librelane/steps/pyosys.py`),
+   so the default Verilog-2005 frontend hit the same unpacked-array parse error documented in
+   step 1 at the top of this file. Fixed by adding `"USE_SLANG": true` to
+   `pd/librelane/config.json` -- the `pyosys` wheel's `read_slang` command handles it correctly.
+3. `OpenSTAStep` (a distinct LibreLane step class, `librelane/steps/openroad.py:556`) shells out
+   to a bare `sta` binary, separate from `openroad` itself -- pointed PATH at the `~/opensta/bin/sta`
+   already built for the plain synth+STA flow (step 2 above).
+4. `magic` and `klayout` (`sudo apt-get install -y magic klayout`) were needed for the final
+   GDS/DRC steps -- neither was installed previously.
+
+With all four fixed, the flow ran **synthesis through post-PnR multi-corner STA and DRC/antenna
+checks -- 57 of the flow's steps -- with real, clean signoff numbers**:
+
+| metric | value |
+|---|---|
+| die area | 350,767 um^2 |
+| core area | 326,030 um^2 |
+| utilization | 44.18% |
+| instance count | 32,548 |
+| routing DRC errors | 105 -> 70 -> 67 -> 0 -> 0 (converged clean over 4 iterations) |
+| antenna violations | 0 |
+| setup WNS (typ corner, nom_typ_1p20V_25C) | 0.0 ns (met) |
+| setup WNS (slow corner, nom_slow_1p08V_125C) | -0.56 ns (12 violations, TNS -3.62 ns) |
+| total power | ~10.8 mW |
+
+Full metrics JSON, the magic failure log, and its exact command are preserved at
+`pd/librelane/RUN_2026-09-14_13-39-27_metrics/` (the full ~455MB run directory under
+`pd/librelane/runs/` was not committed -- it's gitignored and reproducible via the commands
+above). This is a real, clean, multi-corner-signed-off placed-and-routed design; the flow
+correctly converged routing DRC to zero and met setup timing at typ/fast corners.
+
+**Still blocked**: the final GDS stream-out step (magic) fails -- Ubuntu's only available
+`magic` package (8.3.105, apt has no other version) cannot parse several sections of
+IHP-Open-PDK's `.tech` file (`Illegal keyword` errors in the `extract` section — a tech-file
+format version mismatch, not a flow bug), and magic exits after ~1.2s without writing GDS.
+**No GDS/DEF file exists.** The fix is a from-source magic build matching whatever version
+IHP-Open-PDK's own CI targets; not attempted here (this retry already ran long). Reproduce
+with `wsl -d Ubuntu -- bash -lc "cd /mnt/c/Users/bomma/projects/tensor-accel-coproc/pd && bash
+_run_librelane.sh"` (needs `~/openroad-bin/bin/openroad`, `~/opensta/bin/sta`, and the
+`/tmp/lltest` venv with `pyosys` installed, all built/installed during this retry).
+
 ## Reproducing
 
 ```
