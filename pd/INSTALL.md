@@ -282,11 +282,24 @@ correctly converged routing DRC to zero and met setup timing at typ/fast corners
 `magic` package (8.3.105, apt has no other version) cannot parse several sections of
 IHP-Open-PDK's `.tech` file (`Illegal keyword` errors in the `extract` section — a tech-file
 format version mismatch, not a flow bug), and magic exits after ~1.2s without writing GDS.
-**No GDS/DEF file exists.** The fix is a from-source magic build matching whatever version
-IHP-Open-PDK's own CI targets; not attempted here (this retry already ran long). Reproduce
-with `wsl -d Ubuntu -- bash -lc "cd /mnt/c/Users/bomma/projects/tensor-accel-coproc/pd && bash
-_run_librelane.sh"` (needs `~/openroad-bin/bin/openroad`, `~/opensta/bin/sta`, and the
-`/tmp/lltest` venv with `pyosys` installed, all built/installed during this retry).
+**No GDS/DEF file exists.** The PDK's own `ihp-sg13g2-GDS.tech` explicitly states
+`requires magic-8.3.124`; installed is 8.3.105.
+
+Follow-up (2026-09-14, same day, orchestrating session): tried building magic from source to
+close this gap. Both `git clone --branch 8.3.124` (the PDK's stated minimum) and
+`--branch 8.3.196` (latest tag) fail to compile against this machine's GCC 15.2.0 -- genuine
+source incompatibilities in magic's own C code (`8.3.196`: ~20 hard errors in `tcltk/tclmagic.c`,
+old-style K&R function definitions GCC 14+ rejects by default, e.g. "number of arguments doesn't
+match prototype" for `TxSetPrompt`/`Tcl_escape`/etc; `8.3.124`: ~6900 errors, far more pervasive,
+consistent with an older codebase never updated for modern strict-C compilers). Neither is a
+quick fix (would need patching magic's source, not just build flags -- `-std=gnu17` and
+`-fpermissive` did not help, since these are real signature mismatches, not just strictness
+warnings). Not pursued further. A working fix would need either an older GCC (e.g. via a
+container/chroot with GCC 11-12), or patching magic's `tclmagic.c` to modern prototypes, or
+building a `klayout`-based GDS stream-out path instead of magic (klayout was installed
+alongside magic during this session but not evaluated as a magic replacement for this step --
+LibreLane/the IHP config pins `PRIMARY_GDSII_STREAMOUT_TOOL=magic`, so using klayout instead
+would need a config override, not attempted).
 
 ## Reproducing
 
