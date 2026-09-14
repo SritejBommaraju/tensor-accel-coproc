@@ -160,6 +160,66 @@ provided and is believed correct (it matches the PDK's own shipped
 `libs.tech/librelane/config.tcl` variable names); it has not been run to completion, so its
 area/utilization numbers are not in `pd/RESULTS.md`.
 
+### Retry (2026-09-13): (a) prebuilt .deb, (b) pip/openroadpy shim, (c) librelane upgrade
+
+Re-attempted unblocking, in the order specified, ~20 min cap:
+
+**(a) Precision-Innovations prebuilt `.deb`.** GitHub Releases for
+`Precision-Innovations/OpenROAD` have been retired:
+```
+$ curl -sSL https://api.github.com/repos/Precision-Innovations/OpenROAD/releases/latest
+{"tag_name": "26Q1", "name": "Releases have been moved", "assets": [],
+ "body": "All further releases will be available at: https://vaultlink.precisioninno.com/"}
+```
+`vaultlink.precisioninno.com` returns HTTP 200 but is a separate distribution portal (not a
+plain GitHub-releases `.deb` mirror covered by the task's assumption); not pursued further as
+"the Precision-Innovations GitHub releases .deb" this task named no longer exist.
+
+**(b) `pip install -U openroad` + shim.** Still v0.0.1 (`pip index versions openroad` ->
+`Available versions: 0.0.1`), still the bare `openroadpy` SWIG core with no console script
+(same as before). Its `openroad.Design`/`openroad.Tech` Python API does work standalone,
+though:
+```python
+import openroad
+tech = openroad.Tech(); design = openroad.Design(tech)
+design.evalTclString("puts hi")   # -> prints "hi", no crash
+```
+Wrote the ~50-line shim at `pd/librelane/bin/openroad` (Python): parses LibreLane's
+`-exit -no_init [-threads N] <script.tcl>` argv, constructs `openroad.Tech()`/`openroad.Design()`,
+sets `argv`/`argc` Tcl globals, `evalTclString()`s the script file's contents, and on `-exit`
+calls `os._exit(0)` rather than `sys.exit(0)`.  Two real bugs found and fixed while making this
+work standalone (both reproduced in isolation with minimal repro scripts):
+1. `openroad.set_thread_count(N)` **segfaults** if called before `Tech()`/`Design()` are
+   constructed (harmless once called after) -- openroadpy 0.0.1's global thread pool isn't
+   initialized until a `Design` exists.
+2. Normal CPython interpreter teardown after `sys.exit()` **segfaults** while destructing the
+   SWIG-wrapped `Tech`/`Design` C++ objects (destructor ordering issue in the 0.0.1 binding);
+   `os._exit(0)` (skip teardown, like real `openroad`'s own process-exit path) avoids it.
+With both fixes the shim correctly runs a Tcl script and exits 0 (verified directly, both via
+`python3 pd/librelane/bin/openroad -exit -no_init -threads 4 script.tcl` and via `openroad` on
+`PATH`). **However**, `openroad.Tech()`/`Design()` only expose the subset of the real OpenROAD
+Tcl command set that openroadpy's SWIG wrapper registers -- it does not `source` OpenROAD's own
+`.tcl` command library (`read_lef`, `initialize_floorplan`, etc. as LibreLane's floorplan/place/
+route step scripts call them are not necessarily present as bare Tcl procs the way the real
+`openroad` binary provides), so LibreLane's actual floorplan-step script was not run to
+completion against this shim within the time cap -- the shim is a real, working `openroad`-argv-
+compatible Tcl driver as far as Tcl execution and Design/Tech construction go, but is unverified
+end-to-end against LibreLane's OpenROAD step scripts specifically (a genuinely different, harder
+integration question than "is there a CLI binary at all").
+
+**(c) `pip install -U librelane`.** Already at the latest release (3.0.14, first installed at
+the start of this task); no newer version bundles/locates OpenROAD differently.
+
+**Net effect of this retry**: went from "no `openroad` executable exists at all, hard stop" to
+"an `openroad`-argv-compatible executable exists and correctly runs arbitrary Tcl", which is a
+real, working piece of infrastructure (kept at `pd/librelane/bin/openroad`) -- but the deeper gap
+(openroadpy 0.0.1 not exposing OpenROAD's full builtin Tcl command surface the way the real
+compiled-from-source `openroad` binary does) was not fully closed within the cap, so a completed
+LibreLane PnR-to-GDS run for `top` N=4/N=8 is still not demonstrated. Given that, the fallback
+interface-block synth+STA targets below (`pd/Makefile`: `synth-axi-bridge`, `sta-axi-bridge`,
+`sweep-axi-bridge`, `synth-cmdq`, `sta-cmdq`, `sweep-cmdq`) were run instead; see
+`pd/RESULTS.md`'s "Interface blocks" table.
+
 ## Reproducing
 
 ```

@@ -1,0 +1,7 @@
+n_images=32
+in=784 hidden=64 out=10
+M0_1=1655142528 shift_1=-11
+weights.bin = W1_i8[784][64] + b1_i32[64] + W2_i8[64][10] + b2_i32[10]
+images.bin = x_i8[n_images][784] int8
+labels.bin = label[n_images] int32 LE
+expected_logits.bin = logits[n_images][10] int32 LE

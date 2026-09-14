@@ -1,0 +1,60 @@
+#!/usr/bin/env python3
+# Shim `openroad` Tcl-CLI binary, backed by the PyPI `openroad` package's SWIG core
+# (openroadpy). That package has no console-script entry point (see pd/INSTALL.md #5),
+# so this reimplements just enough of the real `openroad` argv contract for LibreLane's
+# subprocess calls: `openroad -exit -no_init [-threads N] <script.tcl> [tcl-script-args...]`.
+import sys
+import openroad
+
+argv = sys.argv[1:]
+script = None
+script_args = []
+exit_after = False
+threads = None
+
+i = 0
+while i < len(argv):
+    a = argv[i]
+    if a == "-exit":
+        exit_after = True
+    elif a == "-no_init":
+        pass  # real openroad skips ~/.openroad init scripts; nothing to load here anyway
+    elif a == "-threads":
+        i += 1
+        threads = argv[i]
+    elif a in ("-log", "-metrics"):
+        i += 1  # skip the value; LibreLane's log/metrics files are unused by this shim
+    elif script is None:
+        script = a
+    else:
+        script_args.append(a)
+    i += 1
+
+if script is None:
+    sys.exit("openroad shim: no Tcl script given")
+
+tech = openroad.Tech()
+design = openroad.Design(tech)
+
+# openroad.set_thread_count() segfaults when called before Tech()/Design() are constructed
+# (openroadpy 0.0.1); call it after construction instead, once a design object exists.
+if threads is not None:
+    openroad.set_thread_count(int(threads))
+
+# expose script args the way real openroad's Tcl interp does, then source the script
+design.evalTclString("set argv {%s}; set argc %d" % (" ".join(script_args), len(script_args)))
+with open(script) as f:
+    src = f.read()
+try:
+    design.evalTclString(src)
+except Exception as e:
+    sys.exit("openroad shim: Tcl error: %s" % e)
+
+sys.stdout.flush()
+sys.stderr.flush()
+if exit_after:
+    # os._exit(), not sys.exit(): openroadpy's SWIG-wrapped C++ objects (Tech/Design)
+    # segfault during normal Python interpreter teardown/destructor order at exit;
+    # skipping that teardown (like real openroad's own process-exit path) avoids it.
+    import os
+    os._exit(0)

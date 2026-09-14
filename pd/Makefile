@@ -19,10 +19,12 @@ OUT := out
 SEED_PERIOD_NS := 3.0
 
 .PHONY: all synth-pe synth-top4 synth-top8 synth-top16 synth-scratchpad \
-        sta-pe sta-top4 sta-top8 sweep-pe sweep-top4 sweep-top8 gls results clean
+        sta-pe sta-top4 sta-top8 sweep-pe sweep-top4 sweep-top8 gls results clean \
+        synth-axi-bridge sta-axi-bridge sweep-axi-bridge synth-cmdq sta-cmdq sweep-cmdq
 
 all: synth-pe synth-top4 synth-top8 synth-top16 synth-scratchpad \
-     sta-pe sta-top4 sta-top8 sweep-pe sweep-top4 sweep-top8 gls
+     sta-pe sta-top4 sta-top8 sweep-pe sweep-top4 sweep-top8 gls \
+     synth-axi-bridge sta-axi-bridge sweep-axi-bridge synth-cmdq sta-cmdq sweep-cmdq
 
 $(OUT):
 	mkdir -p $(OUT)
@@ -86,6 +88,43 @@ sweep-top4: synth-top4
 
 sweep-top8: synth-top8
 	LIBERTY="$(LIBERTY)" STA=$(OPENSTA) ./run_sweep.sh top $(OUT)/top_N8_netlist.sta.v 20.0 0.4 30 top_N8 > $(OUT)/top_N8_sweep_summary.log 2>&1
+
+# ---- interface blocks: AXI4 DMA bridge and MMIO command-queue regs ----
+# (LibreLane PnR was attempted first; still blocked after the 20-min cap, see INSTALL.md #5.
+# FIFOs in axi4_dma_bridge have no memory-compiler SRAM in this open PDK, so RD/WR FIFOs
+# (default depth 256) map straight to flip-flops, same as scratchpad_dbuf above.)
+
+synth-axi-bridge: $(OUT)
+	SRCS="$(RTL)/stream_ctrl.sv $(RTL)/axi/axi4_dma_bridge.sv" TOP=axi4_dma_bridge NVAL=4 \
+	  LIBERTY="$(LIBERTY)" PERIOD_NS=$(SEED_PERIOD_NS) \
+	  OUTV=$(OUT)/axi4_dma_bridge_netlist.v OUTLOG=$(OUT)/axi4_dma_bridge_stat.log \
+	  $(YOSYS) -c synth/synth.tcl > $(OUT)/axi4_dma_bridge_synth.log 2>&1
+	sed 's/ signed//g' $(OUT)/axi4_dma_bridge_netlist.v > $(OUT)/axi4_dma_bridge_netlist.sta.v
+
+sta-axi-bridge: synth-axi-bridge
+	LIBERTY="$(LIBERTY)" NETLIST=$(OUT)/axi4_dma_bridge_netlist.sta.v TOP=axi4_dma_bridge \
+	  PERIOD_NS=$(SEED_PERIOD_NS) $(OPENSTA) sta/sta.tcl > $(OUT)/axi4_dma_bridge_sta.log 2>&1
+
+
+# axi4_dma_bridge has a single-gate huge-fanout artifact (see RESULTS.md, same class as
+# top_N8's rst path) that pushes its real convergence period out past 300ns; start the
+# sweep near there instead of wasting ~1700 tiny 0.2ns steps.
+sweep-axi-bridge: synth-axi-bridge
+	LIBERTY="$(LIBERTY)" STA=$(OPENSTA) ./run_sweep.sh axi4_dma_bridge $(OUT)/axi4_dma_bridge_netlist.sta.v 340.0 10 20 axi4_dma_bridge > $(OUT)/axi4_dma_bridge_sweep_summary.log 2>&1
+
+synth-cmdq: $(OUT)
+	SRCS="$(RTL)/mmio/cmd_queue_regs.sv" TOP=cmd_queue_regs \
+	  PARAMS="ADDR_W=32" LIBERTY="$(LIBERTY)" PERIOD_NS=$(SEED_PERIOD_NS) \
+	  OUTV=$(OUT)/cmd_queue_regs_netlist.v OUTLOG=$(OUT)/cmd_queue_regs_stat.log \
+	  $(YOSYS) -c synth/synth.tcl > $(OUT)/cmd_queue_regs_synth.log 2>&1
+	sed 's/ signed//g' $(OUT)/cmd_queue_regs_netlist.v > $(OUT)/cmd_queue_regs_netlist.sta.v
+
+sta-cmdq: synth-cmdq
+	LIBERTY="$(LIBERTY)" NETLIST=$(OUT)/cmd_queue_regs_netlist.sta.v TOP=cmd_queue_regs \
+	  PERIOD_NS=$(SEED_PERIOD_NS) $(OPENSTA) sta/sta.tcl > $(OUT)/cmd_queue_regs_sta.log 2>&1
+
+sweep-cmdq: synth-cmdq
+	LIBERTY="$(LIBERTY)" STA=$(OPENSTA) ./run_sweep.sh cmd_queue_regs $(OUT)/cmd_queue_regs_netlist.sta.v 4.0 0.2 60 cmd_queue_regs > $(OUT)/cmd_queue_regs_sweep_summary.log 2>&1
 
 # ---- gate-level regression ----
 

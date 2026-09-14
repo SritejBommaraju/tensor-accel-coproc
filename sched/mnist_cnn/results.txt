@@ -1,0 +1,15 @@
+N images: 100
+RTL int8 accuracy:   94.00%
+numpy int8 accuracy: 94.00%
+fp32 CNN accuracy:   94.00%
+
+per-layer bit-exactness vs numpy int8 matmul (raw accumulator, pre-bias):
+  conv (K=9, 4x4 tile, 540800/540800 exact): True
+  dense (K=1352, 1000/1000 exact): True
+bit-exact vs numpy int8: True
+
+per-layer scheduler stats:
+  conv:  tiles=18 weight_loads=18 cycles=405762 MACs=4867200 MACs/cycle=11.995  (K=9 padded to ceil(9/4)*4=12: only 9/12=75% of the K-dim MAC lanes do real work, the rest multiply zero padding)
+  dense: tiles=3042 weight_loads=3042 cycles=128778 MACs=1352000 MACs/cycle=10.499
+total: tiles=3060 cycles=534540 MACs=6219200 MACs/cycle=11.635
+wall-clock: 1.09s

@@ -1,0 +1,8 @@
+period=340.0ns  wns=-41.47
+period=350.000ns  wns=-33.47
+period=360.000ns  wns=-25.47
+period=370.000ns  wns=-17.46
+period=380.000ns  wns=-9.46
+period=390.000ns  wns=-1.46
+period=400.000ns  wns=0.00
+CONVERGED: period=400.000ns -> fmax=2.50MHz (log: out/axi4_dma_bridge_sweep_400.000ns.log)

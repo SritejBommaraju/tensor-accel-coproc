@@ -1,0 +1,48 @@
+OpenSTA 3.1.0 d97587f669 Copyright (c) 2026, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details. 
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+Startpoint: _214024_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _214272_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _214024_/CLK (sg13g2_dfrbpq_1)
+  40.0681   40.0681 ^ _214024_/Q (sg13g2_dfrbpq_1)
+ 295.2236  335.2917 v _131993_/Y (sg13g2_nor2_1)
+   6.1140  341.4058 ^ _166729_/Y (sg13g2_a221oi_1)
+   1.0940  342.4998 v _166733_/Y (sg13g2_a221oi_1)
+   0.3226  342.8223 ^ _166735_/Y (sg13g2_o21ai_1)
+   0.0849  342.9073 v _166736_/Y (sg13g2_o21ai_1)
+   0.0913  342.9986 ^ _166737_/Y (sg13g2_nand2_1)
+   0.1015  343.1001 v _166742_/Y (sg13g2_a21oi_1)
+   0.1100  343.2101 ^ _166743_/Y (sg13g2_a21oi_1)
+   0.0609  343.2711 v _166744_/Y (sg13g2_nor2_1)
+   0.0981  343.3691 ^ _166866_/Y (sg13g2_a21oi_1)
+   0.0855  343.4546 v _166868_/Y (sg13g2_a21oi_1)
+   0.0000  343.4546 v _214272_/D (sg13g2_dfrbpq_1)
+           343.4546   data arrival time
+
+   5.0000    5.0000   clock clk (rise edge)
+   0.0000    5.0000   clock network delay (ideal)
+   0.0000    5.0000   clock reconvergence pessimism
+             5.0000 ^ _214272_/CLK (sg13g2_dfrbpq_1)
+  -0.1599    4.8401   library setup time
+             4.8401   data required time
+-------------------------------------------------------------
+             4.8401   data required time
+          -343.4546   data arrival time
+-------------------------------------------------------------
+          -338.6145   slack (VIOLATED)
+
+
+---SUMMARY---
+wns max -338.61
+tns max -180398.78
+worst slack max -338.61

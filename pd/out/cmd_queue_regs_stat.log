@@ -1,0 +1,45 @@
+
+5. Printing statistics.
+
+=== cmd_queue_regs ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+     1693        - wires
+     2726        - wire bits
+       34        - public wires
+     1067        - public wire bits
+       15        - ports
+      330        - port bits
+     2486 6.19E+04 cells
+        3   38.102   sg13g2_a21o_1
+      178 1.61E+03   sg13g2_a21oi_1
+       18  261.274   sg13g2_a221oi_1
+       45  488.187   sg13g2_a22oi_1
+       17  154.224   sg13g2_and2_1
+        5   63.504   sg13g2_and3_1
+        6   87.091   sg13g2_and4_1
+      794 3.89E+04   sg13g2_dfrbpq_1
+      138  751.162   sg13g2_inv_1
+      513 9.31E+03   sg13g2_mux2_1
+      128 4.88E+03   sg13g2_mux4_1
+        9   65.318   sg13g2_nand2_1
+        2   18.144   sg13g2_nand2b_1
+        9   81.648   sg13g2_nand3_1
+        2   25.402   sg13g2_nand3b_1
+        8   87.091   sg13g2_nand4_1
+      281 2.04E+03   sg13g2_nor2_1
+        8   72.576   sg13g2_nor2b_1
+        8   72.576   sg13g2_nor3_1
+       25   272.16   sg13g2_nor4_1
+      275   2494.8   sg13g2_o21ai_1
+        6   54.432   sg13g2_or2_1
+        2   25.402   sg13g2_or3_1
+        3   43.546   sg13g2_or4_1
+        1   14.515   sg13g2_xnor2_1
+        2    29.03   sg13g2_xor2_1
+
+   Chip area for module '\cmd_queue_regs': 61936.471800
+     of which used for sequential elements: 38897.107200 (62.80%)
+

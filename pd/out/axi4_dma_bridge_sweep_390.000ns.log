@@ -1,0 +1,48 @@
+OpenSTA 3.1.0 d97587f669 Copyright (c) 2026, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details. 
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+Startpoint: awready (input port clocked by clk)
+Endpoint: _213801_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+  78.0000   78.0000 v input external delay
+   0.0000   78.0000 v awready (in)
+   0.2134   78.2134 ^ _089323_/Y (sg13g2_nand3_1)
+   0.0952   78.3086 v _135777_/Y (sg13g2_nor2_1)
+ 274.2143  352.5229 ^ _135779_/Y (sg13g2_a21oi_1)
+  35.0285  387.5514 ^ _141077_/X (sg13g2_mux4_1)
+   0.5893  388.1407 v _141083_/Y (sg13g2_a21oi_1)
+   1.3290  389.4698 ^ _141088_/Y (sg13g2_o21ai_1)
+   0.9809  390.4507 v _141100_/Y (sg13g2_nand3_1)
+   0.2466  390.6973 ^ _141125_/Y (sg13g2_o21ai_1)
+   0.2772  390.9745 v _141169_/Y (sg13g2_a221oi_1)
+   0.1741  391.1487 ^ _141279_/Y (sg13g2_nor3_1)
+   0.1816  391.3303 ^ _141280_/X (sg13g2_a21o_1)
+   0.0000  391.3303 ^ _213801_/D (sg13g2_dfrbpq_1)
+           391.3303   data arrival time
+
+ 390.0000  390.0000   clock clk (rise edge)
+   0.0000  390.0000   clock network delay (ideal)
+   0.0000  390.0000   clock reconvergence pessimism
+           390.0000 ^ _213801_/CLK (sg13g2_dfrbpq_1)
+  -0.1347  389.8653   library setup time
+           389.8653   data required time
+-------------------------------------------------------------
+           389.8653   data required time
+          -391.3303   data arrival time
+-------------------------------------------------------------
+            -1.4650   slack (VIOLATED)
+
+
+---SUMMARY---
+wns max -1.46
+tns max -118.50
+worst slack max -1.46

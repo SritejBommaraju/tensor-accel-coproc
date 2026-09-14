@@ -102,4 +102,40 @@ Full command transcript, exact errors, and the concrete unblocking requirement (
 an from-source OpenROAD build with Qt/Boost/LEMON/or-tools/spdlog) are in `pd/INSTALL.md` #5.
 **No post-PnR area/utilization numbers or GDS exist** -- everything above is pre-PnR
 (synthesis + STA with ideal clock trees), which is why the N=8 reset-fanout artifact above is
-visible at all.
+visible at all. A follow-up retry (`pd/INSTALL.md` #5, "Retry (2026-09-13)") got further -- a
+working `openroad`-argv-compatible Tcl driver now exists at `pd/librelane/bin/openroad`, backed
+by the PyPI `openroad` package's `openroadpy` SWIG core (two real bugs in that binding were found
+and fixed along the way: `set_thread_count()` segfaulting before `Design()` construction, and
+interpreter teardown segfaulting after `sys.exit()`) -- but openroadpy 0.0.1 doesn't expose
+OpenROAD's full builtin Tcl command library the way the real compiled binary does, so LibreLane's
+floorplan-step script was not confirmed to run to completion against it within the time cap.
+Still no GDS/DEF and no post-PnR numbers.
+
+## Interface blocks: AXI4 DMA bridge and MMIO command-queue regs (synth + STA, no PnR)
+
+Same toolchain as above (yosys `read_slang` + `dfflibmap` + `abc`, OpenSTA), run via
+`pd/Makefile`'s `synth-axi-bridge`/`sta-axi-bridge`/`sweep-axi-bridge` and
+`synth-cmdq`/`sta-cmdq`/`sweep-cmdq` targets (added instead of LibreLane PnR, per
+`pd/INSTALL.md` #5's outcome). `axi4_dma_bridge` is synthesized at N=4 with its RD/WR FIFOs at
+their default depth (256 entries each); this open PDK has no memory-compiler SRAM, so both
+FIFOs map straight to flip-flops (same as `scratchpad_dbuf` above), which is most of why its
+sequential share is as high as `scratchpad_dbuf`'s. `cmd_queue_regs` is synthesized at its
+default N=4 with `ADDR_W=32` (task-specified override, `PARAMS="ADDR_W=32"` on the module's
+default ADDR_W=16).
+
+| module | cell count | area (um^2) | sequential share | converged period | fmax | critical path | log |
+|---|---:|---:|---:|---:|---:|---|---|
+| `axi4_dma_bridge` (N=4, RD/WR FIFO depth 256) | 128,830 | 3,399,490.95 | 2,059,734.10 (60.6%) | 400.0 ns | **2.50 MHz** | `awready` (input) -> a single `sg13g2_a21oi_1` with 274.2ns of delay driving the write-address-accept fanout, -> flop D (`_213801_`) | `axi4_dma_bridge_stat.log`, `axi4_dma_bridge_sweep_400.000ns.log` |
+| `cmd_queue_regs` (ADDR_W=32) | 2,486 | 61,936.47 | 38,897.11 (62.8%) | 14.2 ns | **70.42 MHz** | `dmem_addr[18]` (input) -> `sg13g2_nor4_1` (9.1ns) -> mux2 -> flop D (`_3351_`) | `cmd_queue_regs_stat.log`, `cmd_queue_regs_sweep_14.200ns.log` |
+
+`axi4_dma_bridge`'s critical path is the same synthesis artifact class as `top` N=8's `rst`
+path above: one gate (`sg13g2_a21oi_1`, driven off `awready`) carries 274ns of delay because
+plain `yosys`+`abc` has no placement information and does no fanout-aware buffer insertion --
+here it's the write-address-handshake signal fanning out across the whole bridge's control/FIFO
+logic rather than an async reset, but the mechanism (and the fix -- real PnR clock/buffer-tree
+insertion) is identical. `cmd_queue_regs`'s critical path is a real, unremarkable register-file
+comparator/mux chain (`dmem_addr` decode into the command-queue write mux) with no equivalent
+gross-fanout artifact, so its 70.42MHz fmax is a credible pre-PnR number for a small MMIO
+register block.
+
+Reproduce: `wsl -d Ubuntu -- bash -lc "cd pd && make sweep-axi-bridge sweep-cmdq"`.

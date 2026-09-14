@@ -9,7 +9,8 @@
 #   OUTV       output gate-level netlist path
 #   OUTLOG     stat -liberty report path
 # Optional:
-#   NVAL       if set, chparam -set N $NVAL on $TOP before synth (parameterized modules)
+#   NVAL       if set, -G N=$NVAL on read_slang (parameterized modules)
+#   PARAMS     if set, extra space-separated NAME=VAL pairs passed as -G NAME=VAL each
 
 yosys -import
 
@@ -24,7 +25,10 @@ set outlog  $::env(OUTLOG)
 # native Verilog-2005-based -sv frontend chokes on.
 yosys "plugin -i slang"
 set gparam ""
-if {[info exists ::env(NVAL)]} { set gparam "-G N=$::env(NVAL)" }
+if {[info exists ::env(NVAL)]} { append gparam " -G N=$::env(NVAL)" }
+if {[info exists ::env(PARAMS)]} {
+    foreach kv [split $::env(PARAMS) " "] { append gparam " -G $kv" }
+}
 yosys "read_slang $srcs --top $top $gparam"
 
 yosys "synth -top $top"

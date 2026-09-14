@@ -1,0 +1,48 @@
+OpenSTA 3.1.0 d97587f669 Copyright (c) 2026, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details. 
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+Startpoint: awready (input port clocked by clk)
+Endpoint: _213801_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+  80.0000   80.0000 v input external delay
+   0.0000   80.0000 v awready (in)
+   0.2134   80.2134 ^ _089323_/Y (sg13g2_nand3_1)
+   0.0952   80.3086 v _135777_/Y (sg13g2_nor2_1)
+ 274.2143  354.5229 ^ _135779_/Y (sg13g2_a21oi_1)
+  35.0285  389.5514 ^ _141077_/X (sg13g2_mux4_1)
+   0.5893  390.1407 v _141083_/Y (sg13g2_a21oi_1)
+   1.3290  391.4698 ^ _141088_/Y (sg13g2_o21ai_1)
+   0.9809  392.4507 v _141100_/Y (sg13g2_nand3_1)
+   0.2466  392.6973 ^ _141125_/Y (sg13g2_o21ai_1)
+   0.2772  392.9746 v _141169_/Y (sg13g2_a221oi_1)
+   0.1741  393.1487 ^ _141279_/Y (sg13g2_nor3_1)
+   0.1816  393.3303 ^ _141280_/X (sg13g2_a21o_1)
+   0.0000  393.3303 ^ _213801_/D (sg13g2_dfrbpq_1)
+           393.3303   data arrival time
+
+ 400.0000  400.0000   clock clk (rise edge)
+   0.0000  400.0000   clock network delay (ideal)
+   0.0000  400.0000   clock reconvergence pessimism
+           400.0000 ^ _213801_/CLK (sg13g2_dfrbpq_1)
+  -0.1347  399.8653   library setup time
+           399.8653   data required time
+-------------------------------------------------------------
+           399.8653   data required time
+          -393.3303   data arrival time
+-------------------------------------------------------------
+             6.5350   slack (MET)
+
+
+---SUMMARY---
+wns max 0.00
+tns max 0.00
+worst slack max 6.53

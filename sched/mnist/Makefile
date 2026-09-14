@@ -1,6 +1,6 @@
 PY = python3
 
-.PHONY: all fetch train quant rtl clean
+.PHONY: all fetch train quant rtl coproc clean
 
 all: rtl
 
@@ -19,5 +19,11 @@ quant: train
 rtl: quant ../obj_dir/Vtop
 	$(PY) run_rtl.py
 
+../obj_dir_coproc/Vcoproc_axi_sim_top:
+	$(MAKE) -C .. obj_dir_coproc/Vcoproc_axi_sim_top
+
+coproc: quant ../obj_dir_coproc/Vcoproc_axi_sim_top
+	$(PY) run_coproc.py
+
 clean:
-	rm -f weights_fp32.npz weights_int8.npz results.txt
+	rm -f weights_fp32.npz weights_int8.npz results.txt results_coproc.txt

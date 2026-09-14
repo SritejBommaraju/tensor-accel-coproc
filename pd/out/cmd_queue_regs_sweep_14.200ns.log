@@ -1,0 +1,44 @@
+OpenSTA 3.1.0 d97587f669 Copyright (c) 2026, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details. 
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+Startpoint: dmem_addr[18] (input port clocked by clk)
+Endpoint: _3351_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   2.8400    2.8400 v input external delay
+   0.0000    2.8400 v dmem_addr[18] (in)
+   0.1391    2.9791 ^ _1823_/Y (sg13g2_nor4_1)
+   0.1030    3.0820 v _1824_/Y (sg13g2_nand3_1)
+   0.1398    3.2219 ^ _1825_/Y (sg13g2_o21ai_1)
+   0.2722    3.4940 v _2005_/Y (sg13g2_nand4_1)
+   0.1857    3.6798 v _2566_/Y (sg13g2_nand2b_1)
+   9.1005   12.7803 ^ _2695_/Y (sg13g2_nor4_1)
+   1.0902   13.8705 v _2730_/X (sg13g2_mux2_1)
+   0.0000   13.8705 v _3351_/D (sg13g2_dfrbpq_1)
+            13.8705   data arrival time
+
+  14.2000   14.2000   clock clk (rise edge)
+   0.0000   14.2000   clock network delay (ideal)
+   0.0000   14.2000   clock reconvergence pessimism
+            14.2000 ^ _3351_/CLK (sg13g2_dfrbpq_1)
+  -0.1821   14.0179   library setup time
+            14.0179   data required time
+-------------------------------------------------------------
+            14.0179   data required time
+           -13.8705   data arrival time
+-------------------------------------------------------------
+             0.1474   slack (MET)
+
+
+---SUMMARY---
+wns max 0.00
+tns max 0.00
+worst slack max 0.15
